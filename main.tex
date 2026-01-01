@@ -1,0 +1,179 @@
+\documentclass[10pt]{report}
+
+% palatino
+\usepackage{mathpazo}
+
+% 1 inch margins
+\usepackage[margin=1in]{geometry}
+
+% line spacing
+\usepackage{setspace}
+\setstretch{1.15}
+
+% better quotes
+\usepackage{csquotes}
+
+%% standard math tools
+\usepackage{amsthm, amssymb, mathtools}
+
+%% solution box
+\newcommand{\widebox}[1]{\begin{center}\noindent\fbox{\parbox{0.75\linewidth}{#1}}\end{center}}
+\newcommand{\solutionbox}[1]{\widebox{\textit{Solution.} {#1}}}
+
+%% better bullets
+%% \renewcommand{\theenumi}{\Alph{enumi}}
+\renewcommand{\labelitemi}{$\triangleright$}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\title{Problems and Exercises}
+\author{\texttt{CAS CS 132}: \textit{Geometric Algorithms}}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Preface}
+
+TODO. write a preface.
+
+\chapter{Linear Systems}
+
+\section{Definitions}
+
+\section{Basic Problems}
+
+\begin{enumerate}
+\item % id: determine_coefficient_augmented_matrix
+% seed: 2009837464
+Determine the coefficient matrix and the augmented matrix of the following linear system.
+\begin{align*}2 x_{1} - 6 x_{2} &= -4 \\6 x_{1} + 8 x_{2} &= -7\end{align*}
+
+\item % id: determine_coefficient_augmented_matrix
+% seed: 3209557267
+Determine the coefficient matrix and the augmented matrix of the following linear system.
+\begin{align*}x_{1} + 8 x_{2} + 7 x_{3} &= -1 \\4 x_{1} - 9 x_{2} &= 8 \\7 x_{1} - 7 x_{2} - 3 x_{3} &= 10\end{align*}
+
+\item % id: determine_coefficient_augmented_matrix
+% seed: 2878334791
+Determine the coefficient matrix and the augmented matrix of the following linear system.
+\begin{align*}- 8 x_{1} + 6 x_{2} + x_{3} + 7 x_{4} + 10 x_{5} &= 8 \\- 4 x_{2} - 4 x_{3} - x_{4} + x_{5} &= -8 \\7 x_{1} + x_{2} - 2 x_{3} - 8 x_{4} + 7 x_{5} &= 9 \\- 4 x_{1} - 7 x_{2} + 5 x_{3} + 2 x_{4} - 9 x_{5} &= -4\end{align*}
+
+\item % id: determine_unique_solution_linear_system
+% seed: 3094789175
+Demonstrate that the following linear system has a unique solution. Also determine the solution.
+\begin{align*}3 x_{1} + 6 x_{2} &= -15 \\- x_{1} + x_{2} &= 5\end{align*}
+
+\item % id: determine_unique_solution_linear_system
+% seed: 425464091
+Demonstrate that the following linear system has a unique solution. Also determine the solution.
+\begin{align*}- 3 x_{1} + 6 x_{3} &= 12 \\3 x_{1} + 3 x_{2} - 12 x_{3} &= -21 \\2 x_{1} - 6 x_{2} + 10 x_{3} &= 16\end{align*}
+
+\item % id: determine_unique_solution_linear_system
+% seed: 2573908387
+Demonstrate that the following linear system has a unique solution. Also determine the solution.
+\begin{align*}- 3 x_{1} + 6 x_{2} &= 9 \\3 x_{1} - 8 x_{2} &= -9 \\2 x_{2} + 6 x_{3} &= 18\end{align*}
+
+\item % id: determine_unique_solution_linear_system
+% seed: 4148622710
+Demonstrate that the following linear system has a unique solution. Also determine the solution.
+\begin{align*}- 3 x_{1} - 6 x_{3} + 9 x_{4} &= -6 \\- x_{1} + 2 x_{2} - 3 x_{4} &= 8 \\- 2 x_{1} - 9 x_{2} - 19 x_{3} + 45 x_{4} &= -61 \\x_{1} - 3 x_{2} + 5 x_{3} - 9 x_{4} &= 5\end{align*}
+
+\end{enumerate}
+
+\section{True/False}
+
+\section{More Difficult Problems}
+
+\section{Challenge Problems}
+
+\section*{True/False}
+
+\begin{enumerate}
+\item Elementary row operations cannot change the solution set of a
+  linear system.
+\item There is a linear system with exactly three solutions.
+\item If $A$ is the augmented matrix of an inconsistent linear system,
+  and $B$ is a matrix such that $A \sim B$ (that is, $A$ and $B$ are
+  row equivalent), then $B$ is the augmented matrix of an inconsistent
+  linear system.
+\item If $A \sim B$ and $A \sim C$ and $B$ and $C$ are in reduced
+  echelon form, then $B = C$.
+\item There is a unique sequence of row operations that reduces a
+  given matrix to reduced echelon form.
+\item If a general form solution of a linear system has a free
+  variable, then the system must have infinitely many solutions.
+\item A matrix may have different pivot positions depending on the
+  sequence of row operations used to attain a matrix in echelon form.
+\item A linear system over 3 variables and 2 equations must be
+  consistent.
+\item If the coefficient matrix of a linear system as more rows than
+  columns, then the system must have infinitely many solutions.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}
+\item
+  For what values of the coefficient $h$ is the following system
+  inconsistent?
+  \begin{align*}
+    x + 4y &= -1 \\
+    3x - hy &= 7
+  \end{align*}
+  Is there a value of $h$ for which the above system has infinitely
+  many solutions? Justify your answer.
+\item
+  Consider the following linear system with two unknown coefficients
+  $h$ and $k$.
+  \begin{align*}
+    hx + 2y &= 1 \\
+    3x + 9y &= k
+  \end{align*}
+  \begin{enumerate}
+  \item Determine values of $h$ and $k$ so that the above linear
+    system has no solutions.
+  \item Determine values of $h$ and $k$ so that the above linear
+    system has exactly one solution.
+  \item Determine values of $h$ and $k$ so that the above linear
+    system has infinitely many solutions.
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}
+\item <<problem10>>
+\item Determine what must hold of $a$, $b$, $c$, $d$, $f$, and $g$ so
+  that the following system is inconsistent.
+  \begin{align*}
+    ax + by &= f \\
+    cx + dy &= g
+  \end{align*}
+\end{enumerate}
+
+\chapter{Vector Equations}
+
+\chapter{Matrix-Vector Equations}
+
+\chapter{Linear Independence}
+
+\chapter{Linear Transformations}
+
+\chapter{Matrix Algebra}
+
+\chapter{LU Factorization}
+
+\chapter{Markov Chains}
+
+\chapter{Vector Spaces}
+
+\chapter{Eigenvectors}
+
+\chapter{Analytic Geometry}
+
+\chapter{Least Squares}
+
+\chapter{Singular Value Decomposition}
+
+\end{document}
