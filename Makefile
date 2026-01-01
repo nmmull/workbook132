@@ -19,7 +19,7 @@ check:
 	fi
 
 .PHONY: promote
-promote: build check
+promote: check
 	mv main.tex main-template.tex
 
 .PHONY: clean
