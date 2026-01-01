@@ -20,7 +20,7 @@ check:
 
 .PHONY: promote
 promote: check
-	mv main.tex main-template.tex
+	cp main.tex main-template.tex
 
 .PHONY: clean
 clean:
