@@ -1,0 +1,191 @@
+\section{Basic Exercises}
+
+Compute the matrix-vector multiplication $A\mathbf v$ where $A$ and $\mathbf v$ are given below.
+If it is not possible to multiply $A$ with $\mathbf v$, then explain why.
+\begin{enumerate}
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      -10 & 6 & 2 & 8 \\
+      -1 & 3 & 4 & 5 \\
+      0 & -2 & 0 & -9
+    \end{bmatrix}
+    \quad
+    \mathbf v = \begin{bmatrix} 4 \\ -5 \\ 3 \\ 1 \end{bmatrix}
+\end{align*}
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      6 & 1 & -8 & -3 \\
+      5 & 0 & -9 & -4
+    \end{bmatrix}
+    \quad
+    \mathbf v = \begin{bmatrix} -6 \\ 2 \end{bmatrix}
+\end{align*}
+\end{enumerate}
+Determine a general form solution for the matrix equation $A\mathbf x = \mathbf b$ where $A$ and $\mathbf b$ are given below.
+If this equation has no solutions then write \textit{NO SOLUTION}.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      1 & -3 & 1 & -9 \\
+      1 & -2 & 0 & -5 \\
+      -3 & 8 & -1 & 19 \\
+      -2 & 4 & 0 & 10
+    \end{bmatrix}
+    \quad
+    \mathbf b = \begin{bmatrix} 3 \\ 7 \\ -18 \\ -14 \end{bmatrix}
+\end{align*}
+\item \faCalculator
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      1 & 1 & 3 & 1 & -7 & 1 \\
+      -5 & -4 & -14 & -3 & 24 & -8\\
+      0 & -2 & -2 & -3 & 21 & 3 \\
+      -6 & -3 & -15 & -2 & 11 & -8
+    \end{bmatrix}
+    \quad
+    \mathbf b =
+    \begin{bmatrix}
+      7 \\ -16 \\ -20 \\ -27
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following matrices, Determine if its columns have full span, i.e., given a matrix in $\mathbb R^{m \times n}$, determine if the columns span $\mathbb R^m$.
+\begin{enumerate}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 \\
+      2 & 5
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -5 & 4\\
+      -1 & 6 & -3\\
+      -2 & 13 & -7\\
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 0 & 4 \\
+      -1 & -1 & 2 & 9 \\
+      -1 & -2 & 1 & 1 \\
+      0 & 2 & 6 & 36
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      8 & 3 & 8 \\
+      8 & -4 & 4 \\
+      -2 & 1 & -5 \\
+      -5 & -7 & -10 \\
+      -8 & 9 & 1
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  For $A \in \mathbb R^{m \times n}$ where $m > n$, it is not possible for the columns of $A$ to span $\mathbb R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is inconsistent for some vector $\mathbf b$, then it is not possible for the columns of $A$ to span $\mathbb R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has infinitely many solutions, then the columns of $A$ span $\mathbb R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has infinitely many solutions, then $\{ \mathbf v : A\mathbf v = \mathbf 0\} = \mathbb R^n$.
+\item
+  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, let $[A \ B] \in \mathbb R ^ {m \times 2n}$ be the matrix obtained by horizontally stacking $A$ and $B$.
+  If $A\mathbf x = \mathbf b$ is consistent and $B\mathbf x = \mathbf b$ is consistent, then so is $[A \ B] \mathbf x = \mathbf b$.
+\item
+  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, if $[A \ B]\mathbf x = \mathbf b$ is consistent then $A\mathbf x = \mathbf b$ is consistent or $B \mathbf x = \mathbf b$ is consistent.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is inconsistent for some vector $\mathbf b$, then $A$ does not have a pivot position in every column.
+\end{enumerate}
+
+\section{More Difficult Problems}
+
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    A
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4
+    \end{bmatrix}
+  \end{displaymath}
+  For each of the following shapes, determine a concrete matrix $A$ so that the above equation holds, where $\blacksquare$ represents a nonzero entry.
+  {
+    \newcommand{\bs}{\blacksquare}
+    \begin{enumerate}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&0&0&0 \\
+          0&\bs&0&0 \\
+          0&0&\bs&0 \\
+          0&0&0&\bs
+        \end{bmatrix}
+      \end{displaymath}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&0&0&0 \\
+          \bs&\bs&0&0 \\
+          \bs&\bs&\bs&0 \\
+          \bs&\bs&\bs&\bs
+        \end{bmatrix}
+      \end{displaymath}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&\bs&\bs&\bs \\
+          \bs&\bs&\bs&0 \\
+          \bs&\bs&0&0 \\
+          \bs&0&0&0 \\
+        \end{bmatrix}
+      \end{displaymath}
+    \end{enumerate}
+  }
+\item \faCalculator \
+  Any three distinct points in the plane define a \textit{unique} quadratic equation.
+  Given three points $(x_1, y_1)$, $(x_2, y_2)$ and $(x_3, y_3)$, the equation $y = ax^2 + bx + c$ that passes through these three points is given by the solution to the following matrix equation.
+  \begin{align*}
+    \begin{bmatrix}
+      x_1^2 & x_1 & 1	\\
+      x_2^2 & x_2 & 1	\\
+      x_3^2 & x_3 & 1
+    \end{bmatrix}
+    \begin{bmatrix} a \\ b \\ c \end{bmatrix}
+    =
+    \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+  \end{align*}
+  Use it to determine the unique quadratic equation which passes through the points $(2, 13)$, $(3, 25)$ and $(-2, 5)$.
+\item
+  Determine the RREF of the following matrix in terms of $x$, $y$, assuming $x \not = 1$.
+  \begin{align*}
+    \begin{bmatrix}
+      x^2 & x & 1 & y \\
+      1 & 1 & 1 & 1 \\
+      \left(\frac{x + 1}{2}\right)^2 & \frac{x + 1}{2} & 1 & \frac{y + 1}{2}
+    \end{bmatrix}
+  \end{align*}
+  \textit{Hint:} Don't try to row reduce it. Think in terms of polynomial interpolation.
+\end{enumerate}
+\section{Challenge Problems}

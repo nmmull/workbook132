@@ -1,0 +1,109 @@
+\section{Basic Exercises}
+
+Determine if the following collections of vectors are linearly dependent.
+If they are write a dependence relation, i.e., determine linear combination of the given vectors which sums to $\mathbf 0$.
+\begin{enumerate}
+\item
+  \begin{align*}
+    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+    \quad
+    \mathbf{v}_{2} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix}
+      1 \\ -1 \\ 2
+    \end{bmatrix}
+    \qquad
+    \mathbf v_2 =
+    \begin{bmatrix}
+      -1 \\ 4 \\ -3
+    \end{bmatrix}
+    \qquad
+    \mathbf v_3 =
+    \begin{bmatrix}
+      -3 \\ 9 \\ -8
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}
+    \quad
+    \mathbf{v}_{2} = \begin{bmatrix} -3 \\ 7 \\ -2 \end{bmatrix}
+    \quad
+    \mathbf{v}_{3} = \begin{bmatrix} -6 \\ 15 \\ -3 \end{bmatrix}
+    \quad
+    \mathbf{v}_{4} = \begin{bmatrix} -1 \\ 3 \\ 1 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section{True/False}
+\trueFalseHeader
+\begin{enumerate}[resume]
+\item
+  For $A \in \mathbb R^{m \times n}$, if the columns of $A$ are linearly dependent, then they do not span $\mathbb R^m$.
+\end{enumerate}
+
+\section{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine all values of $h$ for which the following set of vectors is linearly dependent.
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix} 1 \\ 9 \\ -3 \end{bmatrix}
+    \qquad
+    \mathbf v_2 =
+    \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}
+    \qquad
+    \mathbf v_3 =
+    \begin{bmatrix} -2 \\ h \\ -6 \end{bmatrix}
+    \qquad
+  \end{align*}
+\item
+  Determine three \textit{nonzero} vectors $\mathbf v_1$, $\mathbf v_2$, and $\mathbf v_3$ in $\mathbb R^3$ such that
+  \begin{itemize}
+  \item
+    $\{\mathbf v_1, \mathbf v_2, \mathbf v_3\}$ is linearly dependent and
+  \item
+    $\mathbf v_1$ cannot be written as a linear combination of $\mathbf v_2$ and $\mathbf v_3$.
+  \end{itemize}
+\item \faCalculator \
+  Consider the following matrix, presented as a SymPy array.
+  \begin{lstlisting}
+  import sympy
+  a = sympy.Matrix(
+      [[ 13,  -19,  19,  16,   5,   1,  10,   5,  15],
+       [-11,   -7, -10,   7,   2,  -8, -10, -19,   6],
+       [ -5,   10,  -7,   2,  -8,   2, -15, -16, -11],
+       [ 17,  -13,   9,  13,  19,   8,  -3,  -9,   0],
+       [  9,  -18,   5,   1,   4,  14,   9,   8,  -4],
+       [  8,   14,  17,   5,  -6,   7, -13,   2,  12],
+       [ 18,   12,  -7,   2, -10,  15, -12,   1, -12],
+       [ 19,  -12,   1, -16,   2,  -6,  -4,  17,  15],
+       [-19,   -6, -16, -20, -20,  -3,   7,   3,  14],
+       [  6,    8, -15,   5,  -5,   8, -14,   5, -19]])\end{lstlisting}
+  \begin{enumerate}
+  \item Determine if the columns of this matrix span all of $\mathbb R^{10}$. Justify your answer.
+  \item Determine if the columns of this matrix linearly independent. Justify your answer.
+  \end{enumerate}
+\end{enumerate}
+
+\section{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine all values of $h$ for which the following set of vectors is linearly dependent.
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix} 1 \\ -1 \\ h \end{bmatrix}
+    \qquad
+    \mathbf v_2 =
+    \begin{bmatrix} 4 \\ 0 \\ 2 \end{bmatrix}
+    \qquad
+    \mathbf v_3 =
+    \begin{bmatrix} 13 \\ h \\ -1 \end{bmatrix}
+    \qquad
+  \end{align*}
+\end{enumerate}

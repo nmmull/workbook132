@@ -21,7 +21,40 @@
 %% \renewcommand{\theenumi}{\Alph{enumi}}
 %% \renewcommand{\labelitemi}{$\triangleright$}
 
+\usepackage{fontawesome}
 
+% TAKEN FROM OVERLEAF DOCUMENTATION
+% https://www.overleaf.com/learn/latex/Code_listing
+\usepackage{listings}
+\lstset{language=Python}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\newcommand{\trueFalseHeader}{
+  Determine if each statement is \textbf{true} or \textbf{false} and justify your answer.
+  In particular, if the statement is false, provide a counterexample if possible.
+}
 
 \usepackage{hyperref}
 \usepackage{cleveref}
@@ -37,401 +70,16 @@
 TODO. write a preface.
 
 \chapter{Linear Systems}
+\input{linear-systems.tex}
 
-\section{Definitions}
-
-\section{Basic Problems}
-
-For each of the following linear systems, determine its coefficient matrix and its augmented matrix.
-\begin{enumerate}
-\item
-  \begin{align*}
-    2 x_{1} - 6 x_{2} &= -4 \\
-    6 x_{1} + 8 x_{2} &= -7
-  \end{align*}
-\item
-  \begin{align*}x_{1} + 8 x_{2} + 7 x_{3} &= -1 \\
-    4 x_{1} - 9 x_{2} &= 8 \\
-    7 x_{1} - 7 x_{2} - 3 x_{3} &= 10
-  \end{align*}
-\item
-  \begin{align*}
-    x_{1} - 2x_{2} - 2x_{3} &= 2 \\
-    2x_{1} - 3x_{2} - 5x_{3} &= 2 \\
-    -2x_{1} + 2x_{2} + 7x_{3} &= -1
-  \end{align*}
-\item
-  \begin{align*}
-    - 8 x_{1} + 6 x_{2} + x_{3} + 7 x_{4} + 10 x_{5} &= 8 \\
-    - 4 x_{2} - 4 x_{3} - x_{4} + x_{5} &= -8 \\
-    7 x_{1} + x_{2} - 2 x_{3} - 8 x_{4} + 7 x_{5} &= 9 \\
-    - 4 x_{1} - 7 x_{2} + 5 x_{3} + 2 x_{4} - 9 x_{5} &= -4
-  \end{align*}
-\end{enumerate}
-For each of the following linear systems, verify that the given point is a solution.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    x_{1} - 2x_{2} + x_{3} - 2x_{4} &= -9 \\
-    x_{1} - x_{2} - x_{3} - 2x_{4} &= -10 \\
-    -3x_{1} + 8x_{2} - 6x_{3} + 4x_{4} &= 21 \\
-    2x_{2} - 7x_{3} + 7x_{4} &= 13 \\
-  \end{align*}
-  \begin{align*}
-    s = (1, 3, 2, 3)\\
-  \end{align*}
-\end{enumerate}
-For each of the following linear systems, demonstrate that it has a unique solution.
-Additionally, determine the solution.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    3 x_{1} + 6 x_{2} &= -15 \\
-    - x_{1} + x_{2} &= 5
-  \end{align*}
-\item
-  \begin{align*}
-    2x + 4y &= 29 \\
-    -6x - 10y &= -75
-  \end{align*}
-\item
-  \begin{align*}
-    x + 3y - 3z &= -2 \\
-    2x + 7y + 7z &= -5 \\
-    x - 2y - z &= 3
-  \end{align*}
-\item
-  \begin{align*}
-    3x - 4y + 3z &= -9 \\
-    6x + 7y - 3z &= 0 \\
-    x + 10z &= -21
-\end{align*}
-\item
-  \begin{align*}
-    - 3 x_{1} + 6 x_{3} &= 12 \\
-    3 x_{1} + 3 x_{2} - 12 x_{3} &= -21 \\
-    2 x_{1} - 6 x_{2} + 10 x_{3} &= 16
-  \end{align*}
-\item
-  \begin{align*}
-    - 3 x_{1} + 6 x_{2} &= 9 \\
-    3 x_{1} - 8 x_{2} &= -9 \\
-    2 x_{2} + 6 x_{3} &= 18
-  \end{align*}
-\item
-  \begin{align*}
-    x_{1} - 2x_{2} - 2x_{3} &= -7 \\
-    -x_{1} + 3x_{2} + 2x_{3} &= 10 \\
-    2x_{1} - 6x_{2} - 3x_{3} &= -18
-  \end{align*}
-\item
-  \begin{align*}
-    - 3 x_{1} - 6 x_{3} + 9 x_{4} &= -6 \\
-    - x_{1} + 2 x_{2} - 3 x_{4} &= 8 \\
-    - 2 x_{1} - 9 x_{2} - 19 x_{3} + 45 x_{4} &= -61 \\
-    x_{1} - 3 x_{2} + 5 x_{3} - 9 x_{4} &= 5
-  \end{align*}
-\end{enumerate}
-For each of the following matrices, apply the given row operations from top to bottom.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    \begin{bmatrix}
-      9 & 5 & -7 & -5 & -9 \\
-      5 & -7 & 1 & -2 & -9 \\
-      5 & 1 & -10 & 6 & -5 \\
-      5 & 7 & -5 & 2 & 1
-    \end{bmatrix}
-  \end{align*}
-  \begin{align*}
-    R_{4} &\gets -R_{4} \\
-    R_{2} &\gets R_{2} - 2R_{3} \\
-    R_{2} &\gets R_{2} - 5R_{4} \\
-    R_{3} &\gets R_{3} + 3R_{4} \\
-    R_{3} &\leftrightarrow R_{2}
-  \end{align*}
-\end{enumerate}
-For each of the following RREFs, determine a general form solution, i.e., find a general form solution for a linear system whose augmented matrix is row equivalent to the given matrix.
-\begin{enumerate}[resume]
-  \item
-    \begin{align*}
-      \begin{bmatrix}
-        1 & 1 & 0 & 0 & 0 & -4 & 5 & -3 \\
-        0 & 0 & 1 & 0 & 0 & 1 & 3 & -4 \\
-        0 & 0 & 0 & 0 & 1 & 5 & -3 & 2 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-        0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
-      \end{bmatrix}
-    \end{align*}
-\end{enumerate}
-For each of the following matrices, determine its row-reduced echelon form.
-You must include the intermediate matrices and row operations you used.
-\begin{enumerate}[resume]
-  \item
-    \begin{align*}
-      \begin{bmatrix}
-        1 & -1 & -2 & 1 \\
-        -1 & 2 & 4 & 0 \\
-        2 & -3 & -6 & 2 \\
-        -2 & 1 & 2 & -1
-      \end{bmatrix}
-    \end{align*}
-\end{enumerate}
-For each of the following linear systems, determine
-\begin{itemize}
-\item its augmented matrix;
-\item the row-reduced echelon form of its augmented matrix;
-\item whether it has \textbf{no solutions}, a \textbf{unique solution}, or \textbf{infinitely many solutions}.
-\end{itemize}
-You may use a calculator/computer (e.g., \texttt{a.rref()} using SymPy) to determine the RREF.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    x_1 - 2x_2 + 5x_3 &= 6 \\
-    -2x_1 + 6x_2 - 11x_3 + 7x_4 &= -8 \\
-    5x_1 - 10 x_2 + 25x_3 + 3x_4 &= 30
-  \end{align*}
-\item
-  \begin{align*}
-    x_1 - 3x_2 + 4x_3 &= 0 \\
-    -x_1 + 6x_2 + x_3 &= 4 \\
-    23x_2 + 5x_3 &= 9
-  \end{align*}
-\item
-  \begin{align*}
-    x_1 + 5x_2 + 3x_3 &= -4 \\
-    x_1 + 6x_2 + 7x_3 &= -13 \\
-    -2x_1 - 12 x_2 - 14 x_3 &= 25
-  \end{align*}
-\end{enumerate}
-For each of the following pairs of matrices, determine a sequence of elementary row operations from the left matrix to the right matrix.
-You must including the intermediate matrices and row operations used.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    \begin{bmatrix}
-      -4 & -7 & 4 \\
-      3 & 8 & 2 \\
-      -10 & 1 & -9
-    \end{bmatrix}
-    \sim
-    \begin{bmatrix}
-      3 & 8 & 2 \\
-      -14 & -6 & -5 \\
-      -10 & 1 & -9
-    \end{bmatrix}
-  \end{align*}
-\item
-  \begin{align*}
-    \begin{bmatrix}
-      1 & 2 & -1 & 5 \\
-      0 & 1 & 0 & 1 \\
-      0 & 0 & 0 & 5 \\
-      2 & 2 & 1 & 1
-    \end{bmatrix}
-    \sim
-    \begin{bmatrix}
-      3 & 4 & 0 & 6 \\
-      4 & 4 & 2 & 2 \\
-      0 & -1 & 0 & 4 \\
-      0 & 1 & 0 & 1
-    \end{bmatrix}
-  \end{align*}
-\end{enumerate}
-For each the following linear systems, determine a general form solution for it by first determining the reduced echelon form of its augmented matrix.
-If this system has no solutions then write \textit{NO SOLUTION}.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    x_{1} - 6x_{2} + x_{4} &= 2 \\
-    2x_{1} - 12x_{2} + x_{3} - 4x_{4} &= 7 \\
-    x_{1} - 6x_{2} - 2x_{3} + 13x_{4} &= -4
-  \end{align*}
-\end{enumerate}
-
-\section{True/False}
-
-Determine if each statement is \textbf{true} or \textbf{false} and justify your answer.
-In particular, if the statement is false, provide a counterexample if possible.
-
-\begin{enumerate}[resume]
-\item
-  Elementary row operations cannot change the solution set of a linear system.
-\item
-  There is a linear system with exactly three solutions.
-\item
-  If $A$ is the augmented matrix of an inconsistent linear system, and $B$ is a matrix such that $A \sim B$ (that is, $A$ and $B$ are row equivalent), then $B$ is the augmented matrix of an inconsistent linear system.
-\item
-  If $A \sim B$ and $A \sim C$ and $B$ and $C$ are in reduced echelon form, then $B = C$.
-\item
-  There is a unique sequence of row operations that reduces a given matrix to reduced echelon form.
-\item
-  If a general form solution of a linear system has a free variable, then the system must have infinitely many solutions.
-\item
-  A matrix may have different pivot positions depending on the sequence of row operations used to attain a matrix in echelon form.
-\item
-  A linear system over 3 variables and 2 equations must be consistent.
-\item
-  If the coefficient matrix of a linear system as more rows than columns, then the system must have infinitely many solutions.
-\end{enumerate}
-
-\section{More Difficult Problems}
-\begin{enumerate}[resume]
-\item
-  Determine the slope-intercept form of the line equation which defines the intersection of the plane
-  \begin{align*}
-    2x + 3y + 3z = 6
-  \end{align*}
-  with the $xy$-plane.
-\item
-  For what values of the coefficient $h$ is the following system inconsistent?
-  \begin{align*}
-    x + 4y &= -1 \\
-    3x - hy &= 7
-  \end{align*}
-  Is there a value of $h$ for which the above system has infinitely many solutions? Justify your answer.
-\item
-  Consider the following linear system with two unknown coefficients $h$ and $k$.
-  \begin{align*}
-    hx + 2y &= 1 \\
-    3x + 9y &= k
-  \end{align*}
-  \begin{enumerate}
-  \item Determine values of $h$ and $k$ so that the above linear system has no solutions.
-  \item Determine values of $h$ and $k$ so that the above linear system has exactly one solution.
-  \item Determine values of $h$ and $k$ so that the above linear system has infinitely many solutions.
-  \end{enumerate}
-\item
-  Consider the following general form solution.
-  \begin{align*}
-    x_{1} &= -6 + 6x_{3} + 2x_{5} \\
-    x_{2} &= 4 + 4x_{3} + 6x_{5} \\
-    x_{3} &\text{ is free} \\
-    x_{4} &= -4 + 5x_{5} \\
-    x_{5} &\text{ is free}
-  \end{align*}
-  Determine a general form solution that describes the same solution set but in which $x_1$ is free.
-\item
-  Suppose you're investigating a claim that, out of five competing car companies who purchase engine parts from the same suppliers, one purportedly \textit{overestimated} their total spending by \textdollar 1,300,000.
-  Companies are required to report their total spending, and you've been able to determine how many units (× 10,000) of each part that each company has purchased.
-  You haven't been unable to determine how much each item costs per unit (it's an industry secret), but you can assume that each company pays the same amount per unit.
-  Given the following data, which company is falsifying their records?
-  Justify our answer.
-  The total amount spent by each company in the table below is multiplied by \textdollar 100,000.
-  You may use a calculator to determine any RREFs.
-  \begin{center}
-    \begin{tabular}{|c|r|r|r|r|r|r|}
-      \hline
-      Co. & Part 1 & Part 2 & Part 3 & Part 4 & Part 5 & Total Spent\\
-      \hline
-      A & 15 & 3 & 24 & 46 & 182 & 1013 \\
-      B & 5 & 3 & 14 & 25 &100 & 552 \\
-      C & 15 & 3 & 24 & 46 &188 & 1038 \\
-      D & 5 & 0 &  5 & 10 & 40 & 225 \\
-      E & 15 & 3 & 26 & 47 &190 & 1056 \\
-      \hline
-    \end{tabular}
-  \end{center}
-\end{enumerate}
-
-\section{Challenge Problems}
-
-\begin{enumerate}[resume]
-\item
-  Consider the following pair of linear systems.
-  \begin{align*}
-    ax + by &= c \\
-    dx + ey &= f
-  \end{align*}
-  \begin{align*}
-    ax + by - cz = 0 \\
-    dx + ey - fz = 0
-  \end{align*}
-  \begin{enumerate}
-  \item Demonstrate that if the first system has a solution, then so does the second one.
-  \item
-    Give \textbf{nonzero} values to $a$ through $f$ such that the second system has a solution, but the first does not.
-    Present your solution as an augmented matrix for the first system, i.e., of the form
-    \begin{displaymath}
-      \begin{bmatrix}
-        a & b & c \\
-        d & e & f
-      \end{bmatrix}
-    \end{displaymath}
-  \end{enumerate}
-\item
-  Consider the following pair of linear systems.
-  \begin{align*}
-    x_1 - 2x_2 &= 3 \\
-    4x_1 + x_2 &= 21
-  \end{align*}
-  \begin{align*}
-    10x_3 + 2x_4 &= x_1 \\
-    (-8)x_3 + 9x_4 &= x_2
-  \end{align*}
-  \begin{enumerate}
-  \item Solve the first system of linear equations (in $x_1$ and $x_2$) and write down the augmented matrix of the second system with the solutions of $x_1$ and $x_2$ substituted in.
-  \item
-    Determine the augmented matrix of a \textit{single} system of linear equations \textit{with all four equations} in the variables $x_1$, $x_2$, $x_3$, $x_4$.
-    Describe the relationship between this matrix and the one in the previous part.
-\end{enumerate}
-\item
-  Determine what must hold of $a$, $b$, $c$, $d$ so that the following linear system has exactly one solution.
-  \begin{align*}
-    ax + by &= 0 \\
-    cx + dy &= 0
-  \end{align*}
-\item
-  Determine an inconsistent linear system in 3 variables such that every pair of equations is consistent.
-  That is, give values for $a$ through $l$ in the system
-  \begin{align*}
-    ax + by + cz = d \\
-    ex + fy + gz = h \\
-    ix + jy + kz = l
-  \end{align*}
-  such that the system is inconsistent, but each pair of equations forms a consistent system.
-  Present your solution to each part as the an augmented matrix, i.e., of the form
-  \begin{displaymath}
-    \begin{bmatrix}
-      a & b & c & d \\
-      e & f & g & h \\
-      i & j & k & l \\
-    \end{bmatrix}
-  \end{displaymath}
-  \begin{enumerate}
-  \item Achieve this with no more than 5 nonzero values for $a$ through $l$.
-  \item Achieve this with all nonzero values for $a$ through $l$.
-  \end{enumerate}
-\item
-  Consider an arbitrary linear system in three variables:
-  \begin{align*}
-    ax + by + cz = d \\
-    ex + fy + gz = h \\
-    ix + jy + kz = l
-  \end{align*}
-  Show that if $(s_x, s_y, s_z)$ and $(t_x, t_y, t_z)$ are solutions to the above system, then
-  \begin{displaymath}
-    \left(\frac{s_x + t_x}{2}, \frac{s_y + t_y}{2}, \frac{s_z + t_z}{2} \right)
-  \end{displaymath}
-  is also a solution.
-  Describe why $(s_x, s_y, s_z) \not = (t_x, t_y, t_z)$ implies the system has infinitely many solutions.
-\item
-  One way to describe a line in 3 dimensions is to use a parameter $t$.
-  That is, after fixing values $a_x$, $b_x$, $a_y$, $b_y$, $a_z$, and $b_z$, a line can be described as all points of the form
-  \begin{displaymath}
-    (a_xt + b_x, a_yt + b_y, a_zt + b_z)
-  \end{displaymath}
-  for any real value of $t$.
-  Give a pair of 3 dimensional linear equations (each of which represents a plane in $\mathbb R^3$) whose intersection is exactly the line whose points are defined by the above parametric form.
-  \textit{Hint:} The line above can be thought of as a system in the variables $x$, $y$, $z$, and $t$, e.g., one of its equations is $x - a_xt = b_x$. Write $t$ in terms of $x$ and substitute this value for $t$ into the other equations.
-
-\end{enumerate}
-
-\chapter{Vector Equations}
+\chapter{Vector Equations and Spans}
+\input{vector-equations.tex}
 
 \chapter{Matrix-Vector Equations}
+\input{matrix-equations.tex}
 
 \chapter{Linear Independence}
+\input{linear-independence.tex}
 
 \chapter{Linear Transformations}
 
