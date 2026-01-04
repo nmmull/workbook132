@@ -1,0 +1,494 @@
+\section{Basic Exercises}
+
+Determine if $\mathbf v$ is an eigenvector of $A$.
+If it is, find its corresponding eigenvalue.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      6 & 1 \\
+      -3 & 2
+    \end{bmatrix}
+    \qquad
+    \vv = \vTwo {-1} 1
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -10 & -3 & -5 \\
+      5 & -5 & -3 \\
+      5 & 7 & -7
+    \end{bmatrix}
+    \qquad
+    \mathbf v = \vThree 3 0 {-5}
+\end{displaymath}
+\end{enumerate}
+Determine if $\lambda$ is an eigenvalue of $A$.
+If it is, find a basis for the corresponding eigenspace.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -2 & 2 \\
+      -1 & -4
+    \end{bmatrix}
+    \qquad
+    \lambda = -3
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      5 & -6 & 2 \\
+      1 & -2 & 2 \\
+      -1 & 6 & 2
+    \end{bmatrix}
+    \qquad
+    \lambda = 4
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      4 & -42 \\
+      1 & -9
+    \end{bmatrix}
+    \qquad
+    \lambda = -3
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      3 & -8 & 8 \\
+      8 & -13 & 8 \\
+      2 & -2 & -3
+    \end{bmatrix}
+    \qquad
+    \lambda = -5
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      3 & -8 & 8 \\
+      8 & -13 & 8 \\
+      2 & -2 & -3
+    \end{bmatrix}
+    \qquad
+    \lambda = 4
+  \end{displaymath}
+\end{enumerate}
+For the following matrices, determine all eigenvalues and bases for the corresponding eigenspaces.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -3 & 2 \\
+      -10 & 6
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 16 & -12 \\
+      0 & -3 & -2 \\
+      0 & 0 & -4
+    \end{bmatrix}
+  \end{displaymath}
+
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 0 & 0 \\
+      -1 & 3 & 0 \\
+      2 & 4 & 2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+Calculate the determinant of the following matrices.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -1 & 1 & -1 \\
+      3 & 3 & 3 \\
+      1 & -3 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & -3 & 0 \\
+      0 & 3 & -1 \\
+      2 & 0 & -1
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+For each of the following matrices, calculate the determinant of its
+inverse.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 3 & 4 \\
+      -5 & -4 & -3 \\
+      2 & 0 & -5
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following matrices, determine its characteristic
+polynomial.  Use the characteristic polynomial to calculate its
+determinant.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -1\\
+      -1 & 3 \\
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 & 0 \\
+      -1 & 5 & 0 & 0 & 0 \\
+      2 & 6 & 3 & 0 & 0 \\
+      10 & -15 & 3 & 4 & 0 \\
+      -1 & 5 & 2 & 5 & 5
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 2 & 10 & 5 \\
+      0 & 0 & 5 & -3 & 15 \\
+      0 & 0 & 16 & 6 & -1 \\
+      0 & 0 & 0 & 1 & 5\\
+      0 & 0 & 0 & 7 & 4
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      1 & 2 & 5 \\
+      0 & 1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  Every eigenspace of $A$ is a null space (potentially of some other
+  matrix).
+\item
+  Every matrix has at least one eigenvector.
+\item
+  Every matrix $A \in \mathbb R^{n \times n}$ has an eigenbasis, i.e.,
+  a set of eigenvectors that form a basis for $\mathbb{R}^n$.
+\item
+  Only square matrices can have eigenvectors.
+\item
+  If $0$ is an eigenvalue of $A$, then $A$ is not invertible.
+\item
+  The determinant of a matrix does not change under elementary row
+  operations.
+\item
+  If $\det (A^2) = 1$, then $\det (A) = 1$.
+\item
+  A matrix with characteristic polynomial $(x+2)^3$ has a single
+  eigenspace with dimension $3$.
+\item
+  For any square matrices $A$ and $B$, if $A \sim B$ then $\det(A) =
+  \det(B)$.
+\item
+  $\det(5A) = 5\det A$ for any square matrix $A$.
+\item
+  $\det(A^TA) \geq 0$ for any square matrix $A$.
+\item
+  $\det(A + B) = \det(A) + \det(B)$ for any square matrices $A$ and
+  $B$.
+\item
+  If $A$ is invertible, then $\det(ABA^{-1}) = \det(B)$.
+\end{enumerate}
+
+\section{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Let $A$ be the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      -17 & 28 & 14 \\
+      -7 & 11 & 7 \\
+      -7 & 14 & 4
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine if the following vectors are eigenvectors of $A$. For
+    the ones that are, find their associated eigenvalues.
+    \begin{displaymath}
+      \vv_1 = \vThree 1 1 1
+      \qquad
+      \vv_2 = \vThree 2 2 0
+      \qquad
+      \vv_3 = \vThree 2 1 1
+    \end{displaymath}
+  \item
+    Show that $-3$ is an eigenvalue of $A$ without doing any row
+    operations.  \textit{Hint:} Use the invertible matrix theorem.
+  \item
+    Find a basis for the eigenspace of $A$ corresponding to the
+    eigenvalue $-3$.
+\end{enumerate}
+\item Let $A$ and $B$ be square matrices such that $\det A = 3.5$ and
+  $\det B = -2$.  Compute the determinant of the matrix
+  $B(AB)^{-1}(AB)^TA$.
+\item Consider the following reduction sequence
+  \begin{align*}
+    R_1 &\gets R_1 + R_2 \\
+    \mathsf{swap}&(R_2, R_3) \\
+    R_3 &\gets R_3 + 5R_4 \\
+    R_2 &\gets -3R_2 \\
+    R_5 &\gets R_5 - 10R_3 \\
+    R_5 &\gets R_5 / 11 \\
+    \mathsf{swap}&(R_5, R_3) \\
+    \mathsf{swap}&(R_1, R_2) \\
+    R_4 &\gets R_4 + R_1 \\
+    R_2 &\gets 5R_2 \\
+    R_1 &\gets -R_1
+  \end{align*}
+  Suppose that $A \in \R^{5 \times 5}$ reduces to $U$ by this sequence
+  of reductions, where $U$ is in \textit{reduced} echelon form.  Given
+  $\rank A = 5$, determine $\det A$.
+\item
+  Let $A$ be as in the previous problem. Given $\rank A = 4$, determine $\det A$.
+\item
+  The characteristic polynomial of the following matrix is
+  $-\lambda^3+5\lambda^2-6\lambda$.
+  \begin{displaymath}
+    \begin{bmatrix}
+      0 & 3  & -3 \\
+      -2 & 6 & -4 \\
+      -2 & 3 & -1
+    \end{bmatrix}
+  \end{displaymath}
+  Find the eigenvalues and bases for the eigenspaces.
+\item
+  For each of the following statements, find a counterexample by giving
+  explicit $2 \times 2$ matrices $A$ and $B$ which falsify the
+  statement.  Justify your answer.
+  \begin{enumerate}
+  \item
+    $\det(A + B) = \det(A) + \det(B)$ for any matrices $A$ and $B$ in
+    $\R^{n\times n}$.
+  \item
+    For any square matrix $A$, if $\det(A - \lambda I) = (\lambda - 1)^2$,
+    then $\dim(\nul (A - I)) = 2$.
+  \item
+    For any matrices $A$ and $B$ in $\R^{n \times n}$, if $\det(A -
+    \lambda I) = \det(B - \lambda I)$ (i.e., they have the same
+    characteristic polynomial) then $A$ is similar to $B$.
+  \end{enumerate}
+\item
+  Let $A$ be a $5 \times 5$ matrix with characteristic polynomial
+  $(\lambda - 2)^2 (\lambda + 1)^2 \lambda$ and $\rank(A - 2I) =
+  \rank(A + I) = 3$.
+  \begin{enumerate}
+  \item
+    Determine $\rank A$. Justify your answer.
+  \item
+    Determine if $A$ is diagonalizable. Justify your answer.
+  \end{enumerate}
+\item
+  Suppose that $AP = PD$ for a square matrix $A$, diagonal matrix $D$,
+  and arbitrary $m \times n$ matrix $P$. Show that the nonzero columns
+  of $P$ are eigenvectors of $A$ and find their corresponding
+  eigenvalues in terms of entries of $D$.
+\item
+  Consider the following pair of vectors.
+  \begin{align*}
+    \vv_1 = \vFour 1 {-2} {-1} 3
+    \qquad
+    \vv_2 = \vFour 3 {-6} {-2} 2
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Determine the matrix equations whose solution set consists exactly
+    of those vectors which are orthogonal to $\vv_1$ and $\vv_2$.
+  \item
+    Determine a general-form solution for the matrix equation from the
+    previous part.
+  \item
+    Determine the dimension of the subspace of vectors orthogonal to
+    both $\vv_1$ and $\vv_2$
+  \end{enumerate}
+\item
+  Show that the angle between two vectors does not depend on their
+  length. In other words, show that for any pair of vectors $\vu$ and
+  $\vv$ in $\R^n$, the angle between them is equal to the angle
+  between $a\vu$ and $b\vv$ for any nonzero real numbers $a$ and $b$.
+\item
+  Suppose the eigenvalues of a $3 \times 3$ matrix $A$ are $\lambda_1
+  = 2$, $\lambda_2 = 1/2$, and $\lambda_3 = 1/4$ with corresponding
+  eigenvectors:
+  \begin{displaymath}
+    \vv_1 = \vThree 1 {-1} 3
+    \qquad
+    \vv_2 = \vThree {-3} 4 9
+    \qquad
+    \vv_3 = \vThree = 2 {-2} 4
+  \end{displaymath}
+  Given a starting state $\vx_0 = [8, -9, 6]^T$, give a closed form
+  expression for the state after $k$ iterations: $A^k \vx_0$. Describe
+  what happens as $k \to \infty$.
+\item
+  Recall that counterclockwise rotation by angle $\theta$ in the plane
+  can be implemented by the matrix below.
+  \begin{align*}
+    R_\theta = \begin{bmatrix}
+      \cos \theta & -\sin \theta \\
+      \sin \theta & \cos \theta
+    \end{bmatrix}
+  \end{align*}
+  Calculate $\det (R_\theta)$.
+  \textit{Hint.} The value does not depend on $\theta$.
+\item
+  Let $R_\theta$ be as in the previous problem.
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial of $R_\theta$ as a function
+    of $\theta$.
+  \item
+    Determine the values of $\theta$ for which $R_\theta$ has eigenvalues.
+    For those values, also determine bases for the corresponding eigenspaces.
+  \end{enumerate}
+\item
+  Give two $2 \times 2$ matrices where every nonzero vector is an
+  eigenvector.
+\item \faCalculator \
+  Let $A$ be a matrix such that
+  \begin{displaymath}
+    A \vThree 1 1 {-3} = \vThree {-1} {-1} 3
+    \qquad
+    A \vThree 0 1 1 = \vThree 0 1 1
+    \qquad
+    A \vThree 2 {-2} {-9} = \vThree 4 {-4} {-18}
+  \end{displaymath}
+  Without determining $A$, determine the vector
+  \begin{displaymath}
+    A^5 \vThree 3 0 {-11}
+  \end{displaymath}
+  You may use a computer, but you must show your work and justify your
+  answer.
+\item
+  Let $A$ be the matrix from the previous part.
+  Consider the basis
+  \begin{displaymath}
+    \cB =
+    \left\{
+    \vThree 1 1 {-3},
+    \vThree 0 1 1,
+    \vThree 2 {-2} {-9}
+    \right\}
+  \end{displaymath}
+  Determine the matrix $C$ such that $C[\vv]_{\cB} = A \vv$ for all $\vv \in \R^3$.
+\item
+Determine if the following matrix has an eigenbasis. Justify your
+answer.
+\begin{displaymath}
+  \begin{bmatrix}
+    1 & 2 & -4 & 1 \\
+    0 & 1 & 4 & 1 \\
+    0 & 0 & 0 & 3 \\
+    0 & 0 & 0 & 2
+  \end{bmatrix}
+\end{displaymath}
+\end{enumerate}
+
+\section{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Show that a pair of eigenvectors $\vv_1$ and $\vv_2$ with
+  distinct eigenvalues $\lambda_1$ and $\lambda_2$ is linearly
+  independent.
+\item
+  Show that the determinant formula from lecture is correct.
+  \textit{Hint:} Consider applying elementary row operations via left
+  multiplication by elementary row matrices, and use the fact that
+  \begin{displaymath}
+    \det (E_k \ldots E_2 E_1 A) = \det E_k \ldots \det E_2 \det E_1 \det A
+  \end{displaymath}
+\item
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 1 \\
+      1 & 0
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Verify that the following vectors form an eigenbasis of $A$.  Also
+    determine the eigenvalues for each eigenvector.
+    \begin{displaymath}
+      \vv_1 = \vTwo {\frac{1 + \sqrt{5}}{2}} 1
+      \qquad
+      \vv_2 = \vTwo {\frac{1 - \sqrt{5}}{2}} 1
+    \end{displaymath}
+  \item
+    Write the vector $\ve_1$ in terms of the eigenbasis you found.  In
+    other words, determine $\alpha_1$ and $\alpha_2$ such that
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 \\ 0
+      \end{bmatrix}
+      =
+      \alpha_1\vv_1 + \alpha_2 \vv_2
+    \end{displaymath}
+    \textit{Hint:} Calcuate $\vv_1 - \vv_2$.
+  \item
+    Write down a closed-form solution for the linear dynamical system
+    determined by $A$ with initial vector $\ve_1$.
+  \item \faCalculator \
+    If you look at the formula given by the second component of your
+    closed-form solution from the previous part, this gives a
+    \textit{non-recursive} definition for Fibonacci numbers.  Write
+    down this formula and use it to calculate $F_{20}$, the $20$th
+    fibonacci number (where $F_0 = 0$ and $F_1 = 1$).
+  \end{enumerate}
+\item
+  A Jordan block $J$ is a square matrix in $\R^{n \times n}$ of the following form.
+  \begin{displaymath}
+    \begin{bmatrix}
+      \alpha & 1 & & \\
+      & \alpha & \ddots & \\
+      & & \ddots & 1 \\
+      & & & \alpha
+    \end{bmatrix}
+  \end{displaymath}
+  where $\alpha \in \R$.
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial (in terms of $n$) of $J$.
+  \item
+    Determine the dimension of the eigenspace of $J$ for the
+    eigenvalue $\alpha$.
+  \item
+    Construct six matrices, each with the characteristic polynomial
+    $(\lambda - 3)^3(\lambda + 2)^2$, that achieve all possible
+    combinations of eigenspace dimensions for $\lambda = 3$ (1,2, or
+    3) and for $\lambda = 2$ (1 or 2).
+  \end{enumerate}
+\end{enumerate}

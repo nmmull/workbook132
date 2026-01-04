@@ -1,0 +1,73 @@
+Let $G = (V, E)$ be a graph with $n$ vertices $v_1, v_2, \dots, v_n$.
+In class we discussed the $n \times n$ adjacency matrix given by
+\begin{align*}
+A_{ij} =
+\begin{cases}
+1 & (v_i, v_j) \in E \\
+0 & (v_i, v_j) \not \in E
+\end{cases}
+\end{align*}
+There are many other matrices based on graphs. One is the $n \times n$
+*degree matrix* given by
+\begin{align*}
+D_{ij} =
+\begin{cases}
+\deg(v_i) & i = j\\
+0 & i \not = j
+\end{cases}
+\end{align*}
+where $\deg(v)$ is the number of edges adjacent to $v$.  Another is
+the $n \times n$ *Laplacian matrix* given by
+\begin{align*}
+L = D - A
+\end{align*}
+
+For the following two graphs, write down
+1. its adjacency matrix
+2. its degree matrix
+3. its Laplacian matrix
+4. the number of pivot columns in its Laplacian matrix (you can use a
+   computer to solve for this)
+
+** (5 points)
+#+ATTR_HTML: :width 300px
+[[file:graph1.jpg]]
+
+This graph is made up of two disjoint triangles, one with vertices
+$v_1, v_4, v_5$ and one with vertices $v_2, v_3, v_6$.
+
+** (5 points)
+#+ATTR_HTML: :width 300px
+[[file:graph2.jpg]]
+
+This graph is the same as the previous graph but with an additional
+edge connecting $v_3$ and $v_4$.
+
+
+
+
+
+Consider the following undirected unweighted graph.\footnote{Image generated with Graph Editor (\texttt{https://csacademy.com/app/graph\_editor/})}
+For this problem, you may use NumPy or solve by hand.
+If you use NumPy, you must include the code you used to compute each part.
+\begin{center}
+  \includegraphics[scale=0.4]{graph.png}
+\end{center}
+
+\begin{enumerate}
+\item (4 points) Write down the adjacency matrix $A$ for this graph.
+\item (4 points) Compute $A^2$ and $A^3$.
+\item (5 points)The \textit{Hadamard product} of two $m \times n$ matrices (denoted by $A \circ B$) is entry-wise multiplication (like `\texttt{*}' in NumPy).
+  So $(A \circ B)_{ij} = A_{ij} * B_{ij}$ for any indices $i$ and $j$.
+  Compute the value of
+  \begin{displaymath}
+    \frac 1 6 \left(\mathbf 1^T (A^2 \circ A) \mathbf 1\right)
+  \end{displaymath}
+  (Recall that $\mathbf 1$ is the all-ones vector.
+  In the case of this problem, it must be in $\mathbb R^6$.)
+\item (5 points) The \textit{trace} of a $n \times n$ matrix (denoted by $\mathsf{tr}(A)$) is the sum of the entries along it's diagonal. So
+  \begin{displaymath}
+    \mathsf{tr}(A) = A_{11} + A_{22} + \dots + A_{nn}.
+  \end{displaymath}
+  Compute the value of $\frac 1 6 \mathsf{tr}(A^3)$.
+\end{enumerate}

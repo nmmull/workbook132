@@ -1,0 +1,155 @@
+\section{Basic Exercises}
+
+Solve for all least-squares solutions of the equation $A\vx = \vb$ using the normal equations.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}-3 & 0\\0 & 3\\3 & -6\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}-3\\8\\3\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & -1 \\
+      1 & -1
+    \end{bmatrix}
+    \qquad
+    \vb = \vThree 4 2 0
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}1 & 1 & -4\\0 & 1 & -3\\-1 & -2 & 7\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}-7\\-10\\2\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}-1 & 1\\-3 & 1\\-3 & 0\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}1\\11\\15\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 0 & 1 \\
+      1 & 0 & 1 \\
+      1 & 0 & 1 \\
+      1 & 1 & 0 \\
+      1 & 1 & 0 \\
+      1 & 1 & 0 \\
+    \end{bmatrix}
+    \qquad
+    \vb =
+    \begin{bmatrix}
+      6 \\ 5 \\ 4 \\ 7 \\ 2 \\ 3
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  Determine the least squares linear fit to the following data points.
+  Sketch the graphs to verify your answer.  You should set up the
+  required matrix equations by hand, but you can use a computer to
+  determine the coefficients of your model.
+  \begin{displaymath}
+    \{(-5, 2), (-2, 1), (0, 0), (2, 4), (6, 6)\}
+  \end{displaymath}
+\item Determine the least squares quadratic fit to the data points
+  from the previous problem. Sketch the graphs to verify your answer.
+  You should set up the required matrix equations by hand, but you can
+  use a computer to determine the coefficients of your model.
+\item Determine the design matrix for the following function model
+  using the data points from the previous problem.
+  \begin{displaymath}
+    f(x) = \beta_12^x + \beta_2x\sin(x) + \beta_3x^2 + 7\beta_4
+  \end{displaymath}
+\item
+  Determine the least-squares fit model for the given data.  Round the
+  parameters to the nearest hundredth.
+  \begin{displaymath}
+    \{(-2, 0), (-1, 5), (0, 13), (1, 9), (2, 5), (3, 0)\}
+  \end{displaymath}
+\item
+  Determine the design matrix for the following function model using
+  the data points from the previous problem.
+  \begin{displaymath}
+    f(x) = \beta_1 \cos x + \beta_2 \sin x + \beta_3 x + \beta_4
+  \end{displaymath}
+\item Determine an orthogonal diagonalization of the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 1 \\
+      1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  Given any matrix equation $A\vx = \vb$, there always exists a
+  least-squares solution.
+\item
+  Given any matrix equation $A\vx = \vb$, there always exists a unique
+  least-squares solution.
+\item
+  A least-squares solution of $A\vx = \vb$ is a vector $\hat{\vx}$
+  that satisfies $A\hat{\vx} = \hat{\vb}$, where $\hat{\vb}$ is the
+  orthogonal projection of $\vb$ onto $\col A$.
+\item
+  Given a model function $f(x) = \beta_0 + \beta_1^2 x$, we may
+  minimize for least squares error by using the least squares solution
+  to a matrix equation.
+\item
+  If $X$ denotes the design matrix for a least squares regression
+  problem, then $X^T X$ is invertible.
+\item
+  There are orthogonally diagonalizable matrices that are not symmetric.
+\item
+  Every $n \times n$ symmetric matrix must has $n$ distinct eigenvalues.
+\item
+  For a symmetric matrix, the dimension of each eigenspace is equal to
+  the algebraic multiplicity of the corresponding eigenvalue.
+\item
+  $\|\vx\|^2$ is a quadratic form.
+\item
+  A positive definite quadratic form $Q(\vx)$ satisfies $Q(\vx) > 0$
+  for all $\vx \in \R^n$.
+\item
+  $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
+\end{enumerate}
+
+\section{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine a formula for the least-squares solution of $A\vx = \vb$
+  given that the columns of $A$ are orthonormal.  Furthermore, explain
+  why this solution is unique.
+\item
+  Let $C$ be an arbitrary $m \times n$ matrix of rank $k$ and let
+  $\mathbf b$ be an arbitrary vector in $\R^m$.  Determine the maximum
+  size of a linearly independent set of least squares solutions for
+  $C\mathbf x = \mathbf b$ where $\vb \not = \vzero$.  Justify your
+  answer.  Your solution should be given in terms of $m$, $n$, and
+  $k$.
+\item \faCalculator
+  Consider the following multivariate function model
+  \begin{displaymath}
+    f(x,y) = \beta_0 + \beta_1 x + \beta_2 y
+  \end{displaymath}
+  and solve for the real number parameters $\beta_0$, $\beta_1$, and
+  $\beta_2$ that minimize least squares error for the following data
+  points.
+  \begin{displaymath}
+    \{(-2,0,0), (0,0,3), (0,2,0), (-2, -3, 3), (1,5,-1)\}.
+  \end{displaymath}
+  Justify your answer.
+\end{enumerate}
+
+\section{Challenge Problems}

@@ -1,0 +1,385 @@
+\section{Basic Exercises}
+
+For each of the following linear transformations, its domain, codomain, and the matrix that implements it (i.e., determine the matrix $A$ such that the given transformation is $\mathbf x \mapsto A \mathbf x$).
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      x_1 \\ x_2 \\ x_3
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      x_1 + x_2 \\
+      -2x_1 - x_3 \\
+      x_1 + x_3
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{align*}
+    \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5} \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -9x_{1} + 4x_{2} + 5x_{3} - 3x_{4} + 2x_{5} \\
+      3x_{1} + 8x_{2} + 5x_{3} - 5x_{4} + 7x_{5} \\
+      -x_{1} + 5x_{2} - x_{3} + 4x_{4} + 8x_{5}
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -2x_2 + x_3 + x_4 \\ x_1 + x_3 \\ -3x_3 - 3x_4 \\ 9x_4
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+Let $T$ be a linear transformation with the following input-output behavior.
+\begin{align*}
+  T(\mathbf v_{1}) = \begin{bmatrix} -6 \\ 3 \\ -2 \\ -10 \end{bmatrix}
+  \quad
+  T(\mathbf v_{2}) = \begin{bmatrix} -5 \\ 1 \\ -2 \\ 9 \end{bmatrix}
+  \quad
+  T(\mathbf v_{3}) = \begin{bmatrix} 8 \\ -7 \\ 6 \\ 6 \end{bmatrix}
+\end{align*}
+Compute the following.
+\begin{enumerate}[resume]
+\item
+  $T(\mathbf v_1 + \mathbf v_2)$
+\item
+  $T(-3\mathbf v_{1} - \mathbf v_{2} - 2\mathbf v_{3})$.
+\end{enumerate}
+Let $T$ be a linear transformation with the following input-output behavior.
+\begin{align*}
+  T
+  \left(
+  \begin{bmatrix}
+    -3 \\ 9 \\ 5 \\ 4
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    -4 \\ 3 \\ 4
+  \end{bmatrix}
+  \qquad
+  T
+  \left(
+  \begin{bmatrix}
+    -9 \\ -5 \\ 0 \\ -7
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    0 \\ 1 \\ 2
+  \end{bmatrix}
+  \qquad
+  T
+  \left(
+  \begin{bmatrix}
+    9 \\ -1 \\ -2 \\ 4
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    3 \\ -3 \\ 7
+  \end{bmatrix}
+\end{align*}
+Compute the following
+\begin{enumerate}[resume]
+\item \faCalculator \
+  \begin{align*}
+    T
+    \left(
+    \begin{bmatrix}
+      30 \\ 0 \\ -7 \\ 22
+    \end{bmatrix}
+    \right)
+  \end{align*}
+\item \faCalculator \
+  \begin{align*}
+    T
+    \left(
+    \begin{bmatrix}
+      1 \\ 0 \\ 0 \\ 0
+    \end{bmatrix}
+    \right)
+  \end{align*}
+\end{enumerate}
+Determine the matrix that implements the linear transformation $T$, given its input-output behavior.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ -2 \end{bmatrix}\right)
+    = \begin{bmatrix} -3 \\ -1 \end{bmatrix}
+    \quad
+    T\left(\begin{bmatrix} 2 \\ -3 \end{bmatrix}\right)
+    = \begin{bmatrix} -4 \\ -1 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ -2 \\ -3 \end{bmatrix}\right)
+    = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+    \quad
+    T\left(\begin{bmatrix} 2 \\ -3 \\ -4 \end{bmatrix}\right)
+    = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+    \quad
+    T\left(\begin{bmatrix} 2 \\ -4 \\ -5 \end{bmatrix}\right)
+    = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix} \right)
+    = \begin{bmatrix} 3 \\ -3 \\ 4 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \right)
+    = \begin{bmatrix} 8 \\ 0 \\ 2 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} \right)
+    = \begin{bmatrix} -1 \\ -1 \\ -1 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T \left(\begin{bmatrix} -7 \\ -3 \end{bmatrix} \right)
+    = \begin{bmatrix} -4 \\ 3 \\ 4 \\ 0 \\ 1 \end{bmatrix}
+    \qquad
+    T \left(\begin{bmatrix} 9 \\ 4 \end{bmatrix} \right)
+    = \begin{bmatrix} 13 \\ 0 \\ 0 \\ 8 \\ 3 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each matrix, determine if its transformation is (a) one-to-one but not onto, (b) onto but not one-to-one, (c) both, or (d) neither. Justify your answer.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 1 & 3 \\
+      1 & 3 & 1 & 3 \\
+      1 & 5 & 1 & 4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 & 2 \\
+      2 & 3 & 5 \\
+      -1 & -3 & -3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      5 & 0 & 5 \\
+      0 & 0 & 0 \\
+      4 & 0 & 7
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & 1 \\
+      -2 & -2 \\
+      1 & 3 \\
+      1 & 4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 1 & 3 \\
+      0 & 0 & 3 \\
+      0 & 0 & 3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & -1 & 6 & 9 \\
+      2 & 5 & -5 & 13 & 22 \\
+      -3 & -4 & -3 & -16 & -19
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 1 & 3 & 0 \\
+      1 & 4 & 3 & 0 \\
+      0 & 0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -2 & 3 & -4 \\
+      0 & 5 & -6 &  7 \\
+      0 & 0 & -8 & 9 \\
+      0 & 0 & 0 & -10
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      12 & 45 & -3 & 20 & 1 \\
+      0 & 24 & 121 & 0 & -47 \\
+      0 & 0 & 252 & 44 & 46 \\
+      0 & 0 & 0 & 21 & -44 \\
+      0 & 0 & 0 & 0 & 11
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 \\
+      -13 & 6 & -39 & 4 \\
+      2 & 9 & 6 & 7 \\
+      5 & 4  & 15 & 16 \\
+      0 & 1 & 0 & 65 \\
+      1 & 1 & 1 & 1 \\
+      -12 & 3 & -36 & 33 \\
+      0 & 0 & 0 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+\end{enumerate}
+Draw the image of the unit square under the following linear transformations.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -2 & -2 \\
+      -1 & 0
+    \end{bmatrix}
+    \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  If $\mathbf x \mapsto A \mathbf x$ is one-to-one and onto, then $A$ is a square matrix.
+\item
+  If $\mathbf x \mapsto A \mathbf x$ is neither one-to-one or onto, and the reduced echelon form of $A$ only has $0$s and $1$s, then one of the columns of $A$ is $\mathbf 0$.
+\item
+  For any matrix $A \in \mathbb R^{m \times n}$ where $m > n$, it is not possible for the transformation $\mathbf x \mapsto A \mathbf x$ to be one-to-one.
+\end{enumerate}
+
+
+\begin{enumerate}[resume]
+\item
+  If $T : \mathbb R^m \to \mathbb R^n$ is a linear transformation and $T(\mathbf v) = A \mathbf v$ for all vectors $\mathbf v$ in the domain of $T$, then $A$ is an $m \times n$ matrix.
+\item
+  The matrix that implements a linear transformation is unique.
+\end{enumerate}
+
+\section{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine the matrix which implements the linear tranformation $T : \mathbb R^3 \to \mathbb R^3$ that reflects vectors across the $x_1x_2$-plane.
+\item
+  Determine the matrix which implements the linear transformation $T : \mathbb R^2 \to \mathbb R^4$ that repeats the input vector, e.g.,
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ 2 \end{bmatrix} \right)
+    = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 2 \end{bmatrix}
+  \end{align*}
+\item
+  Determine the matrix which implements the linear transformation $T : \mathbb R^2 \to \mathbb R^2$ that reflects vectors across the line $y = x$.
+\item
+  Determine the matrix which implements the linear transformation $T : \mathbb R^2 \to \mathbb R^2$ that reflects vectors across the line $y = \tan(\frac{3\pi}{8})x$.
+\item
+  Determine the matrix which implements the transformation $T : \mathbb R^4 \to \mathbb R^4$ that swaps the first and second entries of its input, e.g.,
+  \begin{align*}
+    T \left(\begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix} \right)
+    = \begin{bmatrix} 2 \\ 1 \\ 3 \\ 4 \end{bmatrix}
+  \end{align*}
+\item
+  Consider the following transformation.
+  \begin{align*}
+    \begin{bmatrix}
+      x \\ y \\ z
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      (x^3 + y^3 + z^3)^{1 / 3} \\ y + z
+    \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Demonstrate that the above transformation is homogeneous.
+  \item
+    Determine if the above transformation is not linear.
+    Justify your answer.
+  \end{enumerate}
+\item
+  Show that the transformation $T: \mathbb R^4 \to \mathbb R^4$ given by
+  \begin{displaymath}
+    \begin{bmatrix}
+      v_1 \\ v_2 \\ v_3 \\ v_4
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      \min(v_1, 100) \\
+      \min(v_2, 100) \\
+      \min(v_3, 100) \\
+      \min(v_4, 100) \\
+    \end{bmatrix}
+  \end{displaymath}
+  is not linear.
+\end{enumerate}
+
+\section{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine the matrices which implement the linear transformations that rotates vectors in $\mathbb R^3$ 120 degrees about
+  \begin{align*}
+    \mathrm{span}\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
+  \end{align*}
+  You should determine \textit{two} matrices, one for clockwise rotation and the other for counterclockwise rotation.
+\item
+  Determine the matrices which implement the linear transformations that reflects vectors across the plane defined by the linear equation $x + y + z = 0$, and then rotates vectors 60 degrees about
+  \begin{align*}
+    \mathrm{span}\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
+  \end{align*}
+  You should determine \textit{two} matrices, one for clockwise rotation and the other for counterclockwise rotation.
+\item
+  Determine the matrix which implements the linear transformation $T : \mathbb R^3 \to \mathbb R^3$ that reflects vectors across the plane defined by the linear equation $x + y + z = 0$.
+\item
+  Consider the following $\mathbb R^3$ rotation matrices.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      \cos 45^\circ & -\sin 45^\circ & 0 \\
+      \sin 45^\circ & \cos 45^\circ & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & \cos 180^\circ & -\sin 180^\circ \\
+      0 & \sin 180^\circ & \cos 180^\circ
+    \end{bmatrix}
+  \end{displaymath}
+  The matrix $A$ rotates vectors around the $x_3$-axis by 45 degrees, and $B$ rotates vectors around the $x_1$-axis by 180 degrees.
+  \begin{enumerate}
+  \item
+    Determine $A^{-1}$.
+  \item
+    Calculate $ABA^{-1}$.
+  \item
+    Describe what the transformation implemented by $ABA^{-1}$ does geometrically.
+  \end{enumerate}
+\end{enumerate}
