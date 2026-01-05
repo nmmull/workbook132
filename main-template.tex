@@ -893,7 +893,7 @@ coefficients).
   such a plane is called \textit{affine}.  Determine vectors $\vb$,
   $\vv_1$, and $\vv_2$ such that every point in the plane represented
   by the above equation (that is, every point $(a, b, c)$ such that $a
-  + b + c = 5$) can be written as $\mathbf b + \vv$ where $\vv$ is in
+  + b + c = 5$) can be written as $\vb + \vv$ where $\vv$ is in
   $\vspan \{\vv_1, \vv_2\}$, i.e.,
   \begin{displaymath}
     \{(x, y, z) : x + y + z = 5\}
@@ -929,7 +929,7 @@ with $\vv$, then explain why.
 \end{align*}
 \end{enumerate}
 Determine a general form solution for the matrix equation $A\vx
-= \mathbf b$ where $A$ and $\mathbf b$ are given below.  If this
+= \vb$ where $A$ and $\vb$ are given below.  If this
 equation has no solutions then write \textit{NO SOLUTION}.
 \begin{enumerate}[resume]
 \item
@@ -939,7 +939,7 @@ equation has no solutions then write \textit{NO SOLUTION}.
       1 & -3 & 1 & -9 \\ 1 & -2 & 0 & -5 \\ -3 & 8 & -1 & 19 \\ -2 & 4
       & 0 & 10
     \end{bmatrix}
-    \qquad \mathbf b = \begin{bmatrix} 3 \\ 7 \\ -18
+    \qquad \vb = \begin{bmatrix} 3 \\ 7 \\ -18
       \\ -14 \end{bmatrix}
 \end{align*}
 \item \faCalculator
@@ -949,7 +949,7 @@ equation has no solutions then write \textit{NO SOLUTION}.
       1 & 1 & 3 & 1 & -7 & 1 \\ -5 & -4 & -14 & -3 & 24 & -8\\ 0 & -2
       & -2 & -3 & 21 & 3 \\ -6 & -3 & -15 & -2 & 11 & -8
     \end{bmatrix}
-    \qquad \mathbf b =
+    \qquad \vb =
     \begin{bmatrix}
       7 \\ -16 \\ -20 \\ -27
     \end{bmatrix}
@@ -996,8 +996,8 @@ the columns span $\R^m$.
   For $A \in \R^{m \times n}$ where $m > n$, it is not possible
   for the columns of $A$ to span $\R^m$.
 \item
-  For $A \in \R^{m \times n}$, if $A \vx = \mathbf b$ is
-  inconsistent for some vector $\mathbf b$, then it is not possible
+  For $A \in \R^{m \times n}$, if $A \vx = \vb$ is
+  inconsistent for some vector $\vb$, then it is not possible
   for the columns of $A$ to span $\R^m$.
 \item
   For $A \in \R^{m \times n}$, if $A \vx = \vzero$ has
@@ -1010,16 +1010,16 @@ the columns span $\R^m$.
 \item
   For matrices $A$ and $B$ in $\R^{m \times n}$, let $[A \ B]
   \in \R ^ {m \times 2n}$ be the matrix obtained by
-  horizontally stacking $A$ and $B$.  If $A\vx = \mathbf b$ is
-  consistent and $B\vx = \mathbf b$ is consistent, then so is
-  $[A \ B] \vx = \mathbf b$.
+  horizontally stacking $A$ and $B$.  If $A\vx = \vb$ is
+  consistent and $B\vx = \vb$ is consistent, then so is
+  $[A \ B] \vx = \vb$.
 \item
   For matrices $A$ and $B$ in $\R^{m \times n}$, if $[A
-    \ B]\vx = \mathbf b$ is consistent then $A\vx =
-  \mathbf b$ is consistent or $B \vx = \mathbf b$ is consistent.
+    \ B]\vx = \vb$ is consistent then $A\vx =
+  \vb$ is consistent or $B \vx = \vb$ is consistent.
 \item
-  For $A \in \R^{m \times n}$, if $A \vx = \mathbf b$ is
-  inconsistent for some vector $\mathbf b$, then $A$ does not have a
+  For $A \in \R^{m \times n}$, if $A \vx = \vb$ is
+  inconsistent for some vector $\vb$, then $A$ does not have a
   pivot position in every column.
 \item
   If $\vx \mapsto A \vx$ is one-to-one and onto, then $A$
@@ -1958,7 +1958,7 @@ not possible, explain why.
   \end{align*}
 \end{enumerate}
 Let $A$ be matrix such that $A^{-1}$ is defined as below.
-Use this to determine the solution to the matrix equations of the form $A\vx = \mathbf b_i$, where each $\mathbf b_i$ is defined below.
+Use this to determine the solution to the matrix equations of the form $A\vx = \vb_i$, where each $\vb_i$ is defined below.
 \begin{enumerate}[resume]
 \item
   \begin{align*}
@@ -1969,11 +1969,11 @@ Use this to determine the solution to the matrix equations of the form $A\vx = \
       -8 & -6 & 1
     \end{bmatrix}
     \qquad
-    \mathbf b_{1} = \begin{bmatrix} -5 \\ 6 \\ -1 \end{bmatrix}
+    \vb_{1} = \begin{bmatrix} -5 \\ 6 \\ -1 \end{bmatrix}
     \qquad
-    \mathbf b_{2} = \begin{bmatrix} -1 \\ -3 \\ -10 \end{bmatrix}
+    \vb_{2} = \begin{bmatrix} -1 \\ -3 \\ -10 \end{bmatrix}
     \qquad
-    \mathbf b_{3} = \begin{bmatrix} -6 \\ 4 \\ -4 \end{bmatrix}
+    \vb_{3} = \begin{bmatrix} -6 \\ 4 \\ -4 \end{bmatrix}
   \end{align*}
 \end{enumerate}
 Determine the inverse of the following matrices.
@@ -2103,7 +2103,7 @@ You should do this without determining $A$ first.
 \item
   For all matrices $A$ and $B$ such that $AB$ is defined, we have $AB \not = BA$.
 \item
-  If $A\vx = \mathbf b$ has a unique solution for every vector $\mathbf b$ in the span of the columns of $A$, then $A$ is invertible.
+  If $A\vx = \vb$ has a unique solution for every vector $\vb$ in the span of the columns of $A$, then $A$ is invertible.
 \item
   For any matrix $A$ and vector $\vv$, if $\vv^T A$ is defined, then $A$ is single column.
 \item
@@ -2666,7 +2666,7 @@ For each of the following subspaces, determine a basis.
 \begin{enumerate}[resume]
 \item
   \begin{align*}
-    \vspan\!
+    \vspan
     \left
     \{\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix},
     \begin{bmatrix} 2 \\ 5 \\ 1 \end{bmatrix},
@@ -2675,7 +2675,7 @@ For each of the following subspaces, determine a basis.
   \end{align*}
 \item
   \begin{align*}
-    \vspan\! \left\{
+    \vspan \left\{
     \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix},
     \begin{bmatrix} -1 \\ 0 \\ -3 \end{bmatrix},
     \begin{bmatrix} 2 \\ -4 \\ 18 \end{bmatrix},
@@ -2778,9 +2778,9 @@ For each of the following matrices, determine a vector that is
 \item
   For any matrix $A \in \R^{n \times n}$, if $A$ is invertible then $\rank(A) = n$.
 \item
-  For any matrix $A \in \R^{m \times n}$, $\mathrm{Col}(A)$ is
-  the same as the set of vectors $\mathbf{b}$ such that $A \vx
-  = \mathbf{b}$ has a solution.
+  For any matrix $A \in \R^{m \times n}$, $\col(A)$ is the
+  same as the set of vectors $\vb$ such that $A \vx = \vb$ has a
+  solution.
 \item
   A basis is a spanning set that is as large as possible.
 \item
@@ -2829,7 +2829,7 @@ For each of the following matrices, determine a vector that is
     \end{bmatrix}
 \end{align*}
 List all possible subsets of the above vectors that form a basis of
-the subspace $\vspan\!\left\{\vv_1, \, \vv_2, \,
+the subspace $\vspan\left\{\vv_1, \, \vv_2, \,
 \vv_3 \right\}$.\footnote{The process we teach for determining
 a basis gives one choice, but there may be multiple choices that are
 suitable.}
@@ -2853,7 +2853,7 @@ suitable.}
 \end{bmatrix}
 \end{align*}
 List all possible subsets of the above vectors that form a basis of
-the subspace $\vspan\!\left\{\vv_1, \, \vv_2, \,
+the subspace $\vspan\left\{\vv_1, \, \vv_2, \,
 \vv_3, \, \vv_4 \right\}$.
 \item Consider the 3-dimensional vector space of all quadratic
   polynomials $Q = \{a x^2 + b x + c \, | \, a,b,c \in \R\}$
@@ -2864,27 +2864,31 @@ the subspace $\vspan\!\left\{\vv_1, \, \vv_2, \,
     Using the standard basis given by $\{x^2, x, 1 \}$, determine a $3
     \times 3$ matrix $A$ that implements $\frac{d}{dx}$.
   \item
-    Determine a basis for $\mathrm{Col}(A)$.
+    Determine a basis for $\col A$.
   \item
-    Determine basis for $\nul (A)$.
+    Determine basis for $\nul A$.
   \item
-    Determine $\rank(A)$ and $\dim(\nul (A))$.
+    Determine $\rank A$ and $\dim(\nul A)$.
   \end{enumerate}
 \item
-  Let $A$ be an $m \times n$ matrix and let $\vv$ be a vector in $\R^n$.
-  Let $\vb$ denote the vector $A\vv$.
+  Let $A$ be an $m \times n$ matrix and let $\vv$ be a vector in
+  $\R^n$.  Let $\vb$ denote the vector $A\vv$.
   \begin{enumerate}
   \item
-    Show that if $\vw \in \nul A$, then $\vv + \vw$ is a solution to the equation $A\vx = \vb$.
+    Show that if $\vw \in \nul A$, then $\vv + \vw$ is a solution to
+    the equation $A\vx = \vb$.
   \item
-    Show that if $\vb \not = 0$, then the solution set of $A\vx = \vb$ is not a subspace of $\R^n$.
+    Show that if $\vb \not = 0$, then the solution set of $A\vx = \vb$
+    is not a subspace of $\R^n$.
   \item
-    A set $H$ is an \textbf{affine} subspace of $\R^n$ if there is a subspace $U$ of $\R^n$ and a vector $\vo$ such that
+    A set $H$ is an \textbf{affine} subspace of $\R^n$ if there is a
+    subspace $U$ of $\R^n$ and a vector $\vo$ such that
     \begin{align*}
       H = \{\vu + \vo \ | \ \vu \in U\}
     \end{align*}
-    Show that the solution set of $A\vx = \vb$ is an affine subspace of $\R^n$ if it is nonempty.
-    In particular, choose a vector $\vo$ and subspace $U$.
+    Show that the solution set of $A\vx = \vb$ is an affine subspace
+    of $\R^n$ if it is nonempty.  In particular, choose a vector $\vo$
+    and subspace $U$.
   \end{enumerate}
 \item
 Determine the linear equation whose solution set is the column space
@@ -3049,7 +3053,8 @@ If it is, find a basis for the corresponding eigenspace.
     \lambda = 4
   \end{displaymath}
 \end{enumerate}
-For the following matrices, determine all eigenvalues and bases for the corresponding eigenspaces.
+For the following matrices, determine all eigenvalues and bases for
+the corresponding eigenspaces.
 \begin{enumerate}[resume]
 \item
   \begin{displaymath}
@@ -3342,8 +3347,8 @@ determinant.
 \item
   Give two $2 \times 2$ matrices where every nonzero vector is an
   eigenvector.
-\item \faCalculator \
-  Let $A$ be a matrix such that
+\item
+  \faCalculator \ Let $A$ be a matrix such that
   \begin{displaymath}
     A \vThree 1 1 {-3} = \vThree {-1} {-1} 3
     \qquad
@@ -3368,7 +3373,8 @@ determinant.
     \vThree 2 {-2} {-9}
     \right\}
   \end{displaymath}
-  Determine the matrix $C$ such that $C[\vv]_{\cB} = A \vv$ for all $\vv \in \R^3$.
+  Determine the matrix $C$ such that $C[\vv]_{\cB} = A \vv$ for all
+  $\vv \in \R^3$.
 \item
 Determine if the following matrix has an eigenbasis. Justify your
 answer.
@@ -3428,15 +3434,17 @@ answer.
   \item
     Write down a closed-form solution for the linear dynamical system
     determined by $A$ with initial vector $\ve_1$.
-  \item \faCalculator \
-    If you look at the formula given by the second component of your
-    closed-form solution from the previous part, this gives a
-    \textit{non-recursive} definition for Fibonacci numbers.  Write
-    down this formula and use it to calculate $F_{20}$, the $20$th
-    fibonacci number (where $F_0 = 0$ and $F_1 = 1$).
+  \item
+    \faCalculator \ If you look at the formula given by the second
+    component of your closed-form solution from the previous part,
+    this gives a \textit{non-recursive} definition for Fibonacci
+    numbers.  Write down this formula and use it to calculate
+    $F_{20}$, the $20$th fibonacci number (where $F_0 = 0$ and $F_1 =
+    1$).
   \end{enumerate}
 \item
-  A Jordan block $J$ is a square matrix in $\R^{n \times n}$ of the following form.
+  A Jordan block $J$ is a square matrix in $\R^{n \times n}$ of the
+  following form.
   \begin{displaymath}
     \begin{bmatrix}
       \alpha & 1 & & \\
@@ -3628,7 +3636,8 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
 \item the distance between $\vv_1$ and $\vv_2$;
 \item the unit length normalizations of $\vv_1$ and $\vv_2$.
 \end{itemize}
-You must simplify the expression as much as you can before giving the approximate result to a couple decimal places.
+You must simplify the expression as much as you can before giving the
+approximate result to a couple decimal places.
 \begin{enumerate}
 \item
   \begin{displaymath}
@@ -3795,11 +3804,13 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
     \qquad
     \va_3 = \vFour 0 {-1} 1 {-1}
   \end{displaymath}
-\item Show that any $2 \times 2$ rotation matrix $R_\theta$ is an orthogonal matrix.
+\item
+  Show that any $2 \times 2$ rotation matrix $R_\theta$ is an
+  orthogonal matrix.
 \item
   Show that any $3 \times 3$ rotation matrix $R_x^\theta$,
-  $R_y^\theta$, $R_z^\theta$ (about the $x$-axis, $y$-axis, and $z$-axis,
-  respectively) is an orthogonal matrix.
+  $R_y^\theta$, $R_z^\theta$ (about the $x$-axis, $y$-axis, and
+  $z$-axis, respectively) is an orthogonal matrix.
 \item
   Determine the matrix that implements orthogonal projection onto
   $\vspan\{ [2 \ \ 3 \ \ 1]^T \}$.
@@ -3810,13 +3821,14 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
   Show that for any nonzero vector $\vv \in \R^n$, the set of vectors
   orthogonal to $\vv$ form a subspace of $\R^n$.
 \item
-  Determine a basis for the set of vectors orthogonal to the following vector.
+  Determine a basis for the set of vectors orthogonal to the following
+  vector.
   \begin{displaymath}
     \vThree 1 4 {-3}
   \end{displaymath}
 \item
-  Determine a basis for the set of vectors orthogonal to every vector in the solution
-  set of the following linear equation.
+  Determine a basis for the set of vectors orthogonal to every vector
+  in the solution set of the following linear equation.
   \begin{displaymath}
     2x_1 + 3x_2 - 4x_3 + 5x_4 = 0.
   \end{displaymath}
@@ -3838,8 +3850,8 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
     \times n}$.  Use this to show that $\rank A = \rank A^T$.
 \item
   Consider the following vectors.\footnote{This problem goes over the
-  \textit{Gram-Schmidt process}, an algorithm for converting
-  a basis into an orthogonal basis.}
+  \textit{Gram-Schmidt process}, an algorithm for converting a basis
+  into an orthogonal basis.}
   \begin{displaymath}
     \vv_1 = \vFour 2 1 0 {-1}
     \qquad
@@ -3921,9 +3933,9 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
 \item
   Show that the product of two orthogonal matrices is orthogonal.
 \item
-  Show that $\vv \in \nul A^T$ if and only if $\vv$ is orthogonal to every
-  vector in $\col A$ for any matrix $A \in \R^{m \times n}$ and vector
-  $\vv \in \R^m$.
+  Show that $\vv \in \nul A^T$ if and only if $\vv$ is orthogonal to
+  every vector in $\col A$ for any matrix $A \in \R^{m \times n}$ and
+  vector $\vv \in \R^m$.
 \item
   Show that $\rank A + \dim(\nul A^T) = m$ for any matrix $A \in \R^{m
     \times n}$.
@@ -4071,9 +4083,9 @@ using the normal equations.
   why this solution is unique.
 \item
   Let $C$ be an arbitrary $m \times n$ matrix of rank $k$ and let
-  $\mathbf b$ be an arbitrary vector in $\R^m$.  Determine the maximum
+  $\vb$ be an arbitrary vector in $\R^m$.  Determine the maximum
   size of a linearly independent set of least squares solutions for
-  $C\vx = \mathbf b$ where $\vb \not = \vzero$.  Justify your
+  $C\vx = \vb$ where $\vb \not = \vzero$.  Justify your
   answer.  Your solution should be given in terms of $m$, $n$, and
   $k$.
 \item \faCalculator
