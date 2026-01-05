@@ -1,114 +1,6 @@
 \documentclass[10pt]{report}
-
-% Palatino
-%% \usepackage{mathpazo}
-
-% 1 inch margins
-\usepackage[margin=1.25in]{geometry}
-
-% line spacing
-\usepackage{setspace}
-\setstretch{1.1}
-
-% better quotes
-\usepackage{csquotes}
-
-%% standard math tools
-\usepackage{amsthm, amssymb, mathtools}
-
-%% better bullets/enumeration
-\usepackage{enumitem}
-
-%% for the calculator symbol
-\usepackage{fontawesome}
-
-% TAKEN FROM OVERLEAF DOCUMENTATION
-% https://www.overleaf.com/learn/latex/Code_listing
-\usepackage{listings}
-\lstset{language=Python}
-\usepackage{xcolor}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-\lstset{style=mystyle}
-
-% Links for chapters/references
-\usepackage{hyperref}
-\usepackage{cleveref}
-
-% Commands
-\DeclareMathOperator{\col}{\mathrm{Col}}
-\DeclareMathOperator{\nul}{\mathrm{Nul}}
-\DeclareMathOperator{\rank}{\mathrm{rank}}
-\DeclareMathOperator{\proj}{\mathrm{proj}}
-\DeclareMathOperator{\vspan}{\mathrm{span}}
-\DeclareMathOperator{\argmin}{\mathrm{argmin}}
-\DeclareMathOperator{\argmax}{\mathrm{argmax}}
-\newcommand{\R}{\mathbb R}
-\newcommand{\cB}{\mathcal B}
-\newcommand{\va}{\mathbf a}
-\newcommand{\vb}{\mathbf b}
-\newcommand{\vc}{\mathbf c}
-\newcommand{\ve}{\mathbf e}
-\newcommand{\vo}{\mathbf o}
-\newcommand{\vu}{\mathbf u}
-\newcommand{\vv}{\mathbf v}
-\newcommand{\vw}{\mathbf w}
-\newcommand{\vx}{\mathbf x}
-\newcommand{\vy}{\mathbf y}
-\newcommand{\vz}{\mathbf z}
-\newcommand{\vzero}{\mathbf 0}
-\newcommand{\vTwo}[2]{
-  \ensuremath{
-    \begin{bmatrix}
-      #1 \\ #2
-    \end{bmatrix}
-  }
-}
-\newcommand{\vThree}[3]{
-  \ensuremath{
-    \begin{bmatrix}
-      #1 \\ #2 \\ #3
-    \end{bmatrix}
-  }
-}
-\newcommand{\vFour}[4]{
-  \ensuremath{
-    \begin{bmatrix}
-      #1 \\ #2 \\ #3 \\ #4
-    \end{bmatrix}
-  }
-}
-\newcommand{\vFive}[5]{
-  \ensuremath{
-    \begin{bmatrix}
-      #1 \\ #2 \\ #3 \\ #4 \\ #5
-    \end{bmatrix}
-  }
-}
-
-\newcommand{\trueFalseHeader}{
-  Determine if each statement is \textbf{true} or \textbf{false} and justify your answer.
-  In particular, if the statement is false, provide a counterexample if possible.
-}
+\usepackage{workbook132}
+\input{macros.tex}
 
 \title{Problems and Exercises}
 \author{\texttt{CAS CS 132}: \textit{Geometric Algorithms}}
@@ -117,8 +9,7 @@
 \tableofcontents
 
 \chapter*{Preface}
-
-TODO. write a preface.
+\input{preface.tex}
 
 \chapter{Linear Systems}
 \input{linear-systems.tex}

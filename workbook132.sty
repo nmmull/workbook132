@@ -1,0 +1,59 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{workbook132}[2026/01/04 v0.01 LaTeX package for the workbook of CS132 at Boston University]
+
+% Palatino
+%% \usepackage{mathpazo}
+
+% 1.25 inch margins
+\usepackage[margin=1.25in]{geometry}
+
+% line spacing
+\usepackage{setspace}
+\setstretch{1.1}
+
+% better quotes
+\usepackage{csquotes}
+
+%% standard math tools
+\usepackage{amsthm, amssymb, mathtools}
+
+%% better bullets/enumeration
+\usepackage{enumitem}
+
+%% for the calculator symbol
+\usepackage{fontawesome}
+
+% TAKEN FROM OVERLEAF DOCUMENTATION
+% https://www.overleaf.com/learn/latex/Code_listing
+\usepackage{listings}
+\lstset{language=Python}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% Links for chapters/references
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% END OF FILE
+\endinput
