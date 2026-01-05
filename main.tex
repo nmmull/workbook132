@@ -499,8 +499,8 @@ augmented matrix.  If this system has no solutions then write
   Consider the following general form solution
   \begin{align*}
     x_1 &= 3x_2 - 2x_3 \\
-    x_2 &\quad \text{is free} \\
-    x_3 &\quad \text{is free} \\
+    x_2 &\qquad \text{is free} \\
+    x_3 &\qquad \text{is free} \\
     x_4 &= 2 + x_3
   \end{align*}
   \begin{enumerate}
@@ -552,7 +552,7 @@ augmented matrix.  If this system has no solutions then write
   Suppose you're given a system of linear equations with three
   variables and two equations, and that $(4, 1, 0)$ and $(2, 4, 1)$
   are solutions to this system.  You are also given that the two
-  equations define distinct planes in $\mathbb R^3$.  Determine the
+  equations define distinct planes in $\R^3$.  Determine the
   RREF of the augmented matrix for this system.
 \item
   Consider an arbitrary system of linear equations with $n$ unknowns
@@ -736,7 +736,7 @@ answer.  In particular, if it is not possible, then explain why.
 \item
   \begin{displaymath}
     \vv_1 = \vThree {-7} {-1} 0
-    \quad
+    \qquad
     \vv_2 = \vThree {-8} 9 {-7}
   \end{displaymath}
 \end{enumerate}
@@ -767,68 +767,66 @@ $\vv_1$ as a linear combination of the remaining vectors.
 \item
   \begin{displaymath}
     \vv_1 = \begin{bmatrix} 1 \\ 4 \\ -7 \end{bmatrix}
-    \quad
+    \qquad
     \vv_2 = \begin{bmatrix} 0 \\ 1 \\ -3 \end{bmatrix}
-    \quad
+    \qquad
     \vv_3 = \begin{bmatrix} 5 \\ 7 \\ -1 \end{bmatrix}
-    \quad
+    \qquad
     \vv_4 = \begin{bmatrix} 1 \\ 2 \\ -2 \end{bmatrix}
   \end{displaymath}
 \item \faCalculator
   \begin{align*}
-    \mathbf v_1
+    \vv_1
     = \begin{bmatrix} 42 \\ -23 \\ 98 \\ 11 \\ -87 \end{bmatrix}
     \qquad
-    \mathbf v_2
+    \vv_2
     = \begin{bmatrix} 10 \\ -33 \\ -5 \\ -30 \\ -3 \end{bmatrix}
     \qquad
-    \mathbf v_3
+    \vv_3
     = \begin{bmatrix} -47 \\ -1 \\ -2 \\ -25 \\ 24 \end{bmatrix}
-  \end{align*}
-  \begin{align*}
-    \mathbf v_4
+    \qquad
+    \vv_4
     = \begin{bmatrix} 31 \\ -34\\ 11 \\ 39 \\ 25 \end{bmatrix}
     \qquad
-    \mathbf v_5
+    \vv_5
     = \begin{bmatrix}-14 \\ 22 \\ 12 \\ 42 \\ 3\end{bmatrix}
   \end{align*}
 \item \faCalculator
   \begin{align*}
-    \mathbf v_1
+    \vv_1
     = \begin{bmatrix} 87 \\ -19 \\ -24 \\ -61 \\ -79 \end{bmatrix}
     \qquad
-    \mathbf v_2
+    \vv_2
     = \begin{bmatrix} 10 \\ -33 \\ -5 \\ -30 \\ -3 \end{bmatrix}
     \qquad
-    \mathbf v_3
+    \vv_3
     = \begin{bmatrix} -47 \\ -1 \\ -2 \\ -25 \\ 24 \end{bmatrix}
-  \end{align*}
-  \begin{align*}
-    \mathbf v_4
+    \qquad
+    \vv_4
     = \begin{bmatrix} 31 \\ -34\\ 11 \\ 39 \\ 25 \end{bmatrix}
     \qquad
-    \mathbf v_5
+    \vv_5
     = \begin{bmatrix}-14 \\ 22 \\ 12 \\ 42 \\ 3\end{bmatrix}
   \end{align*}
 \end{enumerate}
-For each of the following pairs of vectors $\mathbf v_1$ and $\mathbf
-v_2$, determine a linear equation whose point set is the
-$\mathrm{span}\{\mathbf v_1, \mathbf v_2\}$.  The linear equation you
-determine should have relatively prime integer coefficients (i.e., it
-should not be possible to divide the equation by an integer value and
-get a new equation with integer coefficients).
+For each of the following pairs of vectors $\vv_1$ and $\vv_2$,
+determine a linear equation whose point set is the $\vspan\{\vv_1,
+\vv_2\}$.  The linear equation you determine should have relatively
+prime integer coefficients (i.e., it should not be possible to divide
+the equation by an integer value and get a new equation with integer
+coefficients).
 \begin{enumerate}[resume]
 \item
   \begin{align*}
-    \mathbf{v}_{1} = \begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix}
-    \quad
-    \mathbf{v}_{2} = \begin{bmatrix} -1 \\ 0 \\ 2 \end{bmatrix}
+    \vv_{1} = \begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix}
+    \qquad
+    \vv_{2} = \begin{bmatrix} -1 \\ 0 \\ 2 \end{bmatrix}
   \end{align*}
 \item
   \begin{align*}
-    \mathbf v_1 = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix}
+    \vv_1 = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix}
     \qquad
-    \mathbf v_2 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+    \vv_2 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
   \end{align*}
 \end{enumerate}
 
@@ -836,21 +834,18 @@ get a new equation with integer coefficients).
 \trueFalseHeader
 \begin{enumerate}[resume]
 \item
-  For any two vectors $\mathbf v_1$ and $\mathbf v_2$ in $\mathbb
-  R^n$, there is a vector $\mathbf u$ such that $\mathbf v_1 + \mathbf
-  v_2 + \mathbf u = \mathbf 0$.
+  For any two vectors $\vv_1$ and $\vv_2$ in $\R^n$, there is a
+  vector $\vu$ such that $\vv_1 + \mathbf v_2 + \vu =
+  \vzero$.
 \item
-  For any vectors $\mathbf v_1$, $\mathbf v_2$, and $\mathbf v_3$ in
-  $\mathbb R^n$, if $\mathbf v_1 \in \mathsf{span}\{\mathbf v_2,
-  \mathbf v_3\}$, then $\mathbf v_2 \in \mathsf{span}\{\mathbf v_1,
-  \mathbf v_3\}$.
+  For any vectors $\vv_1$, $\vv_2$, and $\vv_3$ in $\R^n$, if $\vv_1
+  \in \vspan\{\vv_2, \vv_3\}$, then $\vv_2 \in \vspan\{\vv_1,
+  \vv_3\}$.
 \item
-  The span of any two distinct nonzero vectors in $\mathbb R^3$ is a
-  plane.
+  The span of any two distinct nonzero vectors in $\R^3$ is a plane.
 \item
-  For any vector $\mathbf v_1$, $\mathbf v_2$, and $\mathbf v_3$ in
-  $\mathbb R^n$, $\mathsf{span}\{\mathbf v_1, \mathbf v_2, \mathbf
-  v_3\} = \mathsf{span}\{\mathbf v_1 + \mathbf v_3, \mathbf v_2\}$.
+  For any vector $\vv_1$, $\vv_2$, and $\vv_3$ in $\R^n$,
+  $\vspan\{\vv_1, \vv_2, \vv_3\} = \vspan\{\vv_1 + \vv_3, \vv_2\}$.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -859,11 +854,13 @@ get a new equation with integer coefficients).
 \item
   Consider the vectors
   \begin{displaymath}
-    \mathbf v_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}
+    \vv_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}
     \qquad
-    \mathbf v_2 = \begin{bmatrix} 1 \\ 1 \\ 2 \\ 2 \end{bmatrix}
+    \vv_2 = \begin{bmatrix} 1 \\ 1 \\ 2 \\ 2 \end{bmatrix}
   \end{displaymath}
-  Write vectors $\mathbf v_3$ and $\mathbf v_4$ such that $\mathbf v_3$ is not in $\mathsf{span}\{\mathbf v_1, \mathbf v_2\}$ and $\mathbf v_4$ is not in $\mathsf{span}\{\mathbf v_1, \mathbf v_2, \mathbf v_3\}$.
+  Write vectors $\vv_3$ and $\vv_4$ such that $\vv_3$ is not in
+  $\vspan\{\vv_1, \vv_2\}$ and $\vv_4$ is not in $\vspan\{\vv_1,
+  \vv_2, \vv_3\}$.
 \end{enumerate}
 
 \section*{Challenge Problems}
@@ -873,11 +870,11 @@ get a new equation with integer coefficients).
   Find a linear equation in three variables whose point set is exactly
   \begin{align*}
     \left\{
-    \mathbf v +
+    \vv +
     \begin{bmatrix} 2 \\ -3 \\ 2 \end{bmatrix}
     \ \text{where} \
-    \mathbf v \in
-    \mathsf{span}
+    \vv \in
+    \vspan
     \left\{
     \begin{bmatrix} 1 \\ 1 \\ -5 \end{bmatrix},
     \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix}
@@ -893,15 +890,14 @@ get a new equation with integer coefficients).
     x + y + z = 5
   \end{displaymath}
   The plane represented by this equation does not include the origin;
-  such a plane is called \textit{affine}.  Determine vectors $\mathbf
-  b$, $\mathbf v_1$, and $\mathbf v_2$ such that every point in the
-  plane represented by the above equation (that is, every point $(a,
-  b, c)$ such that $a + b + c = 5$) can be written as $\mathbf b +
-  \mathbf v$ where $\mathbf v$ is in $\mathsf{span} \{\mathbf v_1,
-  \mathbf v_2\}$, i.e.,
+  such a plane is called \textit{affine}.  Determine vectors $\vb$,
+  $\vv_1$, and $\vv_2$ such that every point in the plane represented
+  by the above equation (that is, every point $(a, b, c)$ such that $a
+  + b + c = 5$) can be written as $\mathbf b + \vv$ where $\vv$ is in
+  $\vspan \{\vv_1, \vv_2\}$, i.e.,
   \begin{displaymath}
-    \{(x, y, z) : x + y + z = 5\} =
-    \{\vb + \vv : \vv \in \vspan\{\vv_1, \vv_2\}\}.
+    \{(x, y, z) : x + y + z = 5\}
+    = \{\vb + \vv : \vv \in \vspan\{\vv_1, \vv_2\}\}.
   \end{displaymath}
 \end{enumerate}
 
@@ -911,9 +907,9 @@ get a new equation with integer coefficients).
 
 \chapter{Matrix Equations}
 
-Compute the matrix-vector multiplication $A\mathbf v$ where $A$ and
-$\mathbf v$ are given below.  If it is not possible to multiply $A$
-with $\mathbf v$, then explain why.
+Compute the matrix-vector multiplication $A\vv$ where $A$ and
+$\vv$ are given below.  If it is not possible to multiply $A$
+with $\vv$, then explain why.
 \begin{enumerate}
 \item
   \begin{align*}
@@ -921,7 +917,7 @@ with $\mathbf v$, then explain why.
     \begin{bmatrix}
       -10 & 6 & 2 & 8 \\ 1 & 3 & 4 & 5 \\ 0 & -2 & 0 & -9
     \end{bmatrix}
-    \quad \mathbf v = \begin{bmatrix} 4 \\ -5 \\ 3 \\ 1 \end{bmatrix}
+    \qquad \vv = \begin{bmatrix} 4 \\ -5 \\ 3 \\ 1 \end{bmatrix}
 \end{align*}
 \item
   \begin{align*}
@@ -929,10 +925,10 @@ with $\mathbf v$, then explain why.
     \begin{bmatrix}
       6 & 1 & -8 & -3 \\ 5 & 0 & -9 & -4
     \end{bmatrix}
-    \quad \mathbf v = \begin{bmatrix} -6 \\ 2 \end{bmatrix}
+    \qquad \vv = \begin{bmatrix} -6 \\ 2 \end{bmatrix}
 \end{align*}
 \end{enumerate}
-Determine a general form solution for the matrix equation $A\mathbf x
+Determine a general form solution for the matrix equation $A\vx
 = \mathbf b$ where $A$ and $\mathbf b$ are given below.  If this
 equation has no solutions then write \textit{NO SOLUTION}.
 \begin{enumerate}[resume]
@@ -943,7 +939,7 @@ equation has no solutions then write \textit{NO SOLUTION}.
       1 & -3 & 1 & -9 \\ 1 & -2 & 0 & -5 \\ -3 & 8 & -1 & 19 \\ -2 & 4
       & 0 & 10
     \end{bmatrix}
-    \quad \mathbf b = \begin{bmatrix} 3 \\ 7 \\ -18
+    \qquad \mathbf b = \begin{bmatrix} 3 \\ 7 \\ -18
       \\ -14 \end{bmatrix}
 \end{align*}
 \item \faCalculator
@@ -953,15 +949,15 @@ equation has no solutions then write \textit{NO SOLUTION}.
       1 & 1 & 3 & 1 & -7 & 1 \\ -5 & -4 & -14 & -3 & 24 & -8\\ 0 & -2
       & -2 & -3 & 21 & 3 \\ -6 & -3 & -15 & -2 & 11 & -8
     \end{bmatrix}
-    \quad \mathbf b =
+    \qquad \mathbf b =
     \begin{bmatrix}
       7 \\ -16 \\ -20 \\ -27
     \end{bmatrix}
   \end{align*}
 \end{enumerate}
 For each of the following matrices, Determine if its columns have full
-span, i.e., given a matrix in $\mathbb R^{m \times n}$, determine if
-the columns span $\mathbb R^m$.
+span, i.e., given a matrix in $\R^{m \times n}$, determine if
+the columns span $\R^m$.
 \begin{enumerate}[resume]
 \item
   \begin{align*}
@@ -997,50 +993,50 @@ the columns span $\mathbb R^m$.
 
 \begin{enumerate}[resume]
 \item
-  For $A \in \mathbb R^{m \times n}$ where $m > n$, it is not possible
-  for the columns of $A$ to span $\mathbb R^m$.
+  For $A \in \R^{m \times n}$ where $m > n$, it is not possible
+  for the columns of $A$ to span $\R^m$.
 \item
-  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is
+  For $A \in \R^{m \times n}$, if $A \vx = \mathbf b$ is
   inconsistent for some vector $\mathbf b$, then it is not possible
-  for the columns of $A$ to span $\mathbb R^m$.
+  for the columns of $A$ to span $\R^m$.
 \item
-  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has
+  For $A \in \R^{m \times n}$, if $A \vx = \vzero$ has
   infinitely many solutions, then the columns of $A$ span $\mathbb
   R^m$.
 \item
-  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has
-  infinitely many solutions, then $\{ \mathbf v : A\mathbf v = \mathbf
-  0\} = \mathbb R^n$.
+  For $A \in \R^{m \times n}$, if $A \vx = \vzero$ has
+  infinitely many solutions, then $\{ \vv : A\vv = \mathbf
+  0\} = \R^n$.
 \item
-  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, let $[A \ B]
-  \in \mathbb R ^ {m \times 2n}$ be the matrix obtained by
-  horizontally stacking $A$ and $B$.  If $A\mathbf x = \mathbf b$ is
-  consistent and $B\mathbf x = \mathbf b$ is consistent, then so is
-  $[A \ B] \mathbf x = \mathbf b$.
+  For matrices $A$ and $B$ in $\R^{m \times n}$, let $[A \ B]
+  \in \R ^ {m \times 2n}$ be the matrix obtained by
+  horizontally stacking $A$ and $B$.  If $A\vx = \mathbf b$ is
+  consistent and $B\vx = \mathbf b$ is consistent, then so is
+  $[A \ B] \vx = \mathbf b$.
 \item
-  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, if $[A
-    \ B]\mathbf x = \mathbf b$ is consistent then $A\mathbf x =
-  \mathbf b$ is consistent or $B \mathbf x = \mathbf b$ is consistent.
+  For matrices $A$ and $B$ in $\R^{m \times n}$, if $[A
+    \ B]\vx = \mathbf b$ is consistent then $A\vx =
+  \mathbf b$ is consistent or $B \vx = \mathbf b$ is consistent.
 \item
-  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is
+  For $A \in \R^{m \times n}$, if $A \vx = \mathbf b$ is
   inconsistent for some vector $\mathbf b$, then $A$ does not have a
   pivot position in every column.
 \item
-  If $\mathbf x \mapsto A \mathbf x$ is one-to-one and onto, then $A$
+  If $\vx \mapsto A \vx$ is one-to-one and onto, then $A$
   is a square matrix.
 \item
-  If $\mathbf x \mapsto A \mathbf x$ is neither one-to-one or onto,
+  If $\vx \mapsto A \vx$ is neither one-to-one or onto,
   and the reduced echelon form of $A$ only has $0$s and $1$s, then one
-  of the columns of $A$ is $\mathbf 0$.
+  of the columns of $A$ is $\vzero$.
 \item
   If the columns of $A$ are linearly independent, then the reduced
   echelon form of $A$ has only $0$s and $1$s.
 \item
   If $A$ is an $m \times n$ matrix and $m < n$, then the range of
-  $\mathbf x \mapsto A\mathbf x$ is $\mathbb R^m$.
+  $\vx \mapsto A\vx$ is $\R^m$.
 \item
-  If the columns of $A \in \mathbb R^{m \times n}$ span all of
-  $\mathbb R^m$, then the reduced echelon form of $A$ has only $0$s
+  If the columns of $A \in \R^{m \times n}$ span all of
+  $\R^m$, then the reduced echelon form of $A$ has only $0$s
   and $1$s.
 \end{enumerate}
 
@@ -1083,7 +1079,8 @@ the columns span $\mathbb R^m$.
       \end{displaymath}
     \end{enumerate}
   }
-\item \faCalculator \ Any three distinct points in the plane define a
+\item
+  \faCalculator \ Any three distinct points in the plane define a
   \textit{unique} quadratic equation.  Given three points $(x_1,
   y_1)$, $(x_2, y_2)$ and $(x_3, y_3)$, the equation $y = ax^2 + bx +
   c$ that passes through these three points is given by the solution
@@ -1134,7 +1131,7 @@ the columns span $\mathbb R^m$.
     Suppose that homework assignments account for \textbf{50} percent
     of the final grade, the midterm exam accounts for \textbf{20}
     percent and the final exam accounts for \textbf{30} percent.  Find
-    a vector $\mathbf v$ such that $T(\mathbf v)$ is the vector whose
+    a vector $\vv$ such that $T(\vv)$ is the vector whose
     $i^\text{th}$ entry is the final percentage grade of the
     $i^\text{th}$ student.  For example, if the $i^\text{th}$ student
     recieved $90$ percent on every homework assignment, $85$ percent
@@ -1142,7 +1139,7 @@ the columns span $\mathbb R^m$.
     $i^\text{th}$ entry of the output vector should be $90 * 0.5 + 85
     * 0.2 + 92 * 0.3$.
   \item
-    Find a vector $\mathbf v$ such that $T(\mathbf v)$ is the vector
+    Find a vector $\vv$ such that $T(\vv)$ is the vector
     whose $i^\text{th}$ entry is the unweighted homework grade for
     student $i$. For the same example as above, the $i^\text{th}$
     entry would be $90$.
@@ -1159,34 +1156,40 @@ the columns span $\mathbb R^m$.
 
 Determine if the following collections of vectors are linearly
 dependent.  If they are write a dependence relation, i.e., determine
-linear combination of the given vectors which sums to $\mathbf 0$.
+linear combination of the given vectors which sums to $\vzero$.
 \begin{enumerate}
 \item
   \begin{align*}
-    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} \quad
-    \mathbf{v}_{2} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+    \vv_{1} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+    \qquad
+    \vv_{2} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
   \end{align*}
 \item
   \begin{align*}
-    \mathbf v_1 =
+    \vv_1 =
     \begin{bmatrix}
       1 \\ -1 \\ 2
     \end{bmatrix}
-    \qquad \mathbf v_2 =
+    \qquad
+    \vv_2 =
     \begin{bmatrix}
       -1 \\ 4 \\ -3
     \end{bmatrix}
-    \qquad \mathbf v_3 =
+    \qquad
+    \vv_3 =
     \begin{bmatrix}
       -3 \\ 9 \\ -8
     \end{bmatrix}
   \end{align*}
 \item
   \begin{align*}
-    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \quad
-    \mathbf{v}_{2} = \begin{bmatrix} -3 \\ 7 \\ -2 \end{bmatrix} \quad
-    \mathbf{v}_{3} = \begin{bmatrix} -6 \\ 15 \\ -3 \end{bmatrix}
-    \quad \mathbf{v}_{4} = \begin{bmatrix} -1 \\ 3 \\ 1 \end{bmatrix}
+    \vv_{1} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}
+    \qquad
+    \vv_{2} = \begin{bmatrix} -3 \\ 7 \\ -2 \end{bmatrix}
+    \qquad
+    \vv_{3} = \begin{bmatrix} -6 \\ 15 \\ -3 \end{bmatrix}
+    \qquad
+    \vv_{4} = \begin{bmatrix} -1 \\ 3 \\ 1 \end{bmatrix}
   \end{align*}
 \end{enumerate}
 
@@ -1194,95 +1197,108 @@ linear combination of the given vectors which sums to $\mathbf 0$.
 \trueFalseHeader
 \begin{enumerate}[resume]
 \item
-  For $A \in \mathbb R^{m \times n}$, if the columns of $A$ are
-  linearly dependent, then they do not span $\mathbb R^m$.
+  For $A \in \R^{m \times n}$, if the columns of $A$ are linearly
+  dependent, then they do not span $\R^m$.
 \end{enumerate}
 
 \section*{More Difficult Problems}
 
 \begin{enumerate}[resume]
 \item
-  Consider four vectors $\mathbf v_1$, $\mathbf v_2$, $\mathbf v_3$
-  and $\mathbf v_4$ in $\mathbb R^4$ with the property that
+  Consider four vectors $\vv_1$, $\vv_2$, $\vv_3$ and $\vv_4$ in
+  $\R^4$ with the property that
   \begin{align*}
     \begin{bmatrix}
-      \mathbf v_1 & \mathbf v_2 & \mathbf v_3 & \mathbf v_4
+      \vv_1 & \vv_2 & \vv_3 & \vv_4
     \end{bmatrix}
     \sim
     \begin{bmatrix}
-      1 & 1 & 3 & -2 \\ 0 & 4 & -4 & 12 \\ 0 & 0 & 3 & 3 \\ 0 & 0 & 0
-      & 0
+      1 & 1 & 3 & -2 \\
+      0 & 4 & -4 & 12 \\
+      0 & 0 & 3 & 3 \\
+      0 & 0 & 0 & 0
     \end{bmatrix}
   \end{align*}
   \begin{enumerate}
   \item
-    Determine if $\mathbf v_4 \in \mathrm{span}\{\mathbf v_1, \mathbf
-    v_2, \mathbf v_3\}$.  If so, express $\mathbf v_4$ as a linear
-    combination of the vectors $\mathbf v_1$, $\mathbf v_2$ and
-    $\mathbf v_3$.
-  \item Deterime if vectors $\mathbf v_2$, $\mathbf v_3$, and $\mathbf
-    v_4$ linearly independent.  If so, justify your answer.  If not,
-    determine a dependence relation for these vectors.
+    Determine if $\vv_4 \in \vspan\{\vv_1, \vv_2, \vv_3\}$.  If so,
+    express $\vv_4$ as a linear combination of the vectors $\vv_1$,
+    $\vv_2$ and $\vv_3$.
+  \item Determine if vectors $\vv_2$, $\vv_3$, and $\vv_4$ linearly
+    independent.  If so, justify your answer.  If not, determine a
+    dependence relation for these vectors.
   \end{enumerate}
 \item
   Determine all values of $h$ for which the following set of vectors
   is linearly dependent.
   \begin{align*}
-    \mathbf v_1 =
+    \vv_1 =
     \begin{bmatrix} 1 \\ 9 \\ -3 \end{bmatrix}
-    \qquad \mathbf v_2 =
+    \qquad
+    \vv_2 =
     \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}
-    \qquad \mathbf v_3 =
+    \qquad
+    \vv_3 =
     \begin{bmatrix} -2 \\ h \\ -6 \end{bmatrix}
     \qquad
   \end{align*}
 \item
-  Determine three \textit{nonzero} vectors $\mathbf v_1$, $\mathbf
-  v_2$, and $\mathbf v_3$ in $\mathbb R^3$ such that
+  Determine three \textit{nonzero} vectors $\vv_1$, $\vv_2$, and
+  $\vv_3$ in $\R^3$ such that
   \begin{itemize}
   \item
-    $\{\mathbf v_1, \mathbf v_2, \mathbf v_3\}$ is linearly dependent
-    and
+    $\{\vv_1, \vv_2, \vv_3\}$ is linearly dependent and
   \item
-    $\mathbf v_1$ cannot be written as a linear combination of
-    $\mathbf v_2$ and $\mathbf v_3$.
+    $\vv_1$ cannot be written as a linear combination of $\vv_2$ and
+    $\vv_3$.
   \end{itemize}
-\item \faCalculator \ Consider the following matrix, presented as a
-  SymPy array.
+\item
+  \faCalculator \ Consider the following matrix, presented as a SymPy
+  array.
   \begin{lstlisting}
 
-  import sympy a = sympy.Matrix( [[ 13, -19, 19, 16, 5, 1, 10, 5, 15],
-    [-11, -7, -10, 7, 2, -8, -10, -19, 6], [ -5, 10, -7, 2, -8, 2,
-      -15, -16, -11], [ 17, -13, 9, 13, 19, 8, -3, -9, 0], [ 9, -18,
-      5, 1, 4, 14, 9, 8, -4], [ 8, 14, 17, 5, -6, 7, -13, 2, 12], [
-      18, 12, -7, 2, -10, 15, -12, 1, -12], [ 19, -12, 1, -16, 2, -6,
-      -4, 17, 15], [-19, -6, -16, -20, -20, -3, 7, 3, 14], [ 6, 8,
-      -15, 5, -5, 8, -14, 5, -19]])
+  import sympy
+  a = sympy.Matrix(
+      [[ 13,  -19,  19,  16,   5,   1,  10,   5,  15],
+       [-11,   -7, -10,   7,   2,  -8, -10, -19,   6],
+       [ -5,   10,  -7,   2,  -8,   2, -15, -16, -11],
+       [ 17,  -13,   9,  13,  19,   8,  -3,  -9,   0],
+       [  9,  -18,   5,   1,   4,  14,   9,   8,  -4],
+       [  8,   14,  17,   5,  -6,   7, -13,   2,  12],
+       [ 18,   12,  -7,   2, -10,  15, -12,   1, -12],
+       [ 19,  -12,   1, -16,   2,  -6,  -4,  17,  15],
+       [-19,   -6, -16, -20, -20,  -3,   7,   3,  14],
+       [  6,    8, -15,   5,  -5,   8, -14,   5, -19]])
   \end{lstlisting}
   \begin{enumerate}
-  \item Determine if the columns of this matrix span all of $\mathbb
-    R^{10}$. Justify your answer.
+  \item Determine if the columns of this matrix span all of
+    $\R^{10}$. Justify your answer.
   \item Determine if the columns of this matrix linearly
     independent. Justify your answer.
   \end{enumerate}
 \item
   Consider the following collection of vectors.
   \begin{align*}
-    &\mathbf v_1 =
+    &\vv_1 =
     \begin{bmatrix} -10 \\ -6 \\ 2 \\ 0 \\ 8 \\ -3 \\ -4 \end{bmatrix}
-    \qquad \mathbf v_2 =
+    \qquad
+    \vv_2 =
     \begin{bmatrix} -3 \\ 3 \\ -8 \\ 5 \\ -2 \\ 7 \\ -3 \end{bmatrix}
-    \qquad \mathbf v_3 =
+    \qquad
+    \vv_3 =
     \begin{bmatrix} -20 \\ -12 \\ 4 \\ 0 \\ 16 \\ -6 \\ -8 \end{bmatrix}
-    \qquad \mathbf v_4 =
+    \qquad
+    \vv_4 =
     \begin{bmatrix} 6 \\ 1 \\ 3 \\ -1 \\ 10 \\ 7 \\ 4 \end{bmatrix}
   \end{align*}
   \begin{align*}
-    &\mathbf v_5 =
+    &\vv_5 =
     \begin{bmatrix} -2 \\ -10 \\ 10 \\ -5 \\ -3 \\ -10 \\ -5 \end{bmatrix}
-    \qquad \mathbf v_6 =
+    \qquad
+    \vv_6 =
     \begin{bmatrix} -2 \\ 3 \\ -9 \\ -2 \\ -9 \\ -2 \\ 7 \end{bmatrix}
-    \qquad \mathbf v_7 =
+    \qquad
+    \vv_7 =
     \begin{bmatrix} -13 \\ 25 \\ -22 \\ 13 \\ 24 \\ 41 \\ 15 \end{bmatrix}
   \end{align*}
   \begin{enumerate}
@@ -1291,8 +1307,7 @@ linear combination of the given vectors which sums to $\mathbf 0$.
     index) which can be written as a linear combination as of the
     vectors which precede it.  Express this vectors as a linear
     combination of the vectors which precede it.  You should write
-    your final solution using the vector names of the form $\mathbf
-    v_i$.
+    your final solution using the vector names of the form $\vv_i$.
   \item
     Determine a dependence relation for the entire set of vectors with
     the following properties:
@@ -1315,11 +1330,13 @@ linear combination of the given vectors which sums to $\mathbf 0$.
   Determine all values of $h$ for which the following set of vectors
   is linearly dependent.
   \begin{align*}
-    \mathbf v_1 =
+    \vv_1 =
     \begin{bmatrix} 1 \\ -1 \\ h \end{bmatrix}
-    \qquad \mathbf v_2 =
+    \qquad
+    \vv_2 =
     \begin{bmatrix} 4 \\ 0 \\ 2 \end{bmatrix}
-    \qquad \mathbf v_3 =
+    \qquad
+    \vv_3 =
     \begin{bmatrix} 13 \\ h \\ -1 \end{bmatrix}
     \qquad
   \end{align*}
@@ -1330,76 +1347,2865 @@ linear combination of the given vectors which sums to $\mathbf 0$.
 % ======================================================================
 
 \chapter{Linear Transformations}
-\input{linear-transformations.tex}
+
+\section*{Basic Exercises}
+
+For each of the following linear transformations, its domain,
+codomain, and the matrix that implements it (i.e., determine the
+matrix $A$ such that the given transformation is $\vx \mapsto A \vx$).
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      x_1 \\ x_2 \\ x_3
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      x_1 + x_2 \\
+      -2x_1 - x_3 \\
+      x_1 + x_3
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{align*}
+    \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \\ x_{5} \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -9x_{1} + 4x_{2} + 5x_{3} - 3x_{4} + 2x_{5} \\
+      3x_{1} + 8x_{2} + 5x_{3} - 5x_{4} + 7x_{5} \\
+      -x_{1} + 5x_{2} - x_{3} + 4x_{4} + 8x_{5}
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -2x_2 + x_3 + x_4 \\ x_1 + x_3 \\ -3x_3 - 3x_4 \\ 9x_4
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+Let $T$ be a linear transformation with the following input-output
+behavior.
+\begin{align*}
+  T(\vv_{1}) = \begin{bmatrix} -6 \\ 3 \\ -2 \\ -10 \end{bmatrix}
+  \qquad
+  T(\vv_{2}) = \begin{bmatrix} -5 \\ 1 \\ -2 \\ 9 \end{bmatrix}
+  \qquad
+  T(\vv_{3}) = \begin{bmatrix} 8 \\ -7 \\ 6 \\ 6 \end{bmatrix}
+\end{align*}
+Compute the following.
+\begin{enumerate}[resume]
+\item
+  $T(\vv_1 + \vv_2)$
+\item
+  $T(-3\vv_{1} - \vv_{2} - 2\vv_{3})$.
+\end{enumerate}
+Let $T$ be a linear transformation with the following input-output
+behavior.
+\begin{align*}
+  T
+  \left(
+  \begin{bmatrix}
+    -3 \\ 9 \\ 5 \\ 4
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    -4 \\ 3 \\ 4
+  \end{bmatrix}
+  \qquad
+  T
+  \left(
+  \begin{bmatrix}
+    -9 \\ -5 \\ 0 \\ -7
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    0 \\ 1 \\ 2
+  \end{bmatrix}
+  \qquad
+  T
+  \left(
+  \begin{bmatrix}
+    9 \\ -1 \\ -2 \\ 4
+  \end{bmatrix}
+  \right)
+  =
+  \begin{bmatrix}
+    3 \\ -3 \\ 7
+  \end{bmatrix}
+\end{align*}
+Compute the following
+\begin{enumerate}[resume]
+\item \faCalculator \
+  \begin{align*}
+    T
+    \left(
+    \begin{bmatrix}
+      30 \\ 0 \\ -7 \\ 22
+    \end{bmatrix}
+    \right)
+  \end{align*}
+\item \faCalculator \
+  \begin{align*}
+    T
+    \left(
+    \begin{bmatrix}
+      1 \\ 0 \\ 0 \\ 0
+    \end{bmatrix}
+    \right)
+  \end{align*}
+\end{enumerate}
+Determine the matrix that implements the linear transformation $T$,
+given its input-output behavior.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ -2 \end{bmatrix}\right)
+    = \begin{bmatrix} -3 \\ -1 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 2 \\ -3 \end{bmatrix}\right)
+    = \begin{bmatrix} -4 \\ -1 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ -2 \\ -3 \end{bmatrix}\right)
+    = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 2 \\ -3 \\ -4 \end{bmatrix}\right)
+    = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 2 \\ -4 \\ -5 \end{bmatrix}\right)
+    = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T\left(\begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix} \right)
+    = \begin{bmatrix} 3 \\ -3 \\ 4 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \right)
+    = \begin{bmatrix} 8 \\ 0 \\ 2 \end{bmatrix}
+    \qquad
+    T\left(\begin{bmatrix} 2 \\ 1 \\ 2 \end{bmatrix} \right)
+    = \begin{bmatrix} -1 \\ -1 \\ -1 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    T \left(\begin{bmatrix} -7 \\ -3 \end{bmatrix} \right)
+    = \begin{bmatrix} -4 \\ 3 \\ 4 \\ 0 \\ 1 \end{bmatrix}
+    \qquad
+    T \left(\begin{bmatrix} 9 \\ 4 \end{bmatrix} \right)
+    = \begin{bmatrix} 13 \\ 0 \\ 0 \\ 8 \\ 3 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each matrix, determine if its transformation is (a) one-to-one but
+not onto, (b) onto but not one-to-one, (c) both, or (d)
+neither. Justify your answer.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 1 & 3 \\
+      1 & 3 & 1 & 3 \\
+      1 & 5 & 1 & 4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 & 2 \\
+      2 & 3 & 5 \\
+      -1 & -3 & -3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      5 & 0 & 5 \\
+      0 & 0 & 0 \\
+      4 & 0 & 7
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & 1 \\
+      -2 & -2 \\
+      1 & 3 \\
+      1 & 4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 1 & 3 \\
+      0 & 0 & 3 \\
+      0 & 0 & 3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & -1 & 6 & 9 \\
+      2 & 5 & -5 & 13 & 22 \\
+      -3 & -4 & -3 & -16 & -19
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 1 & 3 & 0 \\
+      1 & 4 & 3 & 0 \\
+      0 & 0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -2 & 3 & -4 \\
+      0 & 5 & -6 &  7 \\
+      0 & 0 & -8 & 9 \\
+      0 & 0 & 0 & -10
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      12 & 45 & -3 & 20 & 1 \\
+      0 & 24 & 121 & 0 & -47 \\
+      0 & 0 & 252 & 44 & 46 \\
+      0 & 0 & 0 & 21 & -44 \\
+      0 & 0 & 0 & 0 & 11
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 \\
+      -13 & 6 & -39 & 4 \\
+      2 & 9 & 6 & 7 \\
+      5 & 4  & 15 & 16 \\
+      0 & 1 & 0 & 65 \\
+      1 & 1 & 1 & 1 \\
+      -12 & 3 & -36 & 33 \\
+      0 & 0 & 0 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+\end{enumerate}
+Draw the image of the unit square under the following linear
+transformations.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      -2 & -2 \\
+      -1 & 0
+    \end{bmatrix}
+    \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  If $\vx \mapsto A \vx$ is one-to-one and onto, then $A$ is a square
+  matrix.
+\item
+  If $\vx \mapsto A \vx$ is neither one-to-one or onto, and the
+  reduced echelon form of $A$ only has $0$s and $1$s, then one of the
+  columns of $A$ is $\vzero$.
+\item
+  For any matrix $A \in \R^{m \times n}$ where $m > n$, it is not
+  possible for the transformation $\vx \mapsto A \vx$ to be
+  one-to-one.
+\end{enumerate}
+
+\begin{enumerate}[resume]
+\item
+  If $T : \R^m \to \R^n$ is a linear transformation and $T(\vv) = A
+  \vv$ for all vectors $\vv$ in the domain of $T$, then $A$ is an $m
+  \times n$ matrix.
+\item
+  The matrix that implements a linear transformation is unique.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine the matrix which implements the linear tranformation $T :
+  \R^3 \to \R^3$ that reflects vectors across the $x_1x_2$-plane.
+\item
+  Determine the matrix which implements the linear transformation $T :
+  \R^2 \to \R^4$ that repeats the input vector, e.g.,
+  \begin{align*}
+    T\left(\begin{bmatrix} 1 \\ 2 \end{bmatrix} \right)
+    = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 2 \end{bmatrix}
+  \end{align*}
+\item
+  Determine the matrix which implements the linear transformation $T :
+  \R^2 \to \R^2$ that reflects vectors across the line $y = x$.
+\item
+  Determine the matrix which implements the linear transformation $T :
+  \R^2 \to \R^2$ that reflects vectors across the line $y =
+  \tan(\frac{3\pi}{8})x$.
+\item
+  Determine the matrix which implements the transformation $T : \R^4
+  \to \R^4$ that swaps the first and second entries of its input,
+  e.g.,
+  \begin{align*}
+    T \left( \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix} \right)
+    = \begin{bmatrix} 2 \\ 1 \\ 3 \\ 4 \end{bmatrix}
+  \end{align*}
+\item
+  Consider the following transformation.
+  \begin{align*}
+    \begin{bmatrix}
+      x \\ y \\ z
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      (x^3 + y^3 + z^3)^{1 / 3} \\ y + z
+    \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Demonstrate that the above transformation is homogeneous.
+  \item
+    Determine if the above transformation is not linear.
+    Justify your answer.
+  \end{enumerate}
+\item
+  Show that the transformation $T: \R^4 \to \R^4$ given by
+  \begin{displaymath}
+    \begin{bmatrix}
+      v_1 \\ v_2 \\ v_3 \\ v_4
+    \end{bmatrix}
+    \mapsto
+    \begin{bmatrix}
+      \min(v_1, 100) \\
+      \min(v_2, 100) \\
+      \min(v_3, 100) \\
+      \min(v_4, 100) \\
+    \end{bmatrix}
+  \end{displaymath}
+  is not linear.
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine the matrices which implement the linear transformations
+  that rotates vectors in $\R^3$ 120 degrees about
+  \begin{align*}
+    \vspan\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
+  \end{align*}
+  You should determine \textit{two} matrices, one for clockwise
+  rotation and the other for counterclockwise rotation.
+\item
+  Determine the matrices which implement the linear transformations
+  that reflects vectors across the plane defined by the linear
+  equation $x + y + z = 0$, and then rotates vectors 60 degrees about
+  \begin{align*}
+    \vspan\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
+  \end{align*}
+  You should determine \textit{two} matrices, one for clockwise
+  rotation and the other for counterclockwise rotation.
+\item
+  Determine the matrix which implements the linear transformation $T :
+  \R^3 \to \R^3$ that reflects vectors across the plane defined by the
+  linear equation $x + y + z = 0$.
+\item
+  Consider the following $\R^3$ rotation matrices.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      \cos 45^\circ & -\sin 45^\circ & 0 \\
+      \sin 45^\circ & \cos 45^\circ & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & \cos 180^\circ & -\sin 180^\circ \\
+      0 & \sin 180^\circ & \cos 180^\circ
+    \end{bmatrix}
+  \end{displaymath}
+  The matrix $A$ rotates vectors around the $x_3$-axis by 45 degrees,
+  and $B$ rotates vectors around the $x_1$-axis by 180 degrees.
+  \begin{enumerate}
+  \item
+    Determine $A^{-1}$.
+  \item
+    Calculate $ABA^{-1}$.
+  \item
+    Describe what the transformation implemented by $ABA^{-1}$ does
+    geometrically.
+  \end{enumerate}
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Matrix Algebra}
-\input{matrix-algebra.tex}
+
+\section*{Basic Exercises}
+
+\begin{align*}
+  A =
+  \begin{bmatrix}
+    6 & 1 \\
+    -1 & -3 \\
+    8 & 1
+  \end{bmatrix}
+  \qquad
+  B =
+  \begin{bmatrix}
+    6 & -5 \\
+    -6 & -2 \\
+    -3 & 4
+  \end{bmatrix}
+  \qquad
+  C =
+  \begin{bmatrix}
+    -4 & 0 \\
+    -8 & 5 \\
+    -4 & -1
+  \end{bmatrix}
+\end{align*}
+Compute the following expressions.
+\begin{enumerate}
+\item $A + B$
+\item $2A - 4B - 3C$
+\item $A^TA + B^TB$
+\item $AC^T + CA^T$
+\end{enumerate}
+Compute the following matrix multiplications, if possible.  If it is
+not possible, explain why.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      -2 & 6 \\
+      -2 & -7 \\
+      -3 & -2
+    \end{bmatrix}
+    \begin{bmatrix}
+      -4 & 8 & 4 \\
+      -10 & -4 & 9
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix} 8 & 6 & -1 & -2 \end{bmatrix}
+    \begin{bmatrix} 3 \\ 5 \\ 1 \\ 5 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix} -3 \\ 6 \\ 8 \\ 5 \end{bmatrix}
+    \begin{bmatrix} -9 & -7 & 0 & -8 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      7 & -10 \\
+      -6 & 6 \\
+      1 & 0 \\
+      -4 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      -8 & 9 \\
+      -10 & 0 \\
+      -9 & 1 \\
+      -4 & -3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 3 & -1 \\
+      7 & 4 & 3 \\
+      0 & -1 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 4 & 1 \\
+      0 & 2 & 1 \\
+      0 & 0 & 3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 1 & 0 & 1 \\
+      0 & 1 & 0 & 1 & 0 \\
+      1 & 0 & 1 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 2 & 3 \\
+      2 & 3 & 4 \\
+      3 & 4 & 5 \\
+      4 & 5 & 6 \\
+      5 & 6 & 7
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 & 5 & 6
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 & 5 & 6
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -1 & 4 \\
+      3 & 0 & 1 \\
+      0 & 1 & 1 \\
+      -3 & 1 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      2 & 0 & 1 & 1 \\
+      0 & 0 & 2 & 3 \\
+      1 & 1 & 3 & 5
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ -1
+    \end{bmatrix}
+    \begin{bmatrix}
+      2 & -1 & 2 & 2
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}^T
+    \begin{bmatrix}
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      \va_1 & \va_2 & \va_3 & \va_4 & \va_5
+    \end{bmatrix}
+    \begin{bmatrix}
+      0 & 0 & 1 & 0 & 0 \\
+      0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 1 & 0 \\
+      1 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  where $\va_1$, $\va_2$, $\va_3$, $\va_4$, $\va_5$ are vectors in $\R^n$.
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 \\
+      0 & 1
+    \end{bmatrix}^{2023}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      \cos2 & -\sin2 & 0 \\
+      \sin2 & \cos2 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}^{2023}
+  \end{align*}
+\end{enumerate}
+Let $A$ be matrix such that $A^{-1}$ is defined as below.
+Use this to determine the solution to the matrix equations of the form $A\vx = \mathbf b_i$, where each $\mathbf b_i$ is defined below.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    A^{-1} =
+    \begin{bmatrix}
+      -10 & -10 & -1 \\
+      -2 & -4 & -3 \\
+      -8 & -6 & 1
+    \end{bmatrix}
+    \qquad
+    \mathbf b_{1} = \begin{bmatrix} -5 \\ 6 \\ -1 \end{bmatrix}
+    \qquad
+    \mathbf b_{2} = \begin{bmatrix} -1 \\ -3 \\ -10 \end{bmatrix}
+    \qquad
+    \mathbf b_{3} = \begin{bmatrix} -6 \\ 4 \\ -4 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+Determine the inverse of the following matrices.
+If the matrix is not invertible, then explain why.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & -1 \\
+      3 & 3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      -8 & -2 \\
+      -2 & -3
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 3 \\
+      -3 & -2
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 & 1 \\
+      0 & 2 & 0 \\
+      3 & 0 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & -2 \\
+      -3 & 1 & 4 \\
+      2 & -3 & 4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -1 & 1 \\
+      -3 & 4 & -4 \\
+      0 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 & 0 & -1 \\
+      -2 & -1 & -1 & 0 \\
+      1 & 1 & 0 & 0 \\
+      -2 & -2 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      2 & 1 & 0 \\
+      3 & 4 & 1 \\
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      \cos \theta & -\sin \theta \\
+      \cos \theta + \sin \theta & \cos \theta - \sin \theta
+    \end{bmatrix}
+  \end{align*}
+  (Simplify your solution as much as possible.)
+\end{enumerate}
+Determine the matrix in $\R^{4 \times 4}$ that implements the following row operations, in order from top to bottom.
+That is, determine a matrix $A$ such that $AB$ is the result of applying the following row operations, from top to bottom, to $B$.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    R_{2} &\gets R_{2} - R_{3} \\
+    R_{1} &\leftrightarrow R_{4} \\
+    R_{1} &\gets R_{1} + 3R_{2} \\
+    R_{3} &\gets R_{3} - 5R_{4} \\
+    R_{4} &\gets -2R_{4}
+  \end{align*}
+\end{enumerate}
+Determine the inverse of the following transformation, if it exists.
+Your solution should be in the form of a transformation, as given below.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      x_{1} \\
+      x_{2} \\
+      x_{3}
+    \end{bmatrix} \mapsto \begin{bmatrix}
+      x_{1} + x_{3} \\
+      -3x_{1} + x_{2} - 4x_{3} \\
+      x_{1} + 2x_{2}
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+Suppose that $A$ is a matrix in $\R^{3 \times 3}$ such that the following sequence of row operations (from top to bottom) transforms $A$ into the identity matrix.
+Determine the inverse of $A$.
+You should do this without determining $A$ first.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    R_{1} &\leftrightarrow R_{2} \\
+    R_{1} &\gets R_{1} - R_{2} \\
+    R_{3} &\gets R_{3} - 3R_{2} \\
+    R_{1} &\gets R_{1} + 3R_{2} \\
+    R_{3} &\gets R_{3} - 5R_{1} \\
+    R_{1} &\leftrightarrow R_{2}
+  \end{align*}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  For all matrices $A$ and $B$ in $\R^{m \times n}$ and $C$ in $\R^{n \times m}$, we have $(A + B + C^T)^T = C + B^T + A^T$.
+\item
+  For all matrices $A$ and $B$ such that $AB$ is defined, we have $AB \not = BA$.
+\item
+  If $A\vx = \mathbf b$ has a unique solution for every vector $\mathbf b$ in the span of the columns of $A$, then $A$ is invertible.
+\item
+  For any matrix $A$ and vector $\vv$, if $\vv^T A$ is defined, then $A$ is single column.
+\item
+  For any matrices $A$ and $B$, if $A^{-1} = B^{-1}$, then $A = B$.
+\item
+  For any matrices $A$ and $B$, if there is a unique matrix $X$ such that $AX = B$, then $A$ is invertible.
+\item
+  If $A$ and $B$ are invertible, then so is $A + B$.
+\item
+  If $A$ and $B$ are invertible, then so is $BA$.
+\item
+  If $A$ and $B$ in $\R^{n \times n}$ are invertible, then so is $\begin{bmatrix}A & B \\ B & A\end{bmatrix}$, the matrix in $\R^{2n \times 2n}$ gotten by stacking copies of $A$ and $B$.
+\item
+  For any matrices $A$ and $B$, if there is a unique matrix $X$ such that $AX = B$, then $A$ is invertible.
+\item
+  If $A$ and $B$ are symmetric and $AB = BA$ then $AB$ is symmetric.
+\item
+  For any matrix $A \in \R^{n \times n}$, if the columns of
+  $A^3$ span all of $\R^n$, then the columns of $A$ are
+  linearly independent.
+\item
+  For any matrix $A \in \R^{n \times n}$, the matrix $A + A^T$ is symmetric.
+\item
+  If $AB$ and $BA$ are symmetric, then $A$ and $B$ are symmetric.
+\item
+  If $A \in \R^{n \times n}$ has zeros along its diagonal, then
+  $A$ is not invertible.
+\item
+  If $A \in \R^{n \times n}$ has a row of all zeros, then $A$
+  is not invertible.
+\item
+  If $A \in \R^{2 \times 2}$ and $A^{-1}$ has integer entries
+  then the determinant of $A$ is $1$.
+\item
+  For any square matrices $A$ and $B$, if $AB = I$, then $AB = BA$.
+\item
+  The \textbf{Hadamard product} of two matrices is defined as
+  \begin{align*}
+    (A \circ B)_{ij} = A_{ij} B_{ij}
+  \end{align*}
+  In other words, $A$ and $B$ are multiplied entry-wise.  For any
+  invertible matrices $A$ and $B$, if $A \circ B$ is invertible, then
+  $(A \circ B)^{-1} = A^{-1} \circ B^{-1}$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Let $A$ be as defined below.  Is it possible to write the
+  inverse of $A$ as a power of $A$?  If so, determine the smallest positive integer $n$ such that $A^n = A^{-1}$.
+  \begin{align*}
+    A = \begin{bmatrix} 1 & 1 \\ -1 & 0 \end{bmatrix}
+  \end{align*}
+\item Determine the smallest positive integer $n$ such that $A^n = A^{-1}$.
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      \cos\frac{\pi}{9} & -\sin\frac{\pi}{9} & 0 \\
+      \sin\frac{\pi}{9} & \cos\frac{\pi}{9} & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\item
+  Compute the following matrix expression.
+  Your answer should be a single matrix with entries given in terms of $n$.
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 2 \\
+      0 & 1 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}^{n}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & -3 & 1
+    \end{bmatrix}^{-n}
+  \end{align*}
+\item
+  Suppose that $A$ and $B$ are invertible matrices such that $AB^TXA^{-1}B = I$ for some matrix $X$.
+  Determine $X$ in terms of $A$ and $B$.
+\item
+  Let $A$, $B$, and $C$ such that $A = A^{-1}$ and $C = C^T$ and
+  \begin{align*}
+    A(C^{-1}(AB)^T)^TC
+  \end{align*}
+  is well-defined.
+  Simplify this expression using the algebraic properties of matrix operations.
+\item
+  Determine a matrix in $\R^{2 \times 2}$ with all nonzero entries that is equal to its inverse.
+  \textit{Hint.} Use the closed-form equation for the inverse of a $2 \times 2$ matrix.
+
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine \textit{three} matrices in $\R^{2 \times 2}$ that satisfy the following equation.
+  In particular, you must demonstrate that each matrix in your solution satisfies the equation.
+  \begin{align*}
+    X^2 +
+    \begin{bmatrix}
+      3 & 0 \\
+      0 & 1
+    \end{bmatrix}
+    X
+    +
+    \begin{bmatrix}
+      2 & 0 \\
+      0 & 0
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 & 0 \\
+      0 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  Determine the reduced echelon form of the matrix
+  \begin{align*}
+    \begin{bmatrix}
+      a & b & 1 & 0 \\
+      c & d & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+  in terms of $a$, $b$, $c$, $d$. Show your work.
+\item
+  Determine two invertible matrices $A$ and $B$ such that $AB^{-1} = -BA^{-1}$.
+\item
+  Let $A$ and $B$ be two invertible matrices in $\R^{n \times n}$ such that $AB^{-1} = -BA^{-1}$.
+  Determine the inverse of the following matrix in $\R^{2n \times 2n}$.
+  \begin{align*}
+    \begin{bmatrix}
+      A & B \\
+      B & A
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{LU Factorization}
-\input{lu.tex}
+
+\section*{Basic Exercises}
+
+Determine an LU factorization of the following matrices.
+\begin{enumerate}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -2 \\
+      -2 & 5
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 3 \\
+      1 & -4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      -3 & 0 & -6 & -9 \\
+      0 & 2 & 4 & -4 \\
+      3 & 2 & 10 & 9 \\
+      -3 & 2 & -2 & -9
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -1 & 4 & 0 & -5 \\
+      -2 & 3 & -13 & -1 & 8 \\
+      2 & -4 & 18 & 3 & -2 \\
+      -3 & 5 & -22 & -4 & 3
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+
+\section*{True/False}
+
+\section*{More Difficult Problems}
+\begin{enumerate}
+\item
+  Suppose that $LU$ is the LU-factorization of a matrix $A$, and let
+  $B$ be a matrix such that $BU = I$.  Determine the inverse of $A$ in
+  terms of $L$, $U$, and $B$.
+\item
+  Let $A$ be a $5 \times 2026$ matrix such that $\rank A = 4$, which
+  has an LU decomposition where
+  \begin{displaymath}
+    L =
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 & 0 \\
+      -1 & 1 & 0 & 0 & 0\\
+      0 & 4 & 1 & 0 & 0\\
+      2 & 0 & 0 & 1 & 0 \\
+      0 & 3 & -3 & 0 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  Determine if $\vv$ in $\col A$, where
+  \begin{displaymath}
+    \vv = \vFive 2 {-5} {-11} 5 {-12}
+  \end{displaymath}
+
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Markov Chains}
-\input{markov-chains.tex}
+
+\section*{Basic Exercises}
+
+For each of the following stochastic matrices $A$, answer the
+following items:
+\begin{itemize}
+\item
+  Draw the state diagram for the corresponding Markov chain. You
+  should label each node with a positive integer for the corresponding
+  column of $A$ (e.g, the node corresponding to the first column
+  should be labeled \enquote{1}, to the second column labeled
+  \enquote{2}, and so on).
+\item
+  Determine if $A$ is regular, and write down the smallest $k$ such
+  that $A^k$ has strictly positive values. If it is not regular,
+  justify your answer.
+\item
+  Determine the general form solution of the equation
+  $(A-I)\,\vx = \vzero$. You may use a computer to do this,
+  but you should express your answer in fractions, not decimals.
+\item
+  Determine a steady state vector for $A$. If the steady state vector
+  is unique, note this. You must do this by hand and show your work.
+\end{itemize}
+\begin{enumerate}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0.4 & 0.8 \\ 0.6 & 0.2
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0.6 & 0 & 0.1 \\
+      0.4 & 0.3 & 0 \\
+      0 & 0.7 & 0.9
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1/2 & 1/3 \\
+      0 & 1/2 & 1/3 \\
+      0 & 0 & 1/3
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      0.9 & 0.9 \\
+      0.1 & 0.1
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0.2 & 0 & 0 \\
+      0.4 & 1 & 0.3 \\
+      0.4 & 0 & 0.7
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & 0 & 1 \\
+      0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      0.2 & 0 & 0.3 \\
+      0.8 & 0.5 & 0 \\
+      0 & 0.5 & 0.7
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 & 0.3 \\
+      1 & 0 & 0.7 \\
+      0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0.9 & 0.6 \\
+      0.1 & 0.4
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0.3 & 0.4 \\
+      0 & 0.7 & 0.1 \\
+      0 & 0 & 0.5
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0.5 & 0.5 \\
+      0.5 & 0 & 0.5 \\
+      0.5 & 0.5 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 & 1 \\
+      1 & 0 & 0 \\
+      0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 & 0 & 0.5 \\
+      1 & 0 & 0 & 0.3 \\
+      0 & 1 & 0 & 0.2 \\
+      0 & 0 & 1 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0.4 & 0.8 & 0.5 & 0 \\
+      0.6 & 0.2 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0.5 & 1
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  If $A$ is a stochastic matrix, then the all ones vector $\mathbf 1$
+  is an eigenvector for $A^T$.
+\item
+  If a stochastic matrix has a unique steady state vector, then the
+  corresponding Markov chain converges to it regardless of starting
+  state.
+\item
+  A stochastic regular matrix $A \in \R^{n \times n}$ has a
+  smallest integer $k$ such that $A^k$ has strictly positive
+  entries. For such a matrix, $k \leq n$.
+\item
+  Every stochastic matrix has at least one steady state vector.
+\item
+  If $A$ and $B$ are stochastic matrices, then so is $AB$.
+\item
+  Every $A$ stochastic matrix is invertible.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Suppose you've been watching the stock price of your favorite
+  company and you've discovered the following trends based on the data
+  you've taken:
+
+  \begin{itemize}
+  \item
+    If the price is \textbf{STEADY} there's a 70\% chance it will
+    remain steady the next day, but a 20\% chance it will go
+    \textbf{HIGH} and a 10\% chance it will dip \textbf{LOW}.
+  \item
+    If the price is \textbf{HIGH} there's a 55\% chance it will remain
+    high the next day, but a 40\% chance it will go back to being
+    \textbf{STEADY}, and just a 5\% chance it will dip all the way
+    down to \textbf{LOW}.
+  \item
+    If the price is \textbf{LOW}, there is a 60\% change it will
+    remain low the next day, but a 30\% chance it will reset to
+    \textbf{STEADY}, and a 10\% chance it will suddenly jump to
+    \textbf{HIGH}.
+  \end{itemize}
+
+  Suppose that the price is currently \textbf{STEADY}.  In the long
+  term, is more likely to remain \textbf{STEADY}, go up \textbf{HIGH},
+  or dip down \textbf{LOW}?  Justify your answer.
+
+\item
+  Suppose that we're trying to predict the preformance of the $A_5$
+  Soccer Club based on statistics that we've gathered on their recent
+  games. We've found that:
+  \begin{itemize}
+  \item
+    After a win, they have a 70\% chance of winning, a 15\% chance of
+    drawing, and a 15\% chance losing their next game.
+  \item
+    After a draw, they have a 20\% chance of winning, a 50\% chance of
+    drawing, and a 30\% chance of losing their next game.
+  \item
+    After a loss, they have a 20\% chance of winning, a 70\% chance of
+    drawing, and a 10\% chance of losing their next game.
+  \end{itemize}
+  \begin{enumerate}
+  \item
+    If they win their first game, how should we expected them to
+    perform overall?  That is, what is the expected percentage of
+    wins, draws, and losses in the long term?
+  \item
+    If they lose their first game, what will their overall record tend
+    towards?
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Demonstrate that any invertible stochastic matrix $A$ with a
+  stochastic inverse must be a permutation matrix.  That is, every
+  column and every row of $A$ has a single 1, with the rest of the
+  entries being 0s.  \textit{Hint:} Consider what can be inferred
+  about the entries of a stochastic $A^{-1}$ from its action on $A
+  \mathbf{e}_i$ for any elementary basis vector $\mathbf{e}_i$.
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Vector Spaces}
-\input{vector-spaces.tex}
+
+\section*{Basic Exercises}
+
+For each of the following exercises, justify your answer.
+\begin{enumerate}
+\item
+  Given $A \in \R^{3 \times 6}$, determine value of $n$ such that
+  $\nul A$ is a subspace of $\R^n$.
+\item
+  Given $A \in \R^{10 \times 13}$, determine the minimum dimension of
+  $\nul A$.
+\item
+  Given $A \in \R^{7 \times 5}$ and $\rank A = 4$, determine
+  $\dim(\nul A)$.
+\item
+  Determine if $v$ is in $\nul A$ where
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      -1 & 0 & 1 \\
+      3 & 6 & 0\\
+      5 & 7 & 2
+    \end{bmatrix}
+    \qquad
+    \vv = \vThree 2 {-1} 2
+  \end{align*}
+\item Determine if $\vv$ is in $\col A$, where $\vv$ and $A$ are
+  defined as in the previous exercise.
+\item Without performing any row operations, determine $\rank A$ where
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 1 & -8 & 3 \\
+      -1 & 3 & 4 & 2 \\
+      3 & 2 & -12 & 5 \\
+      1 & -2 & -4 & -1
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following matrices, determine a basis for its column
+space and a basis for its null space.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -5 \\
+      -2 & 10
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 \\
+      0 & 0
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      0 & -2 & 2 \\
+      -2 & 3 & -9 \\
+      -1 & -2 & -1
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -4 & 3 & -3 \\
+      -2 & 8 & -6 & 7
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -4 & -3 \\
+      -3 & 12 & 10 \\
+      -2 & 8 & 8 \\
+      -1 & 4 & 2
+    \end{bmatrix}
+  \end{align*}
+\item
+  The matrix $[ \va_1 \ \ \ \va_2 \ \ \ \va_3 \ \ \ \va_4 \ \ \ \va_5
+    \ \ \ \va_6 \ \ \ \va_7 \ \ \ \va_8 ]$ which is row-equivalent to
+  the following matrix.
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 3 & 0 & 0 & 5 & 0 & -7 \\
+      0 & 1 & 14 & 0 & 0 & 2 & 0 & 1 \\
+      0 & 0  & 0  & 1 & 0 & 3 & 0 & 7 \\
+      0 & 0  & 0  & 0 & 1 & 8 & 0 & 9 \\
+      0 & 0  & 0  & 0 & 0 & 0 & 1 & 1 \\
+      0 & 0  & 0  & 0 & 0 & 0 & 0 & 0 \\
+    \end{bmatrix}
+  \end{align*}
+\item \faCalculator
+  \begin{lstlisting}
+
+  Matrix(
+    [[1,   2,   4,   3,  -4,  1],
+     [-3, -4, -10,  -8,  13, -3],
+     [ 5,  6,  16,  10, -13,  9],
+     [-7, -8, -22, -12,  13, -9],
+     [13, 18,  44,  32, -47, 11]]
+  )
+  \end{lstlisting}
+\end{enumerate}
+For each of the following subspaces, determine a basis.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \vspan\!
+    \left
+    \{\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix},
+    \begin{bmatrix} 2 \\ 5 \\ 1 \end{bmatrix},
+    \begin{bmatrix} -3 \\ -5 \\ -8 \end{bmatrix}
+    \right\}
+  \end{align*}
+\item
+  \begin{align*}
+    \vspan\! \left\{
+    \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix},
+    \begin{bmatrix} -1 \\ 0 \\ -3 \end{bmatrix},
+    \begin{bmatrix} 2 \\ -4 \\ 18 \end{bmatrix},
+    \begin{bmatrix} -2 \\ -4 \\ 6 \end{bmatrix}
+    \right\}
+\end{align*}
+\end{enumerate}
+Determine the coordinate vector $[\vu]_{\cB}$ where
+$\vu$ and $\cB$ are defined below.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \vu = \vTwo 8 {-12}
+    \qquad
+    \cB = \left\{ \vTwo 1 {-1}, \vTwo {-3} 4 \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vu = \vThree 4 1 3
+    \qquad
+    \cB = \left\{
+    \vThree 1 {-1} 0
+    \vThree {-1} 2 1
+    \vThree {-2} 2 1
+    \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vu = \vTwo {-17} {15}
+    \qquad
+    \cB =
+    \left\{
+    \vTwo 1 {-5}
+    \vTwo 3 {-1}
+    \right\}
+  \end{displaymath}
+\item \faCalculator
+  \begin{displaymath}
+    \vu = \vFour 5 {29} {-80} {42}
+    \qquad
+    \cB =
+    \left\{
+    \vFour {-11} {-19} {17} 9,
+    \vFour 9 {17} {-20} {-2},
+    \vFour {-3} 1 {-18} {18}
+    \right\}
+  \end{displaymath}
+\end{enumerate}
+Determine the change-of-basis matrix for the following bases.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \left\{
+    \vTwo 1 2,
+    \vTwo {-3} {-5}
+    \right\}
+  \end{displaymath}
+\item
+\begin{displaymath}
+\left\{
+\vThree 1 {-3} {-2},
+\vThree {-3} {10} {5},
+\vThree {-2} 8 3
+\right\}
+\end{displaymath}
+\end{enumerate}
+For each of the following matrices, determine a vector that is
+\textit{not} in its column space.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 \\
+      0 & 1 & 2 & 0 \\
+      0 & 0 & 0 & 1 \\
+      0 & 0 & 0 & 0
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 5 \\
+      -1 & 0 & -1 \\
+      1 & 2 & 9
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  There is a unique basis for any subspace.
+\item
+  A $7 \times 4$ matrix $A$ may have $\dim(\nul (A)) = 5$.
+\item
+  A $3 \times 6$ matrix $A$ may have $\dim(\nul (A)) = 2$.
+\item
+  For any matrix $A \in \R^{n \times n}$, if $A$ is invertible then $\rank(A) = n$.
+\item
+  For any matrix $A \in \R^{m \times n}$, $\mathrm{Col}(A)$ is
+  the same as the set of vectors $\mathbf{b}$ such that $A \vx
+  = \mathbf{b}$ has a solution.
+\item
+  A basis is a spanning set that is as large as possible.
+\item
+  A linear transformation $T: \R^3 \to \R^3$ that maps
+  $\R^3$ to a plane has a trivial kernel (i.e., if
+  $T(\vv) = \vzero$, then $\vv = \vzero$).
+\item
+  If $\cB$ is the standard basis for $R^n$, then for any $\vx \in
+  \R^n$ we have that $[\vx]_{\cB} = \vx$
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  For a matrix $A \in \R^{m \times n}$, consider the set of vectors
+  $\{\vx \in \R^n : A\vx= \ve_1\}$ (\textit{Recall:} $\ve_1$ is the
+  first standard basis vector).
+  \begin{enumerate}
+  \item
+    Determine if this set if closed under addition. Justify your
+    answer.
+  \item
+    Determine if this set is closed under scaling. Justify your
+    answer.
+  \item
+    Determine if this set is a subspace of $\R^n$. Justify your
+    answer.
+  \end{enumerate}
+\item
+  \begin{align*}
+    \vv_1 = \begin{bmatrix}
+      3  \\
+      0  \\
+      -1
+    \end{bmatrix}, \,
+    \vv_2 = \begin{bmatrix}
+      -3  \\
+      2  \\
+      0
+    \end{bmatrix}, \,
+    \vv_3 = \begin{bmatrix}
+      0  \\
+      -2  \\
+      -1
+    \end{bmatrix}
+\end{align*}
+List all possible subsets of the above vectors that form a basis of
+the subspace $\vspan\!\left\{\vv_1, \, \vv_2, \,
+\vv_3 \right\}$.\footnote{The process we teach for determining
+a basis gives one choice, but there may be multiple choices that are
+suitable.}
+\item Consider the following vectors.
+\begin{align*}
+\vv_1 = \begin{bmatrix}
+      3   \\
+      -1
+\end{bmatrix}, \,
+\vv_2 = \begin{bmatrix}
+      -3  \\
+      1
+\end{bmatrix}, \,
+\vv_3 = \begin{bmatrix}
+      -1  \\
+      1
+\end{bmatrix}, \,
+\vv_4 = \begin{bmatrix}
+      8  \\
+      -4
+\end{bmatrix}
+\end{align*}
+List all possible subsets of the above vectors that form a basis of
+the subspace $\vspan\!\left\{\vv_1, \, \vv_2, \,
+\vv_3, \, \vv_4 \right\}$.
+\item Consider the 3-dimensional vector space of all quadratic
+  polynomials $Q = \{a x^2 + b x + c \, | \, a,b,c \in \R\}$
+  and consider the linear derivative map $\frac{d}{dx}: Q \to Q$
+  defined by $\frac{d}{dx}(a x^2 + b x + c) = 0 x^2 + 2 a x + b$.
+  \begin{enumerate}
+  \item
+    Using the standard basis given by $\{x^2, x, 1 \}$, determine a $3
+    \times 3$ matrix $A$ that implements $\frac{d}{dx}$.
+  \item
+    Determine a basis for $\mathrm{Col}(A)$.
+  \item
+    Determine basis for $\nul (A)$.
+  \item
+    Determine $\rank(A)$ and $\dim(\nul (A))$.
+  \end{enumerate}
+\item
+  Let $A$ be an $m \times n$ matrix and let $\vv$ be a vector in $\R^n$.
+  Let $\vb$ denote the vector $A\vv$.
+  \begin{enumerate}
+  \item
+    Show that if $\vw \in \nul A$, then $\vv + \vw$ is a solution to the equation $A\vx = \vb$.
+  \item
+    Show that if $\vb \not = 0$, then the solution set of $A\vx = \vb$ is not a subspace of $\R^n$.
+  \item
+    A set $H$ is an \textbf{affine} subspace of $\R^n$ if there is a subspace $U$ of $\R^n$ and a vector $\vo$ such that
+    \begin{align*}
+      H = \{\vu + \vo \ | \ \vu \in U\}
+    \end{align*}
+    Show that the solution set of $A\vx = \vb$ is an affine subspace of $\R^n$ if it is nonempty.
+    In particular, choose a vector $\vo$ and subspace $U$.
+  \end{enumerate}
+\item
+Determine the linear equation whose solution set is the column space
+of the following matrix.
+\begin{displaymath}
+  \begin{bmatrix}
+    1 & -4 & -10 \\
+    -4 & 17 & 42 \\
+    1 & -2 & -6
+  \end{bmatrix}
+\end{displaymath}
+\item
+  Let $A$ be a $4 \times 2024$ matrix where $\rank A = 3$. Further
+  suppose that the LU-decomposition of $A$ has
+  \begin{displaymath}
+    L =
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 \\
+      -2 & 1 & 0 & 0 \\
+      7 & 5 & 1 & 0 \\
+      0 & 0 & 1 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  Determine the linear equation whose solution set is $\col A$.
+\item
+  Consider the following two matrices.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      6 & -6 & -1 & 17 \\
+      9 & -2 & 2 & 36 \\
+      -10 & -13 & 8 & -45 \\
+      -9 & 4 & -1 & -33 \\
+      2 & 4 & 2 & 14
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      -8 & 5 & -16 & 1 \\
+      2 & 11 & 4 & 16 \\
+      3 & -2 & 6 & 3 \\
+      2 & -10 & 4 & 0 \\
+      8 & 4 & 16 & 9
+    \end{bmatrix}
+  \end{displaymath}
+  Also consider the following set of vectors.
+  \begin{displaymath}
+    H = \{ \vu + \vv \ | \ \vu \in \col A \text{ and } \vv \in \col B \}
+  \end{displaymath}
+  That is, $H$ consists of all sums of pairs of vectors, one from
+  $\col A$ and one from $\col B$.
+  \begin{enumerate}
+  \item
+    Show that $H$ is a subspace of $\R^5$.
+  \item \faCalculator \
+    Determine the dimension of $H$.  Justify your answer.  You may use a
+    computer but you must determine any matrix you reduce along with its
+    reduced echelon form.
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  The row space of a matrix $A \in \R^{m \times n}$ is the span of the
+  rows of $A$, denoted $\row A$. Show that $\dim(\row A) + \dim(\nul
+  A) = n$.
+\item
+  In the vector space of all real-valued functions, find a basis for
+  the subspaced spanned by $\{\sin t, \, \sin 2t, \, \sin t \cos t
+  \}$.
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Eigenvectors}
-\input{eigenvectors.tex}
+
+\section*{Basic Exercises}
+
+Determine if $\vv$ is an eigenvector of $A$.  If it is, find its
+corresponding eigenvalue.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      6 & 1 \\
+      -3 & 2
+    \end{bmatrix}
+    \qquad
+    \vv = \vTwo {-1} 1
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -10 & -3 & -5 \\
+      5 & -5 & -3 \\
+      5 & 7 & -7
+    \end{bmatrix}
+    \qquad
+    \vv = \vThree 3 0 {-5}
+\end{displaymath}
+\end{enumerate}
+Determine if $\lambda$ is an eigenvalue of $A$.
+If it is, find a basis for the corresponding eigenspace.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -2 & 2 \\
+      -1 & -4
+    \end{bmatrix}
+    \qquad
+    \lambda = -3
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      5 & -6 & 2 \\
+      1 & -2 & 2 \\
+      -1 & 6 & 2
+    \end{bmatrix}
+    \qquad
+    \lambda = 4
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      4 & -42 \\
+      1 & -9
+    \end{bmatrix}
+    \qquad
+    \lambda = -3
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      3 & -8 & 8 \\
+      8 & -13 & 8 \\
+      2 & -2 & -3
+    \end{bmatrix}
+    \qquad
+    \lambda = -5
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      3 & -8 & 8 \\
+      8 & -13 & 8 \\
+      2 & -2 & -3
+    \end{bmatrix}
+    \qquad
+    \lambda = 4
+  \end{displaymath}
+\end{enumerate}
+For the following matrices, determine all eigenvalues and bases for the corresponding eigenspaces.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -3 & 2 \\
+      -10 & 6
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 16 & -12 \\
+      0 & -3 & -2 \\
+      0 & 0 & -4
+    \end{bmatrix}
+  \end{displaymath}
+
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 0 & 0 \\
+      -1 & 3 & 0 \\
+      2 & 4 & 2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+Calculate the determinant of the following matrices.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -1 & 1 & -1 \\
+      3 & 3 & 3 \\
+      1 & -3 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & -3 & 0 \\
+      0 & 3 & -1 \\
+      2 & 0 & -1
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+For each of the following matrices, calculate the determinant of its
+inverse.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 3 & 4 \\
+      -5 & -4 & -3 \\
+      2 & 0 & -5
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following matrices, determine its characteristic
+polynomial.  Use the characteristic polynomial to calculate its
+determinant.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -1\\
+      -1 & 3 \\
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 & 0 \\
+      -1 & 5 & 0 & 0 & 0 \\
+      2 & 6 & 3 & 0 & 0 \\
+      10 & -15 & 3 & 4 & 0 \\
+      -1 & 5 & 2 & 5 & 5
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 2 & 10 & 5 \\
+      0 & 0 & 5 & -3 & 15 \\
+      0 & 0 & 16 & 6 & -1 \\
+      0 & 0 & 0 & 1 & 5\\
+      0 & 0 & 0 & 7 & 4
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      1 & 2 & 5 \\
+      0 & 1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  Every eigenspace of $A$ is a null space (potentially of some other
+  matrix).
+\item
+  Every matrix has at least one eigenvector.
+\item
+  Every matrix $A \in \R^{n \times n}$ has an eigenbasis, i.e.,
+  a set of eigenvectors that form a basis for $\R^n$.
+\item
+  Only square matrices can have eigenvectors.
+\item
+  If $0$ is an eigenvalue of $A$, then $A$ is not invertible.
+\item
+  The determinant of a matrix does not change under elementary row
+  operations.
+\item
+  If $\det (A^2) = 1$, then $\det (A) = 1$.
+\item
+  A matrix with characteristic polynomial $(x+2)^3$ has a single
+  eigenspace with dimension $3$.
+\item
+  For any square matrices $A$ and $B$, if $A \sim B$ then $\det(A) =
+  \det(B)$.
+\item
+  $\det(5A) = 5\det A$ for any square matrix $A$.
+\item
+  $\det(A^TA) \geq 0$ for any square matrix $A$.
+\item
+  $\det(A + B) = \det(A) + \det(B)$ for any square matrices $A$ and
+  $B$.
+\item
+  If $A$ is invertible, then $\det(ABA^{-1}) = \det(B)$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Let $A$ be the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      -17 & 28 & 14 \\
+      -7 & 11 & 7 \\
+      -7 & 14 & 4
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine if the following vectors are eigenvectors of $A$. For
+    the ones that are, find their associated eigenvalues.
+    \begin{displaymath}
+      \vv_1 = \vThree 1 1 1
+      \qquad
+      \vv_2 = \vThree 2 2 0
+      \qquad
+      \vv_3 = \vThree 2 1 1
+    \end{displaymath}
+  \item
+    Show that $-3$ is an eigenvalue of $A$ without doing any row
+    operations.  \textit{Hint:} Use the invertible matrix theorem.
+  \item
+    Find a basis for the eigenspace of $A$ corresponding to the
+    eigenvalue $-3$.
+\end{enumerate}
+\item Let $A$ and $B$ be square matrices such that $\det A = 3.5$ and
+  $\det B = -2$.  Compute the determinant of the matrix
+  $B(AB)^{-1}(AB)^TA$.
+\item Consider the following reduction sequence
+  \begin{align*}
+    R_1 &\gets R_1 + R_2 \\
+    \mathsf{swap}&(R_2, R_3) \\
+    R_3 &\gets R_3 + 5R_4 \\
+    R_2 &\gets -3R_2 \\
+    R_5 &\gets R_5 - 10R_3 \\
+    R_5 &\gets R_5 / 11 \\
+    \mathsf{swap}&(R_5, R_3) \\
+    \mathsf{swap}&(R_1, R_2) \\
+    R_4 &\gets R_4 + R_1 \\
+    R_2 &\gets 5R_2 \\
+    R_1 &\gets -R_1
+  \end{align*}
+  Suppose that $A \in \R^{5 \times 5}$ reduces to $U$ by this sequence
+  of reductions, where $U$ is in \textit{reduced} echelon form.  Given
+  $\rank A = 5$, determine $\det A$.
+\item
+  Let $A$ be as in the previous problem. Given $\rank A = 4$, determine $\det A$.
+\item
+  The characteristic polynomial of the following matrix is
+  $-\lambda^3+5\lambda^2-6\lambda$.
+  \begin{displaymath}
+    \begin{bmatrix}
+      0 & 3  & -3 \\
+      -2 & 6 & -4 \\
+      -2 & 3 & -1
+    \end{bmatrix}
+  \end{displaymath}
+  Find the eigenvalues and bases for the eigenspaces.
+\item
+  For each of the following statements, find a counterexample by giving
+  explicit $2 \times 2$ matrices $A$ and $B$ which falsify the
+  statement.  Justify your answer.
+  \begin{enumerate}
+  \item
+    $\det(A + B) = \det(A) + \det(B)$ for any matrices $A$ and $B$ in
+    $\R^{n\times n}$.
+  \item
+    For any square matrix $A$, if $\det(A - \lambda I) = (\lambda - 1)^2$,
+    then $\dim(\nul (A - I)) = 2$.
+  \item
+    For any matrices $A$ and $B$ in $\R^{n \times n}$, if $\det(A -
+    \lambda I) = \det(B - \lambda I)$ (i.e., they have the same
+    characteristic polynomial) then $A$ is similar to $B$.
+  \end{enumerate}
+\item
+  Let $A$ be a $5 \times 5$ matrix with characteristic polynomial
+  $(\lambda - 2)^2 (\lambda + 1)^2 \lambda$ and $\rank(A - 2I) =
+  \rank(A + I) = 3$.
+  \begin{enumerate}
+  \item
+    Determine $\rank A$. Justify your answer.
+  \item
+    Determine if $A$ is diagonalizable. Justify your answer.
+  \end{enumerate}
+\item
+  Suppose that $AP = PD$ for a square matrix $A$, diagonal matrix $D$,
+  and arbitrary $m \times n$ matrix $P$. Show that the nonzero columns
+  of $P$ are eigenvectors of $A$ and find their corresponding
+  eigenvalues in terms of entries of $D$.
+\item
+  Consider the following pair of vectors.
+  \begin{align*}
+    \vv_1 = \vFour 1 {-2} {-1} 3
+    \qquad
+    \vv_2 = \vFour 3 {-6} {-2} 2
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Determine the matrix equations whose solution set consists exactly
+    of those vectors which are orthogonal to $\vv_1$ and $\vv_2$.
+  \item
+    Determine a general-form solution for the matrix equation from the
+    previous part.
+  \item
+    Determine the dimension of the subspace of vectors orthogonal to
+    both $\vv_1$ and $\vv_2$
+  \end{enumerate}
+\item
+  Show that the angle between two vectors does not depend on their
+  length. In other words, show that for any pair of vectors $\vu$ and
+  $\vv$ in $\R^n$, the angle between them is equal to the angle
+  between $a\vu$ and $b\vv$ for any nonzero real numbers $a$ and $b$.
+\item
+  Suppose the eigenvalues of a $3 \times 3$ matrix $A$ are $\lambda_1
+  = 2$, $\lambda_2 = 1/2$, and $\lambda_3 = 1/4$ with corresponding
+  eigenvectors:
+  \begin{displaymath}
+    \vv_1 = \vThree 1 {-1} 3
+    \qquad
+    \vv_2 = \vThree {-3} 4 9
+    \qquad
+    \vv_3 = \vThree = 2 {-2} 4
+  \end{displaymath}
+  Given a starting state $\vx_0 = [8, -9, 6]^T$, give a closed form
+  expression for the state after $k$ iterations: $A^k \vx_0$. Describe
+  what happens as $k \to \infty$.
+\item
+  Recall that counterclockwise rotation by angle $\theta$ in the plane
+  can be implemented by the matrix below.
+  \begin{align*}
+    R_\theta = \begin{bmatrix}
+      \cos \theta & -\sin \theta \\
+      \sin \theta & \cos \theta
+    \end{bmatrix}
+  \end{align*}
+  Calculate $\det (R_\theta)$.
+  \textit{Hint.} The value does not depend on $\theta$.
+\item
+  Let $R_\theta$ be as in the previous problem.
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial of $R_\theta$ as a function
+    of $\theta$.
+  \item
+    Determine the values of $\theta$ for which $R_\theta$ has eigenvalues.
+    For those values, also determine bases for the corresponding eigenspaces.
+  \end{enumerate}
+\item
+  Give two $2 \times 2$ matrices where every nonzero vector is an
+  eigenvector.
+\item \faCalculator \
+  Let $A$ be a matrix such that
+  \begin{displaymath}
+    A \vThree 1 1 {-3} = \vThree {-1} {-1} 3
+    \qquad
+    A \vThree 0 1 1 = \vThree 0 1 1
+    \qquad
+    A \vThree 2 {-2} {-9} = \vThree 4 {-4} {-18}
+  \end{displaymath}
+  Without determining $A$, determine the vector
+  \begin{displaymath}
+    A^5 \vThree 3 0 {-11}
+  \end{displaymath}
+  You may use a computer, but you must show your work and justify your
+  answer.
+\item
+  Let $A$ be the matrix from the previous part.
+  Consider the basis
+  \begin{displaymath}
+    \cB =
+    \left\{
+    \vThree 1 1 {-3},
+    \vThree 0 1 1,
+    \vThree 2 {-2} {-9}
+    \right\}
+  \end{displaymath}
+  Determine the matrix $C$ such that $C[\vv]_{\cB} = A \vv$ for all $\vv \in \R^3$.
+\item
+Determine if the following matrix has an eigenbasis. Justify your
+answer.
+\begin{displaymath}
+  \begin{bmatrix}
+    1 & 2 & -4 & 1 \\
+    0 & 1 & 4 & 1 \\
+    0 & 0 & 0 & 3 \\
+    0 & 0 & 0 & 2
+  \end{bmatrix}
+\end{displaymath}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Show that a pair of eigenvectors $\vv_1$ and $\vv_2$ with
+  distinct eigenvalues $\lambda_1$ and $\lambda_2$ is linearly
+  independent.
+\item
+  Show that the determinant formula from lecture is correct.
+  \textit{Hint:} Consider applying elementary row operations via left
+  multiplication by elementary row matrices, and use the fact that
+  \begin{displaymath}
+    \det (E_k \ldots E_2 E_1 A) = \det E_k \ldots \det E_2 \det E_1 \det A
+  \end{displaymath}
+\item
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 1 \\
+      1 & 0
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Verify that the following vectors form an eigenbasis of $A$.  Also
+    determine the eigenvalues for each eigenvector.
+    \begin{displaymath}
+      \vv_1 = \vTwo {\frac{1 + \sqrt{5}}{2}} 1
+      \qquad
+      \vv_2 = \vTwo {\frac{1 - \sqrt{5}}{2}} 1
+    \end{displaymath}
+  \item
+    Write the vector $\ve_1$ in terms of the eigenbasis you found.  In
+    other words, determine $\alpha_1$ and $\alpha_2$ such that
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 \\ 0
+      \end{bmatrix}
+      =
+      \alpha_1\vv_1 + \alpha_2 \vv_2
+    \end{displaymath}
+    \textit{Hint:} Calcuate $\vv_1 - \vv_2$.
+  \item
+    Write down a closed-form solution for the linear dynamical system
+    determined by $A$ with initial vector $\ve_1$.
+  \item \faCalculator \
+    If you look at the formula given by the second component of your
+    closed-form solution from the previous part, this gives a
+    \textit{non-recursive} definition for Fibonacci numbers.  Write
+    down this formula and use it to calculate $F_{20}$, the $20$th
+    fibonacci number (where $F_0 = 0$ and $F_1 = 1$).
+  \end{enumerate}
+\item
+  A Jordan block $J$ is a square matrix in $\R^{n \times n}$ of the following form.
+  \begin{displaymath}
+    \begin{bmatrix}
+      \alpha & 1 & & \\
+      & \alpha & \ddots & \\
+      & & \ddots & 1 \\
+      & & & \alpha
+    \end{bmatrix}
+  \end{displaymath}
+  where $\alpha \in \R$.
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial (in terms of $n$) of $J$.
+  \item
+    Determine the dimension of the eigenspace of $J$ for the
+    eigenvalue $\alpha$.
+  \item
+    Construct six matrices, each with the characteristic polynomial
+    $(\lambda - 3)^3(\lambda + 2)^2$, that achieve all possible
+    combinations of eigenspace dimensions for $\lambda = 3$ (1,2, or
+    3) and for $\lambda = 2$ (1 or 2).
+  \end{enumerate}
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Diagonalization}
-\input{diagonalization.tex}
+
+\section*{Basic Exercises}
+
+Determine a diagonalization of the following matrix, if it exists.
+You can leave the rightmost factor in the form $P^{-1}$, i.e., you
+don't have to compute the inverse of $P$.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      9 & 4 \\
+      -14 & -6
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      2 & -6 \\
+      2 & -5
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -6 & -7\\
+      7 & 8
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -2 & 0 & 0 \\
+      2 & -1 & -1 \\
+      6 & 4 & -5
+    \end{bmatrix}
+  \end{displaymath}
+\item
+\begin{displaymath}
+  \begin{bmatrix}
+    -1 & -3 & -6 \\
+    -8 & -6 & -18 \\
+    4 & 3 & 9
+  \end{bmatrix}
+\end{displaymath}
+\textit{Hint:} The characteristic polynomial of the above matrix is
+$\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      2 & 0 & 0 & 0 \\
+      -1 & 3 & 0 & 0 \\
+      3 & -3 & 2 & 0 \\
+      -3 & 18 & -6 & -1
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      -1 & -3 & 0 \\
+      2 & 4 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+  \end{displaymath}
+\item \faCalculator
+  \begin{displaymath}
+    \begin{bmatrix}
+      0 & 2 & 2 \\
+      5 & -6 & -5 \\
+      -9 & 12 & 11
+    \end{bmatrix}
+  \end{displaymath}
+  In addition, define $P$ so that its entries are integers.
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  All square matrices are diagonalizable.
+\item
+  Similar matrices have the same eigenvalues.
+\item
+  Similar matrices have the same eigenvectors.
+\item
+  If a matrix does not have $n$ distinct eigenvalues, then it is not
+  diagonalizable.
+\item
+  If a matrix is diagonalizable, then it is invertible.
+\item
+  A diagonalization of a matrix $A$ if it exists, is unique.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}
+\item \faCalculator \
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      103 & -8 & -47 \\
+      24 & 1 & -12 \\
+      198 & -16 & -90
+    \end{bmatrix}
+  \end{displaymath}
+  Determine a matrix $B$ such that $B^2 = A$. You can use a computer
+  to find eigenvectors or to reduce matrices, but you must otherwise
+  show your work and justify your answer.  \textit{Hint:} $A$ is
+  diagonalizable.
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Consider an arbitrary $2 \times 2$ matrix of the following form.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      a & b \\
+      c & d
+    \end{bmatrix}
+  \end{displaymath}
+
+  \begin{enumerate}
+  \item
+    Determine an expression for the characteristic polynomial of $A$
+    in terms of $a$, $b$, $c$, and $d$.
+  \item
+    Recall that for a quadratic polynomial $p(x) = ix^2 + jx + k$, the
+    discriminant $j^2 - 4ik$ tells us how many roots $p$ has, i.e.,
+    $p$ has $0$, $1$ or $2$ roots if the discriminant is less than
+    $0$, equal to $0$, or greater than $0$, respectively.  Use this to
+    derive an expression $E$ in terms of $a$, $b$, $c$, and $d$ where
+    $A$ has $0$, $1$, or $2$ eigenvalues if $E < 0$, $E = 0$, or $E >
+    0$, respectively.
+  \item Using the expression from the previous part, argue that
+    \textit{every $2 \times 2$ matrix with positive entries has two
+      distinct eigenvalues.}  Note that this implies every $2 \times
+    2$ matrix with positive entries is diagonalizable.  \textit{Hint:}
+    Try to write the expression from the previous part so that it is
+    of the form `$(\square - \square)^2 + 4\square\square$' and reason
+    about why this must be positive.
+  \end{enumerate}
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Analytic Geometry and Orthogonality}
-\input{analytic-geometry.tex}
+
+\section*{Basic Exercises}
+
+\faCalculator \ For each pair of vectors $\vv_1$ and $\vv_2$, determine:
+\begin{itemize}
+\item the lengths of $\vv_1$ and $\vv_2$;
+\item the angle between $\vv_1$ and $\vv_2$;
+\item the distance between $\vv_1$ and $\vv_2$;
+\item the unit length normalizations of $\vv_1$ and $\vv_2$.
+\end{itemize}
+You must simplify the expression as much as you can before giving the approximate result to a couple decimal places.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    \vv_1 = \vTwo 7 3
+    \qquad
+    \vv_2 = \vTwo {-1}  5
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv_1 = \vThree {-2} 4 {-5}
+    \qquad
+    \vv_2 = \vThree 2 2 {-2}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv = \vFive 1 {-1} 5 7 4
+    \qquad
+    \vu = \vFive 3 1 3 {-1} 0
+  \end{displaymath}
+  Additionally, without doing any further calculations determine
+  approximately the angle between $\vv$ and $\vv - \vu$.  Justify your
+  answer.
+%% \item
+%%   \begin{displaymath}
+%%     \vv_1 = \vFive 1 {-1} 5 7 4
+%%     \qquad
+%%     \vv_2 = \vFive 3 0 3 {-5} {-7}
+%%   \end{displaymath}
+\end{enumerate}
+Determine if each of the following set of vectors is an orthogonal set.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \left\{
+    \vThree 9 {-18} {-18},
+    \vThree {-2} {-14} {13}
+    \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \left\{
+    \vFour 0 4 4 0,
+    \vFour {-2} 2 0 0,
+    \vFour 2 1 {-1} {-6}
+    \right\}
+  \end{displaymath}
+\end{enumerate}
+Express the vector $\vv$ in terms of the given orthonormal basis
+$\cB$.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \vv = \vTwo{-8}{9}
+    \qquad
+    \cB =
+    \left\{
+    \vTwo{-\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}},
+    \vTwo{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}}
+    \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv = \vThree 3 9 {-3}
+    \qquad
+    \cB =
+    \left\{
+    \vThree {\frac{\sqrt{2}}{2}} {\frac{\sqrt{2}}{2}} {0},
+    \vThree {\frac{\sqrt{6}}{6}} {-\frac{\sqrt{6}}{6}} {-\frac{\sqrt{6}}{3}},
+    \vThree {-\frac{\sqrt{3}}{3}} {\frac{\sqrt{3}}{3}} {-\frac{\sqrt{3}}{3}}
+    \right\}
+  \end{displaymath}
+\end{enumerate}
+Determine the projection of $\vv$ onto the span of the given set of vectors.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \vv = \vTwo 9 7
+    \qquad
+    U =
+    \left\{
+    \vTwo 7 {-9}
+    \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv = \left[\begin{matrix}3\\3\\5\end{matrix}\right]
+    \qquad
+    U =
+    \left\{
+    \left[\begin{matrix}-2\\0\\-10\end{matrix}\right]
+    \right\}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv = \left[\begin{matrix}-3\\6\\2\end{matrix}\right]
+    \qquad
+    U =
+    \left\{
+    \left[\begin{matrix}- \frac{\sqrt{2}}{2}\\\frac{\sqrt{2}}{2}\\0\end{matrix}\right],
+    \left[\begin{matrix}\frac{2}{3}\\\frac{2}{3}\\- \frac{1}{3}\end{matrix}\right]
+    \right\}
+  \end{displaymath}
+\end{enumerate}
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}
+\item
+  If $\|\vu\|^2 + \|\vv\|^2 = \|\vu + \vv\|^2$, then $\vu$ and $\vv$
+  are orthogonal.
+\item
+  For a square matrix $A$, vectors in $\col A$ are orthogonal to
+  vectors in $\nul A$.
+\item
+  There can be a linear dependence relationship between vectors in an
+  orthogonal set.
+\item
+  In $\R^4$, any set of vectors that has 5 members cannot be an
+  orthogonal set.
+\item
+  Orthogonal matrices are invertible.
+\item
+  Orthogonal matrices have determinant 1.
+\item
+  For an $m \times n$ matrix with orthogonal columns, it may be the
+  case that $m < n$.
+\item
+  The orthogonal projection of $\vy$ onto $\vv$ is the same as the
+  orthogonal projection of $\vy$ onto $c \vv$ whenever $c \neq 0$.
+\item
+  For any vector $\vy \in \R^n$ and any subspace $W$ of $\R^n$, the
+  vector $\vy - \proj_W \vy$ is orthogonal to $W$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}
+\item
+  Determine if the following six vectors form an orthogonal set.
+  Justify your answer. \textit{Hint:} You do not need to explicitly
+  check every pair for orthogonality, you can argue more generally.
+  \begin{displaymath}
+    \vv_1 = \begin{bmatrix} 1 \\ -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+    \qquad
+    \vv_2 = \begin{bmatrix} 0 \\ 1 \\ 2 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+    \qquad
+    \vv_3 = \begin{bmatrix} -5 \\ -2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+  \end{displaymath}
+  \begin{displaymath}
+    \vv_4 = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 3 \\ -3 \\ 0 \end{bmatrix}
+    \qquad
+    \vv_5 = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 2 \\ 2 \\ -1 \end{bmatrix}
+    \qquad
+    \vv_6 = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \\ 1 \\ 4 \end{bmatrix}
+  \end{displaymath}
+\item Project $\vb$ onto $\vspan\{ \va_1, \va_2, \va_3 \}$.
+  \begin{displaymath}
+    \vb = \vFour 2 5 6 6
+    \qquad
+    \va_1 = \vFour 1 1 0 {-1}
+    \qquad
+    \va_2 = \vFour 1 0 1 1
+    \qquad
+    \va_3 = \vFour 0 {-1} 1 {-1}
+  \end{displaymath}
+\item Show that any $2 \times 2$ rotation matrix $R_\theta$ is an orthogonal matrix.
+\item
+  Show that any $3 \times 3$ rotation matrix $R_x^\theta$,
+  $R_y^\theta$, $R_z^\theta$ (about the $x$-axis, $y$-axis, and $z$-axis,
+  respectively) is an orthogonal matrix.
+\item
+  Determine the matrix that implements orthogonal projection onto
+  $\vspan\{ [2 \ \ 3 \ \ 1]^T \}$.
+\item Determine a matrix (in terms of $\vu_1$ and $\vu_2$) that
+  implements orthogonal projection onto $\vspan \{ \vu_1, \vu_2 \}$
+  where $\vu_1$ and $\vu_2$ are orthogonal.
+\item
+  Show that for any nonzero vector $\vv \in \R^n$, the set of vectors
+  orthogonal to $\vv$ form a subspace of $\R^n$.
+\item
+  Determine a basis for the set of vectors orthogonal to the following vector.
+  \begin{displaymath}
+    \vThree 1 4 {-3}
+  \end{displaymath}
+\item
+  Determine a basis for the set of vectors orthogonal to every vector in the solution
+  set of the following linear equation.
+  \begin{displaymath}
+    2x_1 + 3x_2 - 4x_3 + 5x_4 = 0.
+  \end{displaymath}
+\item
+  Consider the following pair of vectors.
+  \begin{displaymath}
+    \vu = \vFour 1 2 1 {-2}
+    \qquad
+    \vv = \vFour {-3} {-6} {-2} 2
+  \end{displaymath}
+  For this problem, we will be using theorem that isn't too difficult
+  to show: every vector in $\nul A^T$ is orthogonal to every vector in
+  $\col A$.  Use this to determine two linearly independent vector
+  with integer entries that are orthogonal to every vector in $\vspan
+  \{ \vu , \vv \}$.
+\item
+  For this problem, we will use another theorem that's more difficult
+  to prove: $\rank A + \dim(\nul A^T) = m$ for any matrix $A \in \R^{m
+    \times n}$.  Use this to show that $\rank A = \rank A^T$.
+\item
+  Consider the following vectors.\footnote{This problem goes over the
+  \textit{Gram-Schmidt process}, an algorithm for converting
+  a basis into an orthogonal basis.}
+  \begin{displaymath}
+    \vv_1 = \vFour 2 1 0 {-1}
+    \qquad
+    \vv_2 = \vFour 3 0 0 0
+    \qquad
+    \vv_3 = \vFour {-4} 9 0 {-11}
+    \qquad
+    \vu = \vFour 2 {-2} 0 {-5}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Find the component of $\vv_2$ orthogonal to $\vv_1$ (that is, find
+    the vector $\vz$ such that $\vv_2 = \hat{\vv_2} + \vz$ where
+    $\hat{\vv_2}$ is the orthogonal projection of $\vv_2$ onto
+    $\vv_1$). We will refer to this as $\vv_2'$ below.
+  \item
+    Find the component of $\vv_3$ orthogonal to $\vv_1$. We will refer
+    to this as $\vv_3'$ below.
+  \item
+    Find the component of $\vv_3'$ orthogonal to $\vv_2'$. We will
+    refer to this as $\vv_3''$ below.
+  \item
+    Demonstrate that $\{\vv_1, \vv_2', \vv_3''\}$ is an orthogonal
+    set.
+  \item
+    Find $[\vu]_{\cB}$ where $\cB = \{\vv_1, \vv_2', \vv_3''\}$
+    without any row reductions.
+  \end{enumerate}
+\item
+  Repeat the previous problem with the following vectors.
+  \begin{displaymath}
+    \vv_1 = \vFour 1 0 1 1
+    \qquad
+    \vv_2 = \vFour 0 1 1 2
+    \qquad
+    \vv_3 = \vFour 1 0 2 {-2}
+    \qquad
+    \vu = \vFour2 {-2} 1 {-5}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 2 & -5 \\
+      1 & 1 & 3 \\
+      8 & 14 & -6 \\
+      1 & 2 & 1
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      1 & -4 & -2 & 9 & 0 \\
+      0 & 2 & 2 & -6 & 1 \\
+      3 & -5 & 1 & 9 & 5 \\
+      0 & 1 & 1 & -2 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    \faCalculator \ Determine approximately the matrix that implements
+    orthogonal projection onto $\col A$.
+  \item
+    \faCalculator \ Determine approximately the matrix which
+    implements orthogonal projection onto $\col B$.  \textit{Hint:}
+    First determine $\rank B$.
+  \item
+    Compare the matrices from the previous two parts.  Explain what
+    this implies about the relationship between $\col A$ and $\col B$.
+    Justify your answer.
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Show that the row vectors of an orthogonal matrix form an
+  orthonormal set.
+\item
+  Show that the product of two orthogonal matrices is orthogonal.
+\item
+  Show that $\vv \in \nul A^T$ if and only if $\vv$ is orthogonal to every
+  vector in $\col A$ for any matrix $A \in \R^{m \times n}$ and vector
+  $\vv \in \R^m$.
+\item
+  Show that $\rank A + \dim(\nul A^T) = m$ for any matrix $A \in \R^{m
+    \times n}$.
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Least Squares and Linear Models}
-\input{least-squares.tex}
+
+\section*{Basic Exercises}
+
+Solve for all least-squares solutions of the equation $A\vx = \vb$
+using the normal equations.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}-3 & 0\\0 & 3\\3 & -6\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}-3\\8\\3\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & -1 \\
+      1 & -1
+    \end{bmatrix}
+    \qquad
+    \vb = \vThree 4 2 0
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}1 & 1 & -4\\0 & 1 & -3\\-1 & -2 & 7\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}-7\\-10\\2\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A = \left[\begin{matrix}-1 & 1\\-3 & 1\\-3 & 0\end{matrix}\right]
+    \qquad
+    \vb = \left[\begin{matrix}1\\11\\15\end{matrix}\right]
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 0 & 1 \\
+      1 & 0 & 1 \\
+      1 & 0 & 1 \\
+      1 & 1 & 0 \\
+      1 & 1 & 0 \\
+      1 & 1 & 0 \\
+    \end{bmatrix}
+    \qquad
+    \vb =
+    \begin{bmatrix}
+      6 \\ 5 \\ 4 \\ 7 \\ 2 \\ 3
+    \end{bmatrix}
+  \end{displaymath}
+\item
+  Determine the least squares linear fit to the following data points.
+  Sketch the graphs to verify your answer.  You should set up the
+  required matrix equations by hand, but you can use a computer to
+  determine the coefficients of your model.
+  \begin{displaymath}
+    \{(-5, 2), (-2, 1), (0, 0), (2, 4), (6, 6)\}
+  \end{displaymath}
+\item Determine the least squares quadratic fit to the data points
+  from the previous problem. Sketch the graphs to verify your answer.
+  You should set up the required matrix equations by hand, but you can
+  use a computer to determine the coefficients of your model.
+\item Determine the design matrix for the following function model
+  using the data points from the previous problem.
+  \begin{displaymath}
+    f(x) = \beta_12^x + \beta_2x\sin(x) + \beta_3x^2 + 7\beta_4
+  \end{displaymath}
+\item
+  Determine the least-squares fit model for the given data.  Round the
+  parameters to the nearest hundredth.
+  \begin{displaymath}
+    \{(-2, 0), (-1, 5), (0, 13), (1, 9), (2, 5), (3, 0)\}
+  \end{displaymath}
+\item
+  Determine the design matrix for the following function model using
+  the data points from the previous problem.
+  \begin{displaymath}
+    f(x) = \beta_1 \cos x + \beta_2 \sin x + \beta_3 x + \beta_4
+  \end{displaymath}
+\item Determine an orthogonal diagonalization of the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 1 \\
+      1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  Given any matrix equation $A\vx = \vb$, there always exists a
+  least-squares solution.
+\item
+  Given any matrix equation $A\vx = \vb$, there always exists a unique
+  least-squares solution.
+\item
+  A least-squares solution of $A\vx = \vb$ is a vector $\hat{\vx}$
+  that satisfies $A\hat{\vx} = \hat{\vb}$, where $\hat{\vb}$ is the
+  orthogonal projection of $\vb$ onto $\col A$.
+\item
+  Given a model function $f(x) = \beta_0 + \beta_1^2 x$, we may
+  minimize for least squares error by using the least squares solution
+  to a matrix equation.
+\item
+  If $X$ denotes the design matrix for a least squares regression
+  problem, then $X^T X$ is invertible.
+\item
+  There are orthogonally diagonalizable matrices that are not symmetric.
+\item
+  Every $n \times n$ symmetric matrix must has $n$ distinct eigenvalues.
+\item
+  For a symmetric matrix, the dimension of each eigenspace is equal to
+  the algebraic multiplicity of the corresponding eigenvalue.
+\item
+  $\|\vx\|^2$ is a quadratic form.
+\item
+  A positive definite quadratic form $Q(\vx)$ satisfies $Q(\vx) > 0$
+  for all $\vx \in \R^n$.
+\item
+  $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine a formula for the least-squares solution of $A\vx = \vb$
+  given that the columns of $A$ are orthonormal.  Furthermore, explain
+  why this solution is unique.
+\item
+  Let $C$ be an arbitrary $m \times n$ matrix of rank $k$ and let
+  $\mathbf b$ be an arbitrary vector in $\R^m$.  Determine the maximum
+  size of a linearly independent set of least squares solutions for
+  $C\vx = \mathbf b$ where $\vb \not = \vzero$.  Justify your
+  answer.  Your solution should be given in terms of $m$, $n$, and
+  $k$.
+\item \faCalculator
+  Consider the following multivariate function model
+  \begin{displaymath}
+    f(x,y) = \beta_0 + \beta_1 x + \beta_2 y
+  \end{displaymath}
+  and solve for the real number parameters $\beta_0$, $\beta_1$, and
+  $\beta_2$ that minimize least squares error for the following data
+  points.
+  \begin{displaymath}
+    \{(-2,0,0), (0,0,3), (0,2,0), (-2, -3, 3), (1,5,-1)\}.
+  \end{displaymath}
+  Justify your answer.
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Quadratic Forms}
-\input{quadratic-forms.tex}
+
+\section*{Basic Exercises}
+
+Determine the symmetric matrix $A$ such that $Q(\vx) = \vx^T A \vx$.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T)
+    = 3x_1^2 + 4 x_1 x_2 + 5 x_2 x_1 - x_1 x_3
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T)
+    = 3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
+  \end{displaymath}
+
+\end{enumerate}
+Determine the quadratic form $Q(\vx)$ such that $Q(\vx) = \vx^T A
+\vx$.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 9 & 3 \\
+      0 & 3 & 1
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 9 & 3 \\
+      0 & 3 & 1
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Consider the quadratic form $Q(\vx) = \vx^T A \vx$ where $A$ is
+  defined as follows.
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 5 \\
+      1 & 5 & 1 \\
+      5 & 1 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  Determine the following.
+  \begin{enumerate}
+  \item
+    $\min_{\|\vx\| = 1} Q(\vx)$
+  \item
+    $\max_{\|\vx\| = 1}  Q(\vx)$
+  \item
+    $\argmin_{\|\vx\| = 1} Q(\vx)$
+  \item
+    $\argmax_{\|\vx\| = 1} Q(\vx)$
+  \end{enumerate}
+  \textit{Hint:} $4$ is an eigenvalue of $A$.
+\item
+  \faCalculator \ Repeat the previous problem with the following
+  quadratic form.
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T) =
+    3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
+  \end{displaymath}
+\end{enumerate}
 
 % ======================================================================
 % ======================================================================
 % ======================================================================
 
 \chapter{Singular Value Decomposition}
-\input{svd.tex}
+
+\section*{Basic Exercises}
+
+For each matrix, determine a singular value decomposition.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 2 \\
+      2 & 3 \\
+      2 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  An orthogonal diagonalization of a symmetric matrix $A = PDP^T$ is
+  also a singular value decomposition of $A$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
 
 \end{document}
