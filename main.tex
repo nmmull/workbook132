@@ -43,6 +43,10 @@ Even if it's not explicitly stated, \textbf{you should always show
   your work and justify your answer for every problem.}  Happy
 exercising/problem solving!
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Linear Systems}
 
 Determine the coefficient matrix and augmented matrix for each of the
@@ -340,7 +344,8 @@ row operations used.
 \end{enumerate}
 Determine a general form solution for each of the following linear
 systems by first determining the row-reduced echelon form of its
-augmented matrix.  If this system has no solutions then write \enquote{no solution}.
+augmented matrix.  If this system has no solutions then write
+\enquote{no solution}.
 \begin{enumerate}[resume]
 \item
   \begin{align*}
@@ -424,51 +429,71 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
 \section*{More Difficult Problems}
 \begin{enumerate}[resume]
 \item
-  Find a solution to the linear system below with the following properties:
+  Find a solution to the linear system below with the following
+  properties:
   \begin{enumerate}
   \item
     the solution consists entirely of integer values;
   \item
-    the values in the solution are relatively prime, i.e., it's not possible to divide the solution by a number to get another integer solution. So $(2, 4, 6)$ does not satisfy this property but $(1, 2, 3)$ does.
+    the values in the solution are relatively prime, i.e., it's not
+    possible to divide the solution by a number to get another integer
+    solution. So $(2, 4, 6)$ does not satisfy this property but $(1,
+    2, 3)$ does.
   \end{enumerate}
-  In addition to the solution, you must write down the RREF of the augmented matrix of this system, but otherwise, you don't have to
-  show your work.\footnote{This is the process we would use to find a valid solution to the problem of balancing chemical equations.}
+  In addition to the solution, you must write down the RREF of the
+  augmented matrix of this system, but otherwise, you don't have to
+  show your work.\footnote{This is the process we would use to find a
+  valid solution to the problem of balancing chemical equations.}
   \begin{align*}
     4x_2 + x_3 &= 16 \\
     9x_1 - 20x_2 - 8x_3 &= -71 \\
     3x_1 - 8x_2 - 3x_3 &= -29
   \end{align*}
 \item
-  Determine all the $2 \times 2$ matrices in echelon form whose entries are either $0$ or $1$.
-  Mark which ones are in reduced echelon form.
+  Determine all the $2 \times 2$ matrices in echelon form whose
+  entries are either $0$ or $1$.  Mark which ones are in reduced
+  echelon form.
 \item
-  Determine every $3 \times 3$ matrix in reduced echelon form with at least two pivot positions whose entries are either $0$ or $1$.
+  Determine every $3 \times 3$ matrix in reduced echelon form with at
+  least two pivot positions whose entries are either $0$ or $1$.
 \item
-  Determine a linear system over three variables such that $(a, b, c)$ is a solution exactly when the cubic function $f(x) = ax^3 + bx^2 + c$ intersects the points $(-1, 4)$, $(1, 5)$ and $(2, 10)$.
-  You do not need to solve the linear system.
+  Determine a linear system over three variables such that $(a, b, c)$
+  is a solution exactly when the cubic function $f(x) = ax^3 + bx^2 +
+  c$ intersects the points $(-1, 4)$, $(1, 5)$ and $(2, 10)$.  You do
+  not need to solve the linear system.
 \item
-  Determine the slope-intercept form of the line equation which defines the intersection of the plane
+  Determine the slope-intercept form of the line equation which
+  defines the intersection of the plane
   \begin{align*}
     2x + 3y + 3z = 6
   \end{align*}
   with the $xy$-plane.
 \item
-  For what values of the coefficient $h$ is the following system inconsistent?
+  For what values of the coefficient $h$ is the following system
+  inconsistent?
   \begin{align*}
     x + 4y &= -1 \\
     3x - hy &= 7
   \end{align*}
-  Is there a value of $h$ for which the above system has infinitely many solutions? Justify your answer.
+  Is there a value of $h$ for which the above system has infinitely
+  many solutions? Justify your answer.
 \item
-  Consider the following linear system with two unknown coefficients $h$ and $k$.
+  Consider the following linear system with two unknown coefficients
+  $h$ and $k$.
   \begin{align*}
     hx + 2y &= 1 \\
     3x + 9y &= k
   \end{align*}
   \begin{enumerate}
-  \item Determine values of $h$ and $k$ so that the above linear system has no solutions.
-  \item Determine values of $h$ and $k$ so that the above linear system has exactly one solution.
-  \item Determine values of $h$ and $k$ so that the above linear system has infinitely many solutions.
+  \item
+    Determine values of $h$ and $k$ so that the above linear system
+    has no solutions.
+  \item
+    Determine values of $h$ and $k$ so that the above linear system
+    has exactly one solution.
+  \item
+    Determine values of $h$ and $k$ so that the above linear system
+    has infinitely many solutions.
   \end{enumerate}
 \item
   Consider the following general form solution
@@ -480,9 +505,11 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
   \end{align*}
   \begin{enumerate}
   \item
-    Write down another general form solution which describes the same solution set, but for which $x_3$ is basic and $x_4$ is free.
+    Determine another general form solution which describes the same
+    solution set, but for which $x_3$ is basic and $x_4$ is free.
   \item
-    Write down an RREF which yields the general form solution you wrote down in the previous part.
+    Determine an RREF which yields the general form solution from the
+    previous part.
   \end{enumerate}
 \item
   Consider the following general form solution.
@@ -493,14 +520,21 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
     x_{4} &= -4 + 5x_{5} \\
     x_{5} &\text{ is free}
   \end{align*}
-  Determine a general form solution that describes the same solution set but in which $x_1$ is free.
-\item \faCalculator \
-  Suppose you're investigating a claim that, out of five competing car companies who purchase engine parts from the same suppliers, one purportedly \textit{overestimated} their total spending by \textdollar 1,300,000.
-  Companies are required to report their total spending, and you've been able to determine how many units (× 10,000) of each part that each company has purchased.
-  You haven't been unable to determine how much each item costs per unit (it's an industry secret), but you can assume that each company pays the same amount per unit.
-  Given the following data, which company is falsifying their records?
-  Justify our answer.
-  The total amount spent by each company in the table below is multiplied by \textdollar 100,000.
+  Determine a general form solution that describes the same solution
+  set but in which $x_1$ is free.
+\item
+  \faCalculator \ Suppose you're investigating a claim that, out of
+  five competing car companies who purchase engine parts from the same
+  suppliers, one purportedly \textit{overestimated} their total
+  spending by \textdollar 1,300,000.  Companies are required to report
+  their total spending, and you've been able to determine how many
+  units (× 10,000) of each part that each company has purchased.  You
+  haven't been unable to determine how much each item costs per unit
+  (it's an industry secret), but you can assume that each company pays
+  the same amount per unit.  Given the following data, which company
+  is falsifying their records?  Justify our answer.  The total amount
+  spent by each company in the table below is multiplied by
+  \textdollar 100,000.
   \begin{center}
     \begin{tabular}{|c|r|r|r|r|r|r|}
       \hline
@@ -515,18 +549,23 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
     \end{tabular}
   \end{center}
 \item
-  Suppose you're given a system of linear equations with three variables and two equations, and that $(4, 1, 0)$ and $(2, 4, 1)$ are solutions to this system.
-  You are also given that the two equations define distinct planes in $\mathbb R^3$.
-  Determine the RREF of the augmented matrix for this system.
+  Suppose you're given a system of linear equations with three
+  variables and two equations, and that $(4, 1, 0)$ and $(2, 4, 1)$
+  are solutions to this system.  You are also given that the two
+  equations define distinct planes in $\mathbb R^3$.  Determine the
+  RREF of the augmented matrix for this system.
 \item
-  Consider an arbitrary system of linear equations with $n$ unknowns and $m$ equations.
-  Further suppose that
+  Consider an arbitrary system of linear equations with $n$ unknowns
+  and $m$ equations.  Further suppose that
   \begin{itemize}
-  \item it has a unique solution;
-  \item it has at least as many equations as unknowns ($m \geq n$).
+  \item
+    it has a unique solution;
+  \item
+    it has at least as many equations as unknowns ($m \geq n$).
   \end{itemize}
-  Write down an expression in terms of $m$ and $n$ for the number of all-zero rows which appear in the rwo-reduced echelon form of its augmented matrix.
-  Justify your answer.
+  Write down an expression in terms of $m$ and $n$ for the number of
+  all-zero rows which appear in the rwo-reduced echelon form of its
+  augmented matrix.  Justify your answer.
 \end{enumerate}
 
 \section*{Challenge Problems}
@@ -539,14 +578,18 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
     dx + ey &= f
   \end{align*}
   \begin{align*}
-    ax + by - cz = 0 \\
-    dx + ey - fz = 0
+    ax + by - cz &= 0 \\
+    dx + ey - fz &= 0
   \end{align*}
   \begin{enumerate}
-  \item Demonstrate that if the first system has a solution, then so does the second one.
   \item
-    Give \textbf{nonzero} values to $a$ through $f$ such that the second system has a solution, but the first does not.
-    Present your solution as an augmented matrix for the first system, i.e., of the form
+    Demonstrate that if the first system has a solution, then so does
+    the second one.
+  \item
+    Give \textbf{nonzero} values to $a$ through $f$ such that the
+    second system has a solution, but the first does not.  Present
+    your solution as an augmented matrix for the first system, i.e.,
+    of the form
     \begin{displaymath}
       \begin{bmatrix}
         a & b & c \\
@@ -562,114 +605,799 @@ augmented matrix.  If this system has no solutions then write \enquote{no soluti
   \end{align*}
   \begin{align*}
     10x_3 + 2x_4 &= x_1 \\
-    (-8)x_3 + 9x_4 &= x_2
+    -8x_3 + 9x_4 &= x_2
   \end{align*}
   \begin{enumerate}
-  \item Solve the first system of linear equations (in $x_1$ and $x_2$) and write down the augmented matrix of the second system with the solutions of $x_1$ and $x_2$ substituted in.
   \item
-    Determine the augmented matrix of a \textit{single} system of linear equations \textit{with all four equations} in the variables $x_1$, $x_2$, $x_3$, $x_4$.
-    Describe the relationship between this matrix and the one in the previous part.
+    Solve the first system of linear equations (in $x_1$ and $x_2$)
+    and write down the augmented matrix of the second system with the
+    solutions of $x_1$ and $x_2$ substituted in.
+  \item
+    Determine the augmented matrix of a \textit{single} system of
+    linear equations \textit{with all four equations} in the variables
+    $x_1$, $x_2$, $x_3$, $x_4$.  Describe the relationship between
+    this matrix and the one in the previous part.
 \end{enumerate}
 \item
-  Determine what must hold of $a$, $b$, $c$, $d$ so that the following linear system has exactly one solution.
+  Determine what must hold of $a$, $b$, $c$, $d$ so that the following
+  linear system has exactly one solution.
   \begin{align*}
     ax + by &= 0 \\
     cx + dy &= 0
   \end{align*}
 \item
-  Determine an inconsistent linear system in 3 variables such that every pair of equations is consistent.
-  That is, give values for $a$ through $l$ in the system
+  Determine an inconsistent linear system in 3 variables such that
+  every pair of equations is consistent.  That is, give values for $a$
+  through $l$ in the system
   \begin{align*}
-    ax + by + cz = d \\
-    ex + fy + gz = h \\
-    ix + jy + kz = l
+    ax + by + cz &= d \\
+    ex + fy + gz &= h \\
+    ix + jy + kz &= l
   \end{align*}
-  such that the system is inconsistent, but each pair of equations forms a consistent system.
-  Present your solution to each part as the an augmented matrix, i.e., of the form
+  such that the system is inconsistent, but each pair of equations
+  forms a consistent system.  Present your solution to each part as
+  the an augmented matrix, i.e., of the form
   \begin{displaymath}
     \begin{bmatrix}
       a & b & c & d \\
       e & f & g & h \\
-      i & j & k & l \\
+      i & j & k & l
     \end{bmatrix}
   \end{displaymath}
   \begin{enumerate}
-  \item Achieve this with no more than 5 nonzero values for $a$ through $l$.
-  \item Achieve this with all nonzero values for $a$ through $l$.
+  \item
+    Achieve this with no more than 5 nonzero values for $a$ through
+    $l$.
+  \item
+    Achieve this with all nonzero values for $a$ through $l$.
   \end{enumerate}
 \item
   Consider an arbitrary linear system in three variables:
   \begin{align*}
-    ax + by + cz = d \\
-    ex + fy + gz = h \\
-    ix + jy + kz = l
+    ax + by + cz &= d \\
+    ex + fy + gz &= h \\
+    ix + jy + kz &= l
   \end{align*}
-  Show that if $(s_x, s_y, s_z)$ and $(t_x, t_y, t_z)$ are solutions to the above system, then
+  Show that if $(s_x, s_y, s_z)$ and $(t_x, t_y, t_z)$ are solutions
+  to the above system, then
   \begin{displaymath}
-    \left(\frac{s_x + t_x}{2}, \frac{s_y + t_y}{2}, \frac{s_z + t_z}{2} \right)
+    \left(
+    \frac{s_x + t_x}{2},
+    \frac{s_y + t_y}{2},
+    \frac{s_z + t_z}{2}
+    \right)
   \end{displaymath}
-  is also a solution.
-  Describe why $(s_x, s_y, s_z) \not = (t_x, t_y, t_z)$ implies the system has infinitely many solutions.
+  is also a solution.  Describe why $(s_x, s_y, s_z) \not = (t_x, t_y,
+  t_z)$ implies the system has infinitely many solutions.
 \item
-  One way to describe a line in 3 dimensions is to use a parameter $t$.
-  That is, after fixing values $a_x$, $b_x$, $a_y$, $b_y$, $a_z$, and $b_z$, a line can be described as all points of the form
+  One way to describe a line in 3 dimensions is to use a parameter
+  $t$.  That is, after fixing values $a_x$, $b_x$, $a_y$, $b_y$,
+  $a_z$, and $b_z$, a line can be described as all points of the form
   \begin{displaymath}
     (a_xt + b_x, a_yt + b_y, a_zt + b_z)
   \end{displaymath}
-  for any real value of $t$.
-  Give a pair of 3 dimensional linear equations (each of which represents a plane in $\mathbb R^3$) whose intersection is exactly the line whose points are defined by the above parametric form.
-  \textit{Hint:} The line above can be thought of as a system in the variables $x$, $y$, $z$, and $t$, e.g., one of its equations is $x - a_xt = b_x$. Write $t$ in terms of $x$ and substitute this value for $t$ into the other equations.
+  for any real value of $t$.  Give a pair of 3 dimensional linear
+  equations (each of which represents a plane in $\R^3$) whose
+  intersection is exactly the line whose points are defined by the
+  above parametric form.  \textit{Hint:} The line above can be thought
+  of as a system in the variables $x$, $y$, $z$, and $t$, e.g., one of
+  its equations is $x - a_xt = b_x$. Write $t$ in terms of $x$ and
+  substitute this value for $t$ into the other equations.
 \item
-  There are several ways to define row equivalence.
-  For example, suppose we restrict the replacement rule to only allow operations of the form
-  \begin{align*}
+  There are several ways to define row equivalence.  For example,
+  suppose we restrict the replacement rule to only allow operations of
+  the form
+  \begin{displaymath}
     R_i \gets R_i + R_j
-  \end{align*}
-  That is, we can only add one row to another, without doing any scaling of that row.
-  We call this an \textit{addition operation}.
+  \end{displaymath}
+  That is, we can only add one row to another, without doing any
+  scaling of that row.  We call this an \textit{addition operation}.
 
-  Demonstrate that two matrices $A$ and $B$ are row equivalent if there is a sequence of addition and scaling operations which transform $A$ to $B$.
-  In particular, addition and scaling operations can simulate replacement and exchange operations.
+  Demonstrate that two matrices $A$ and $B$ are row equivalent if
+  there is a sequence of addition and scaling operations which
+  transform $A$ to $B$.  In particular, addition and scaling
+  operations can simulate replacement and exchange operations.
 \end{enumerate}
 
-\chapter{Vector Equations and Spans}
-\input{vector-equations.tex}
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
-\chapter{Matrix-Vector Equations}
-\input{matrix-equations.tex}
+\chapter{Vector Equations and Spans}
+
+\section*{Basic Exercises}
+
+Compute the following linear combinations of vectors.
+\begin{enumerate}
+\item
+  \begin{displaymath}
+    7 \vFour 2 {-3} {-8} 9
+    + 3 \vFour 2 {-3} {-4} {-3}
+    - 4 \vFour 5 {-1} 5 {-7}
+    - 2 \vFour {-2} {-9} {-2} {-10}
+  \end{displaymath}
+\end{enumerate}
+For each of the following linear systems, determine an equivalent
+vector equation, i.e., one that has the same solution set as the given
+linear system.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    8x_{1} + 6x_{2} - 9x_{3} &= -5 \\
+    4x_{1} + 3x_{2} + 9x_{3} + 2x_{4} &= -1 \\
+    4x_{1} + 5x_{2} &= 9 \\
+    3x_{2} + 8x_{3} - 3x_{4} &= 2
+  \end{align*}
+\end{enumerate}
+Determine a vector that is in $\vspan\{\vv_1, \vv_2\}$ but not in
+$\vspan\{\vv_1\}$ or $\vspan\{\vv_2\}$, if possible.  Justify your
+answer.  In particular, if it is not possible, then explain why.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \vv_1 = \vThree {-7} {-1} 0
+    \quad
+    \vv_2 = \vThree {-8} 9 {-7}
+  \end{displaymath}
+\end{enumerate}
+Determine a general form solution for each vector equation.  If the
+given equation has no solutions then write \enquote{no solution}.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    x_1 \vThree 1 {-2} 0
+    + x_2 \vThree {-2} 5 2
+    + x_3 \vThree {-8} {21} {10}
+    = \vThree {16} {-38} {-12}
+  \end{displaymath}
+\end{enumerate}
+For each of the following collections of vectors, determine if the
+vector $\vv_1$ is in the span of the remaining vectors. If it
+is, determine the corresponding dependence relation, i.e., write
+$\vv_1$ as a linear combination of the remaining vectors.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \vv_1 = \begin{bmatrix} 0 \\ -3 \\ -20 \end{bmatrix}
+    \qquad
+    \vv_2 = \begin{bmatrix} 1 \\ 1 \\ 3 \end{bmatrix}
+    \qquad
+    \vv_3 = \begin{bmatrix} 1 \\ 2 \\ 8 \end{bmatrix}
+  \end{displaymath}
+\item
+  \begin{displaymath}
+    \vv_1 = \begin{bmatrix} 1 \\ 4 \\ -7 \end{bmatrix}
+    \quad
+    \vv_2 = \begin{bmatrix} 0 \\ 1 \\ -3 \end{bmatrix}
+    \quad
+    \vv_3 = \begin{bmatrix} 5 \\ 7 \\ -1 \end{bmatrix}
+    \quad
+    \vv_4 = \begin{bmatrix} 1 \\ 2 \\ -2 \end{bmatrix}
+  \end{displaymath}
+\item \faCalculator
+  \begin{align*}
+    \mathbf v_1
+    = \begin{bmatrix} 42 \\ -23 \\ 98 \\ 11 \\ -87 \end{bmatrix}
+    \qquad
+    \mathbf v_2
+    = \begin{bmatrix} 10 \\ -33 \\ -5 \\ -30 \\ -3 \end{bmatrix}
+    \qquad
+    \mathbf v_3
+    = \begin{bmatrix} -47 \\ -1 \\ -2 \\ -25 \\ 24 \end{bmatrix}
+  \end{align*}
+  \begin{align*}
+    \mathbf v_4
+    = \begin{bmatrix} 31 \\ -34\\ 11 \\ 39 \\ 25 \end{bmatrix}
+    \qquad
+    \mathbf v_5
+    = \begin{bmatrix}-14 \\ 22 \\ 12 \\ 42 \\ 3\end{bmatrix}
+  \end{align*}
+\item \faCalculator
+  \begin{align*}
+    \mathbf v_1
+    = \begin{bmatrix} 87 \\ -19 \\ -24 \\ -61 \\ -79 \end{bmatrix}
+    \qquad
+    \mathbf v_2
+    = \begin{bmatrix} 10 \\ -33 \\ -5 \\ -30 \\ -3 \end{bmatrix}
+    \qquad
+    \mathbf v_3
+    = \begin{bmatrix} -47 \\ -1 \\ -2 \\ -25 \\ 24 \end{bmatrix}
+  \end{align*}
+  \begin{align*}
+    \mathbf v_4
+    = \begin{bmatrix} 31 \\ -34\\ 11 \\ 39 \\ 25 \end{bmatrix}
+    \qquad
+    \mathbf v_5
+    = \begin{bmatrix}-14 \\ 22 \\ 12 \\ 42 \\ 3\end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following pairs of vectors $\mathbf v_1$ and $\mathbf
+v_2$, determine a linear equation whose point set is the
+$\mathrm{span}\{\mathbf v_1, \mathbf v_2\}$.  The linear equation you
+determine should have relatively prime integer coefficients (i.e., it
+should not be possible to divide the equation by an integer value and
+get a new equation with integer coefficients).
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \mathbf{v}_{1} = \begin{bmatrix} -2 \\ 1 \\ 2 \end{bmatrix}
+    \quad
+    \mathbf{v}_{2} = \begin{bmatrix} -1 \\ 0 \\ 2 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \mathbf v_1 = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix}
+    \qquad
+    \mathbf v_2 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section*{True/False}
+\trueFalseHeader
+\begin{enumerate}[resume]
+\item
+  For any two vectors $\mathbf v_1$ and $\mathbf v_2$ in $\mathbb
+  R^n$, there is a vector $\mathbf u$ such that $\mathbf v_1 + \mathbf
+  v_2 + \mathbf u = \mathbf 0$.
+\item
+  For any vectors $\mathbf v_1$, $\mathbf v_2$, and $\mathbf v_3$ in
+  $\mathbb R^n$, if $\mathbf v_1 \in \mathsf{span}\{\mathbf v_2,
+  \mathbf v_3\}$, then $\mathbf v_2 \in \mathsf{span}\{\mathbf v_1,
+  \mathbf v_3\}$.
+\item
+  The span of any two distinct nonzero vectors in $\mathbb R^3$ is a
+  plane.
+\item
+  For any vector $\mathbf v_1$, $\mathbf v_2$, and $\mathbf v_3$ in
+  $\mathbb R^n$, $\mathsf{span}\{\mathbf v_1, \mathbf v_2, \mathbf
+  v_3\} = \mathsf{span}\{\mathbf v_1 + \mathbf v_3, \mathbf v_2\}$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Consider the vectors
+  \begin{displaymath}
+    \mathbf v_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}
+    \qquad
+    \mathbf v_2 = \begin{bmatrix} 1 \\ 1 \\ 2 \\ 2 \end{bmatrix}
+  \end{displaymath}
+  Write vectors $\mathbf v_3$ and $\mathbf v_4$ such that $\mathbf v_3$ is not in $\mathsf{span}\{\mathbf v_1, \mathbf v_2\}$ and $\mathbf v_4$ is not in $\mathsf{span}\{\mathbf v_1, \mathbf v_2, \mathbf v_3\}$.
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Find a linear equation in three variables whose point set is exactly
+  \begin{align*}
+    \left\{
+    \mathbf v +
+    \begin{bmatrix} 2 \\ -3 \\ 2 \end{bmatrix}
+    \ \text{where} \
+    \mathbf v \in
+    \mathsf{span}
+    \left\{
+    \begin{bmatrix} 1 \\ 1 \\ -5 \end{bmatrix},
+    \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix}
+    \right\}
+    \right\}
+  \end{align*}
+  In other words, every point in the point set of the equation can be
+  expressed as the sum of $[2 \ \ (-3) \ \ 2]^T$ and a vector in the
+  span of $[1 \ \ 1 \ \ (-5)]^T$ and $[0 \ \ 1 \ \ (-1)]^T$.
+\item
+  Consider the following linear equation.
+  \begin{displaymath}
+    x + y + z = 5
+  \end{displaymath}
+  The plane represented by this equation does not include the origin;
+  such a plane is called \textit{affine}.  Determine vectors $\mathbf
+  b$, $\mathbf v_1$, and $\mathbf v_2$ such that every point in the
+  plane represented by the above equation (that is, every point $(a,
+  b, c)$ such that $a + b + c = 5$) can be written as $\mathbf b +
+  \mathbf v$ where $\mathbf v$ is in $\mathsf{span} \{\mathbf v_1,
+  \mathbf v_2\}$, i.e.,
+  \begin{displaymath}
+    \{(x, y, z) : x + y + z = 5\} =
+    \{\vb + \vv : \vv \in \vspan\{\vv_1, \vv_2\}\}.
+  \end{displaymath}
+\end{enumerate}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
+\chapter{Matrix Equations}
+
+Compute the matrix-vector multiplication $A\mathbf v$ where $A$ and
+$\mathbf v$ are given below.  If it is not possible to multiply $A$
+with $\mathbf v$, then explain why.
+\begin{enumerate}
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      -10 & 6 & 2 & 8 \\ 1 & 3 & 4 & 5 \\ 0 & -2 & 0 & -9
+    \end{bmatrix}
+    \quad \mathbf v = \begin{bmatrix} 4 \\ -5 \\ 3 \\ 1 \end{bmatrix}
+\end{align*}
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      6 & 1 & -8 & -3 \\ 5 & 0 & -9 & -4
+    \end{bmatrix}
+    \quad \mathbf v = \begin{bmatrix} -6 \\ 2 \end{bmatrix}
+\end{align*}
+\end{enumerate}
+Determine a general form solution for the matrix equation $A\mathbf x
+= \mathbf b$ where $A$ and $\mathbf b$ are given below.  If this
+equation has no solutions then write \textit{NO SOLUTION}.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      1 & -3 & 1 & -9 \\ 1 & -2 & 0 & -5 \\ -3 & 8 & -1 & 19 \\ -2 & 4
+      & 0 & 10
+    \end{bmatrix}
+    \quad \mathbf b = \begin{bmatrix} 3 \\ 7 \\ -18
+      \\ -14 \end{bmatrix}
+\end{align*}
+\item \faCalculator
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      1 & 1 & 3 & 1 & -7 & 1 \\ -5 & -4 & -14 & -3 & 24 & -8\\ 0 & -2
+      & -2 & -3 & 21 & 3 \\ -6 & -3 & -15 & -2 & 11 & -8
+    \end{bmatrix}
+    \quad \mathbf b =
+    \begin{bmatrix}
+      7 \\ -16 \\ -20 \\ -27
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+For each of the following matrices, Determine if its columns have full
+span, i.e., given a matrix in $\mathbb R^{m \times n}$, determine if
+the columns span $\mathbb R^m$.
+\begin{enumerate}[resume]
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 \\ 2 & 5
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -5 & 4\\ -1 & 6 & -3\\ -2 & 13 & -7\\
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 0 & 4 \\ -1 & -1 & 2 & 9 \\ -1 & -2 & 1 & 1 \\ 0 & 2 & 6
+      & 36
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \begin{bmatrix}
+      8 & 3 & 8 \\ 8 & -4 & 4 \\ -2 & 1 & -5 \\ -5 & -7 & -10 \\ -8 &
+      9 & 1
+    \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section*{True/False}
+
+\trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  For $A \in \mathbb R^{m \times n}$ where $m > n$, it is not possible
+  for the columns of $A$ to span $\mathbb R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is
+  inconsistent for some vector $\mathbf b$, then it is not possible
+  for the columns of $A$ to span $\mathbb R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has
+  infinitely many solutions, then the columns of $A$ span $\mathbb
+  R^m$.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf 0$ has
+  infinitely many solutions, then $\{ \mathbf v : A\mathbf v = \mathbf
+  0\} = \mathbb R^n$.
+\item
+  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, let $[A \ B]
+  \in \mathbb R ^ {m \times 2n}$ be the matrix obtained by
+  horizontally stacking $A$ and $B$.  If $A\mathbf x = \mathbf b$ is
+  consistent and $B\mathbf x = \mathbf b$ is consistent, then so is
+  $[A \ B] \mathbf x = \mathbf b$.
+\item
+  For matrices $A$ and $B$ in $\mathbb R^{m \times n}$, if $[A
+    \ B]\mathbf x = \mathbf b$ is consistent then $A\mathbf x =
+  \mathbf b$ is consistent or $B \mathbf x = \mathbf b$ is consistent.
+\item
+  For $A \in \mathbb R^{m \times n}$, if $A \mathbf x = \mathbf b$ is
+  inconsistent for some vector $\mathbf b$, then $A$ does not have a
+  pivot position in every column.
+\item
+  If $\mathbf x \mapsto A \mathbf x$ is one-to-one and onto, then $A$
+  is a square matrix.
+\item
+  If $\mathbf x \mapsto A \mathbf x$ is neither one-to-one or onto,
+  and the reduced echelon form of $A$ only has $0$s and $1$s, then one
+  of the columns of $A$ is $\mathbf 0$.
+\item
+  If the columns of $A$ are linearly independent, then the reduced
+  echelon form of $A$ has only $0$s and $1$s.
+\item
+  If $A$ is an $m \times n$ matrix and $m < n$, then the range of
+  $\mathbf x \mapsto A\mathbf x$ is $\mathbb R^m$.
+\item
+  If the columns of $A \in \mathbb R^{m \times n}$ span all of
+  $\mathbb R^m$, then the reduced echelon form of $A$ has only $0$s
+  and $1$s.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    A
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4
+    \end{bmatrix}
+  \end{displaymath}
+  For each of the following shapes, determine a concrete matrix $A$ so
+  that the above equation holds, where $\blacksquare$ represents a
+  nonzero entry.  { \newcommand{\bs}{\blacksquare}
+    \begin{enumerate}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&0&0&0 \\ 0&\bs&0&0 \\ 0&0&\bs&0 \\ 0&0&0&\bs
+        \end{bmatrix}
+      \end{displaymath}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&0&0&0 \\ \bs&\bs&0&0 \\ \bs&\bs&\bs&0 \\ \bs&\bs&\bs&\bs
+        \end{bmatrix}
+      \end{displaymath}
+    \item
+      \begin{displaymath}
+        \begin{bmatrix}
+          \bs&\bs&\bs&\bs \\ \bs&\bs&\bs&0 \\ \bs&\bs&0&0 \\ \bs&0&0&0
+          \\
+        \end{bmatrix}
+      \end{displaymath}
+    \end{enumerate}
+  }
+\item \faCalculator \ Any three distinct points in the plane define a
+  \textit{unique} quadratic equation.  Given three points $(x_1,
+  y_1)$, $(x_2, y_2)$ and $(x_3, y_3)$, the equation $y = ax^2 + bx +
+  c$ that passes through these three points is given by the solution
+  to the following matrix equation.
+  \begin{align*}
+    \begin{bmatrix}
+      x_1^2 & x_1 & 1 \\ x_2^2 & x_2 & 1 \\ x_3^2 & x_3 & 1
+    \end{bmatrix}
+    \begin{bmatrix} a \\ b \\ c \end{bmatrix}
+    =
+    \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+  \end{align*}
+  Use it to determine the unique quadratic equation which passes
+  through the points $(2, 13)$, $(3, 25)$ and $(-2, 5)$.
+\item
+  Determine the RREF of the following matrix in terms of $x$, $y$,
+  assuming $x \not = 1$.
+  \begin{align*}
+    \begin{bmatrix}
+      x^2 & x & 1 & y \\ 1 & 1 & 1 & 1 \\ \left(\frac{x +
+        1}{2}\right)^2 & \frac{x + 1}{2} & 1 & \frac{y + 1}{2}
+    \end{bmatrix}
+  \end{align*}
+  \textit{Hint:} Don't try to row reduce it. Think in terms of
+  polynomial interpolation.
+\item
+  Let $A$ be a matrix with $n$ rows and 6 columns.  Each row of $A$
+  contains the \textbf{unweighted} percentage scores (out of 100) of
+  one student on 4 homework assignments (columns 1 through 4) a
+  midterm exam (column 5) and a final exam (column 6).
+  \begin{displaymath}
+    \begin{matrix}
+      H_1 & H_2 & H_3 & H_4 & M & F
+    \end{matrix}
+  \end{displaymath}
+  \begin{displaymath}
+    \begin{bmatrix}
+      p_{11} & p_{12} & p_{13} & p_{14} & p_{15} & p_{16} \\ p_{21} &
+      p_{22} & p_{23} & p_{24} & p_{25} & p_{26} \\ \vdots & \vdots &
+      \vdots & \vdots & \vdots & \vdots \\ p_{n1} & p_{n2} & p_{n3} &
+      p_{n4} & p_{n5} & p_{n6} \\
+    \end{bmatrix}
+  \end{displaymath}
+  All homework assignments are worth the same amount.  Let $T$ denote
+  the linear transformation implemented by this matrix.
+  \begin{enumerate}
+  \item
+    Suppose that homework assignments account for \textbf{50} percent
+    of the final grade, the midterm exam accounts for \textbf{20}
+    percent and the final exam accounts for \textbf{30} percent.  Find
+    a vector $\mathbf v$ such that $T(\mathbf v)$ is the vector whose
+    $i^\text{th}$ entry is the final percentage grade of the
+    $i^\text{th}$ student.  For example, if the $i^\text{th}$ student
+    recieved $90$ percent on every homework assignment, $85$ percent
+    on the midterm, and $92$ percent on the final, then the
+    $i^\text{th}$ entry of the output vector should be $90 * 0.5 + 85
+    * 0.2 + 92 * 0.3$.
+  \item
+    Find a vector $\mathbf v$ such that $T(\mathbf v)$ is the vector
+    whose $i^\text{th}$ entry is the unweighted homework grade for
+    student $i$. For the same example as above, the $i^\text{th}$
+    entry would be $90$.
+  \end{enumerate}
+\end{enumerate}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Linear Independence}
-\input{linear-independence.tex}
+
+\section*{Basic Exercises}
+
+Determine if the following collections of vectors are linearly
+dependent.  If they are write a dependence relation, i.e., determine
+linear combination of the given vectors which sums to $\mathbf 0$.
+\begin{enumerate}
+\item
+  \begin{align*}
+    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} \quad
+    \mathbf{v}_{2} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix}
+      1 \\ -1 \\ 2
+    \end{bmatrix}
+    \qquad \mathbf v_2 =
+    \begin{bmatrix}
+      -1 \\ 4 \\ -3
+    \end{bmatrix}
+    \qquad \mathbf v_3 =
+    \begin{bmatrix}
+      -3 \\ 9 \\ -8
+    \end{bmatrix}
+  \end{align*}
+\item
+  \begin{align*}
+    \mathbf{v}_{1} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \quad
+    \mathbf{v}_{2} = \begin{bmatrix} -3 \\ 7 \\ -2 \end{bmatrix} \quad
+    \mathbf{v}_{3} = \begin{bmatrix} -6 \\ 15 \\ -3 \end{bmatrix}
+    \quad \mathbf{v}_{4} = \begin{bmatrix} -1 \\ 3 \\ 1 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\section*{True/False}
+\trueFalseHeader
+\begin{enumerate}[resume]
+\item
+  For $A \in \mathbb R^{m \times n}$, if the columns of $A$ are
+  linearly dependent, then they do not span $\mathbb R^m$.
+\end{enumerate}
+
+\section*{More Difficult Problems}
+
+\begin{enumerate}[resume]
+\item
+  Consider four vectors $\mathbf v_1$, $\mathbf v_2$, $\mathbf v_3$
+  and $\mathbf v_4$ in $\mathbb R^4$ with the property that
+  \begin{align*}
+    \begin{bmatrix}
+      \mathbf v_1 & \mathbf v_2 & \mathbf v_3 & \mathbf v_4
+    \end{bmatrix}
+    \sim
+    \begin{bmatrix}
+      1 & 1 & 3 & -2 \\ 0 & 4 & -4 & 12 \\ 0 & 0 & 3 & 3 \\ 0 & 0 & 0
+      & 0
+    \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Determine if $\mathbf v_4 \in \mathrm{span}\{\mathbf v_1, \mathbf
+    v_2, \mathbf v_3\}$.  If so, express $\mathbf v_4$ as a linear
+    combination of the vectors $\mathbf v_1$, $\mathbf v_2$ and
+    $\mathbf v_3$.
+  \item Deterime if vectors $\mathbf v_2$, $\mathbf v_3$, and $\mathbf
+    v_4$ linearly independent.  If so, justify your answer.  If not,
+    determine a dependence relation for these vectors.
+  \end{enumerate}
+\item
+  Determine all values of $h$ for which the following set of vectors
+  is linearly dependent.
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix} 1 \\ 9 \\ -3 \end{bmatrix}
+    \qquad \mathbf v_2 =
+    \begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}
+    \qquad \mathbf v_3 =
+    \begin{bmatrix} -2 \\ h \\ -6 \end{bmatrix}
+    \qquad
+  \end{align*}
+\item
+  Determine three \textit{nonzero} vectors $\mathbf v_1$, $\mathbf
+  v_2$, and $\mathbf v_3$ in $\mathbb R^3$ such that
+  \begin{itemize}
+  \item
+    $\{\mathbf v_1, \mathbf v_2, \mathbf v_3\}$ is linearly dependent
+    and
+  \item
+    $\mathbf v_1$ cannot be written as a linear combination of
+    $\mathbf v_2$ and $\mathbf v_3$.
+  \end{itemize}
+\item \faCalculator \ Consider the following matrix, presented as a
+  SymPy array.
+  \begin{lstlisting}
+
+  import sympy a = sympy.Matrix( [[ 13, -19, 19, 16, 5, 1, 10, 5, 15],
+    [-11, -7, -10, 7, 2, -8, -10, -19, 6], [ -5, 10, -7, 2, -8, 2,
+      -15, -16, -11], [ 17, -13, 9, 13, 19, 8, -3, -9, 0], [ 9, -18,
+      5, 1, 4, 14, 9, 8, -4], [ 8, 14, 17, 5, -6, 7, -13, 2, 12], [
+      18, 12, -7, 2, -10, 15, -12, 1, -12], [ 19, -12, 1, -16, 2, -6,
+      -4, 17, 15], [-19, -6, -16, -20, -20, -3, 7, 3, 14], [ 6, 8,
+      -15, 5, -5, 8, -14, 5, -19]])
+  \end{lstlisting}
+  \begin{enumerate}
+  \item Determine if the columns of this matrix span all of $\mathbb
+    R^{10}$. Justify your answer.
+  \item Determine if the columns of this matrix linearly
+    independent. Justify your answer.
+  \end{enumerate}
+\item
+  Consider the following collection of vectors.
+  \begin{align*}
+    &\mathbf v_1 =
+    \begin{bmatrix} -10 \\ -6 \\ 2 \\ 0 \\ 8 \\ -3 \\ -4 \end{bmatrix}
+    \qquad \mathbf v_2 =
+    \begin{bmatrix} -3 \\ 3 \\ -8 \\ 5 \\ -2 \\ 7 \\ -3 \end{bmatrix}
+    \qquad \mathbf v_3 =
+    \begin{bmatrix} -20 \\ -12 \\ 4 \\ 0 \\ 16 \\ -6 \\ -8 \end{bmatrix}
+    \qquad \mathbf v_4 =
+    \begin{bmatrix} 6 \\ 1 \\ 3 \\ -1 \\ 10 \\ 7 \\ 4 \end{bmatrix}
+  \end{align*}
+  \begin{align*}
+    &\mathbf v_5 =
+    \begin{bmatrix} -2 \\ -10 \\ 10 \\ -5 \\ -3 \\ -10 \\ -5 \end{bmatrix}
+    \qquad \mathbf v_6 =
+    \begin{bmatrix} -2 \\ 3 \\ -9 \\ -2 \\ -9 \\ -2 \\ 7 \end{bmatrix}
+    \qquad \mathbf v_7 =
+    \begin{bmatrix} -13 \\ 25 \\ -22 \\ 13 \\ 24 \\ 41 \\ 15 \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Determine the first vector (i.e., the vector with the smallest
+    index) which can be written as a linear combination as of the
+    vectors which precede it.  Express this vectors as a linear
+    combination of the vectors which precede it.  You should write
+    your final solution using the vector names of the form $\mathbf
+    v_i$.
+  \item
+    Determine a dependence relation for the entire set of vectors with
+    the following properties:
+    \begin{itemize}
+    \item
+      the coefficients of the dependence relation are relatively prime
+      integers;
+    \item
+      the number of nonzero coefficients is maximum, i.e., there is no
+      other dependence relation with a greater number of nonzero
+      coefficients.
+    \end{itemize}
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}[resume]
+\item
+  Determine all values of $h$ for which the following set of vectors
+  is linearly dependent.
+  \begin{align*}
+    \mathbf v_1 =
+    \begin{bmatrix} 1 \\ -1 \\ h \end{bmatrix}
+    \qquad \mathbf v_2 =
+    \begin{bmatrix} 4 \\ 0 \\ 2 \end{bmatrix}
+    \qquad \mathbf v_3 =
+    \begin{bmatrix} 13 \\ h \\ -1 \end{bmatrix}
+    \qquad
+  \end{align*}
+\end{enumerate}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Linear Transformations}
 \input{linear-transformations.tex}
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Matrix Algebra}
 \input{matrix-algebra.tex}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{LU Factorization}
 \input{lu.tex}
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Markov Chains}
 \input{markov-chains.tex}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Vector Spaces}
 \input{vector-spaces.tex}
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Eigenvectors}
 \input{eigenvectors.tex}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Diagonalization}
 \input{diagonalization.tex}
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Analytic Geometry and Orthogonality}
 \input{analytic-geometry.tex}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Least Squares and Linear Models}
 \input{least-squares.tex}
 
+% ======================================================================
+% ======================================================================
+% ======================================================================
+
 \chapter{Quadratic Forms}
 \input{quadratic-forms.tex}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \chapter{Singular Value Decomposition}
 \input{svd.tex}
