@@ -2481,6 +2481,9 @@ should do this without determining $A$ first.
   For all matrices $A$ and $B$ such that $AB$ is defined, we have $AB
   \not = BA$.
 \item
+  For any matrix $A$, if $A$ has $n$ distinct eigenvalues, then it is
+  invertible.
+\item
   If $A\vx = \vb$ has a unique solution for every vector $\vb$ in the
   span of the columns of $A$, then $A$ is invertible.
 \item
@@ -2852,6 +2855,35 @@ Determine an LU factorization of the following matrices.
 
 \begin{enumerate}[resume]
 \item
+  \begin{enumerate}
+  \item
+    Determine the $3 \times 3$ matrix $E$ which implements the
+    following row operations:
+    \begin{align*}
+      \mathsf{swap}&(R_1, R_2) \\
+      R_1 &\gets 3R_1 \\
+      R_3 &\gets R_3 + 2 R_2
+    \end{align*}
+  \item
+    Determine values for $i$ through $m$ such that $E^T$ implements
+    the following row operations:
+    \begin{align*}
+      \mathsf{swap}&(R_i, R_j) \\
+      R_k &\gets 3R_k \\
+      R_l &\gets R_l + 2 R_m
+    \end{align*}
+  \item
+    Using the previous part, compute $AE$ where
+    \begin{displaymath}
+      A =
+      \begin{bmatrix}
+        11 & 22 & 33 \\
+        11 & 22 & 33 \\
+        11 & 22 & 33
+      \end{bmatrix}
+    \end{displaymath}
+  \end{enumerate}
+\item
   Suppose that $LU$ is the LU factorization of a matrix $A$, and let
   $B$ be a matrix such that $BU = I$.  Determine the inverse of $A$ in
   terms of $L$, $U$, and $B$.
@@ -3040,6 +3072,9 @@ following items:
   If $A$ and $B$ are stochastic matrices, then so is $AB$.
 \item
   Every $A$ stochastic matrix is invertible.
+\item
+  For any stochastic matrix $A$, if $A$ has a unique stationary state,
+  then it is regular.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -3348,6 +3383,9 @@ For each of the following matrices, determine a vector that is
 \item
   If $\cB$ is the standard basis for $R^n$, then for any $\vx \in
   \R^n$ we have that $[\vx]_{\cB} = \vx$
+\item
+  For any matrix $A$, the dimension of the null space of $A$ is at
+  most the rank of $A$.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -3746,6 +3784,9 @@ determinant.
   $B$.
 \item
   If $A$ is invertible, then $\det(ABA^{-1}) = \det(B)$.
+\item
+  For any matrix $A$, if $A$ is square and $\det(A) = 0$, then the
+  columns of $A$ are linearly dependent.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -4126,6 +4167,28 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
 \section*{More Difficult Problems}
 
 \begin{enumerate}
+\item
+  Consider the following matrix
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 1 & 4 \\
+      0 & 1 & -1 \\
+      0 & 1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial of $A$.
+  \item
+    Determine bases for every eigenspace of $A$. That is for
+    each eigenvalue $\lambda$ of $A$, find a basis for $\nul(A - \lambda
+    I)$.
+  \item
+    Determine if $A$ is diagonalizable. If it is, provide a
+    diagonalization. Otherwise, justify your answer.
+  \end{enumerate}
 \item \faCalculator \
   Consider the following matrix.
   \begin{displaymath}
@@ -4327,6 +4390,8 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
 \item
   For any vector $\vy \in \R^n$ and any subspace $W$ of $\R^n$, the
   vector $\vy - \proj_W \vy$ is orthogonal to $W$.
+\item
+  Every orthogonal set is linearly independent.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -4476,6 +4541,31 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
   \item
     Compare the matrices from the previous two parts.  Explain what
     this implies about the relationship between $\col A$ and $\col B$.
+    Justify your answer.
+  \end{enumerate}
+\item
+  Consider the following linear equation
+  \begin{displaymath}
+    x_1 - x_2 + x_3 = 0
+  \end{displaymath}
+  and vector
+  \begin{displaymath}
+    \vv = \vThree 4 1 0
+  \end{displaymath}
+
+  \begin{enumerate}
+  \item
+    Determine a vector $\vz$ which is orthogonal to the plane given by
+    the above linear equation.
+  \item
+    Determine a basis $\{\vb_1, \vb_2\}$ for the plane given by the
+    above linear equation.
+  \item
+    Determine a solution to the vector equation $y_1\vz + y_2\vb_1 +
+    y_3\vb_2 = \vv$.
+  \item
+    Using the previous part, determine the orthogonal projection of
+    $\vv v$ onto the plane given by the above linear equation.
     Justify your answer.
   \end{enumerate}
 \end{enumerate}
@@ -4658,6 +4748,60 @@ using the normal equations.
   Justify your answer.
 \end{enumerate}
 
+\section*{Challenge Problems}
+
+\begin{enumerate}
+\item
+  Suppose we are given four aribtrary data points:
+  \begin{displaymath}
+    (x_1, y_1), (x_2, y_2), (x_3, y_3), (x_4, y_4)
+  \end{displaymath}
+
+  \begin{enumerate}
+  \item
+    Construct the design matrix for the given data which can be used
+    to find the best-fit curve of the form
+    \begin{displaymath}
+      f_{\beta_1, \beta_2}(\theta) = \beta_1 \cos\theta + \beta_2
+      \sin\theta
+    \end{displaymath}
+    where $\beta_1$ and $\beta_2$ are parameters.
+  \item
+    Consider fitting the data with a curve of the form
+    \begin{displaymath}
+      g_{\alpha_1, \alpha_2}(\theta) = \alpha_1\cos(\theta + \alpha_2)
+    \end{displaymath}
+    where $\alpha_1$ and $\alpha_2$ are parameters. Note that
+    $g_{\alpha_1, \alpha_2}$ is not linear in its parameters.  Given
+    $\hat{\alpha_1}$, $\hat{\alpha_2}$, $\hat{\beta_1}$ and
+    $\hat{\beta_2}$\textemdash the parameters for the best-fit curves
+    \textemdash show that
+    \begin{displaymath}
+      \sum_{i = 1}^4
+      \left(
+      \hat{\beta_1}\cos(x_i) + \hat{\beta_2}\sin(x_i) - y_i
+      \right)^2
+      \leq
+      \sum_{i = 1}^4
+      \left(
+      \hat{\alpha_1} \cos(x_i + \hat{\alpha_2}) - y_i
+      \right)^2
+    \end{displaymath}
+    using the trigonometric identity
+    \begin{displaymath}
+      \cos(a + b) = \cos(a)\sin(b) - \sin(a)\cos(b)
+    \end{displaymath}
+    In other words, show that the best-fit curve from part (a) has error
+    at least as small as the error of the best-fit curve from part (b).
+  \item
+    Compute $\hat{\alpha_1}$ and $\hat{\alpha_2}$ from $\hat{\beta_1}$
+    and $\hat{\beta_2}$. This implies that, in fact, the errors are
+    equal, and that we can fit to the function $g_{\alpha_1,
+      \alpha_2}$ using the least-squares method.
+  \end{enumerate}
+\end{enumerate}
+
+
 % ======================================================================
 % ======================================================================
 % ======================================================================
@@ -4709,6 +4853,12 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
 \section*{True/False}
 
 \trueFalseHeader
+
+\begin{enumerate}[resume]
+\item
+  For any matrix $A$ and quadratic form $Q(\vx)$, if $Q(\vx) =
+  \vx^TA\vx$, then $A$ is symmetric.
+\end{enumerate}
 
 \section*{More Difficult Problems}
 
