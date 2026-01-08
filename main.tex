@@ -1744,7 +1744,7 @@ behavior.
     3 \\ -3 \\ 7
   \end{bmatrix}
 \end{align*}
-Compute the following
+Compute the following.
 \begin{enumerate}[resume]
 \item \faCalculator \
   \begin{align*}
@@ -2449,7 +2449,7 @@ If the matrix is not invertible, then explain why.
       \cos \theta + \sin \theta & \cos \theta - \sin \theta
     \end{bmatrix}
   \end{align*}
-  (Simplify your solution as much as possible.)
+  Simplify your solution as much as possible.
 \end{enumerate}
 Determine the matrix in $\R^{4 \times 4}$ that implements the
 following row operations, in order from top to bottom.  That is,
@@ -2849,7 +2849,7 @@ For any real numbers $a$ and $b$, the matrix $\begin{bmatrix} a & a^2
 % ======================================================================
 % ======================================================================
 
-\chapter{LU Factorization}
+\chapter{Elementary Matrices and LU Factorization}
 
 \section*{Basic Exercises}
 
@@ -2967,7 +2967,7 @@ Determine an LU factorization of the following matrices.
 % ======================================================================
 % ======================================================================
 
-\chapter{Markov Chains}
+\chapter{Linear Dynamical Systems and Markov Chains}
 
 \section*{Basic Exercises}
 
@@ -3271,7 +3271,7 @@ following items:
     symmetric and, hence, orthogonally diagonalizable.\footnote{The
     second largest eigenvalue tells us about the \textit{rate of
       convergence} to the steady-state distribution. The smaller
-    $|\lambda_2|$, the faster the convergence to the steady-state
+    $|\lambda_2|$ is, the faster the convergence to the steady-state
     distribution.}
   \item
     Give a closed-form solution for $T^k [(1-q) \ \ q]^T$ in terms
@@ -3283,7 +3283,7 @@ following items:
 % ======================================================================
 % ======================================================================
 
-\chapter{Vector Spaces}
+\chapter{Vector Spaces and Subspaces}
 
 \section*{Basic Exercises}
 
@@ -3719,7 +3719,7 @@ the subspace $\vspan\left\{\vv_1,  \vv_2,
 % ======================================================================
 % ======================================================================
 
-\chapter{Eigenvectors}
+\chapter{Eigenvalues and Eigenvectors}
 
 \section*{Basic Exercises}
 
@@ -4269,7 +4269,7 @@ answer.
 % ======================================================================
 % ======================================================================
 
-\chapter{Diagonalization}
+\chapter{Eigenbases and Diagonalization}
 
 \section*{Basic Exercises}
 
@@ -4366,7 +4366,7 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
 
 \section*{More Difficult Problems}
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item
   Consider the following matrix
   \begin{displaymath}
@@ -4620,7 +4620,7 @@ Determine an orthogonal diagonalization of the following matrices.
 
 \trueFalseHeader
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item
   If $\|\vu\|^2 + \|\vv\|^2 = \|\vu + \vv\|^2$, then $\vu$ and $\vv$
   are orthogonal.
@@ -4675,7 +4675,7 @@ Determine an orthogonal diagonalization of the following matrices.
 
 \section*{More Difficult Problems}
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item \hfill
 
   \begin{center}
@@ -5073,7 +5073,7 @@ using the normal equations.
 
 \section*{Challenge Problems}
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item
   Suppose we are given four aribtrary data points:
   \begin{displaymath}
@@ -5129,7 +5129,7 @@ using the normal equations.
 % ======================================================================
 % ======================================================================
 
-\chapter{Quadratic Forms}
+\chapter{Quadratic Forms and Singular Value Decomposition}
 
 \section*{Basic Exercises}
 
@@ -5172,6 +5172,28 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
     \end{bmatrix}
   \end{displaymath}
 \end{enumerate}
+Determine the singular values of the following matrices
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 0 & 2 \\
+      3 & 1 & 1 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+Determine a singular value decomposition for each of the following
+matrices.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 2 \\
+      2 & 3 \\
+      2 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
 
 \section*{True/False}
 
@@ -5193,6 +5215,9 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
   for all $\vx \in \R^n$.
 \item
   $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
+\item
+  An orthogonal diagonalization of a symmetric matrix $A = PDP^T$ is
+  also a singular value decomposition of $A$.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -5227,53 +5252,6 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
     Q([x_1 \ x_2 \ x_3]^T) =
     3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
   \end{displaymath}
-\end{enumerate}
-
-% ======================================================================
-% ======================================================================
-% ======================================================================
-
-\chapter{Singular Value Decomposition}
-
-\section*{Basic Exercises}
-
-Determine the singular values of the following matrices
-\begin{enumerate}
-\item
-  \begin{displaymath}
-    \begin{bmatrix}
-      1 & 1 & 0 & 2 \\
-      3 & 1 & 1 & -2
-    \end{bmatrix}
-  \end{displaymath}
-\end{enumerate}
-
-Determine a singular value decomposition for each of the following
-matrices.
-\begin{enumerate}[resume]
-\item
-  \begin{displaymath}
-    \begin{bmatrix}
-      3 & 2 \\
-      2 & 3 \\
-      2 & -2
-    \end{bmatrix}
-  \end{displaymath}
-\end{enumerate}
-
-\section*{True/False}
-
-\trueFalseHeader
-
-\begin{enumerate}[resume]
-\item
-  An orthogonal diagonalization of a symmetric matrix $A = PDP^T$ is
-  also a singular value decomposition of $A$.
-\end{enumerate}
-
-\section*{More Difficult Problems}
-
-\begin{enumerate}
 \item
 Consider the following matrices and vector.
   \begin{displaymath}
@@ -5338,10 +5316,14 @@ Consider the following matrices and vector.
 
 \section*{Challenge Problems}
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item
   let $A$ be as in Problem \ref{prob:svd-prev} above.  Determine the matrix that
   implements orthogonal projection onto $\col A$.
 \end{enumerate}
+
+% ======================================================================
+% ======================================================================
+% ======================================================================
 
 \end{document}
