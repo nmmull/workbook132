@@ -1314,6 +1314,16 @@ linear combination of the given vectors which sums to $\vzero$.
     \qquad
     \vv_{4} = \begin{bmatrix} -1 \\ 3 \\ 1 \end{bmatrix}
   \end{align*}
+\item
+  \begin{displaymath}
+    \vv_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+    \qquad
+    \vv_2 = \begin{bmatrix} -1 \\ 2 \\ 0 \end{bmatrix}
+    \qquad
+    \vv_3 = \begin{bmatrix} -3 \\ 2 \\ 4 \end{bmatrix}
+    \qquad
+    \vv_4 = \begin{bmatrix} -2 \\ -2 \\ 3 \end{bmatrix}
+  \end{displaymath}
 \end{enumerate}
 Let $\vv_1, \vv_2, \vv_3, \vv_4$ be vectors such that the matrix
 $\begin{bmatrix} \vv_1 & \vv_2 & \vv_3 & \vv_4 \end{bmatrix}$ is row
@@ -1376,7 +1386,6 @@ the vectors $\vv_1, \vv_2, \vv_3, \vv_4$.
   For any vectors $\vv_1, \vv_2, \vv_3 \in \R^n$, if $\{\vv_1, \vv_2,
   \vv_3\}$ is linearly dependent, then so is the set $\{\vv_1 + \vv_2,
   \vv_2 + \vv_2, \vv_3 + \vv_2\}$.
-
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -1430,6 +1439,37 @@ the vectors $\vv_1, \vv_2, \vv_3, \vv_4$.
     $\vv_1$ cannot be written as a linear combination of $\vv_2$ and
     $\vv_3$.
   \end{itemize}
+\item
+  Consider the following matrix $A$ and vector $\vb$.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 1 & 5 & 1 \\
+      -1 & 0 & -3 & 2 \\
+      2 & 3 & 12 & 4 \\
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      \va_1 & \va_2 & \va_3 & \va_4
+    \end{bmatrix}
+    \qquad
+    \vb =
+    \begin{bmatrix}
+      5 \\ -3 \\ 11
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine if $\vb \in \col A$, i.e., if the vector $\vb$ is in the
+    span of the columns of $A$. If it is, then express $\vb$ as a
+    nontrivial linear combination of the columns of $A$ (you should
+    use $\va_i$ to denotes the $i^{\text{th}}$ column of $A$). If it
+    is not, then justify your answer.
+  \item
+    Determine if the set of vectors $\{ \va_1, \va_2, \va_4 \}$ is
+    linearly dependent.  If it is, write a dependence relation for
+    this set of vectors. If it is not, then justify your answer.
+  \end{enumerate}
 \item
   \faCalculator \ Consider the following matrix, presented as a SymPy
   array.
@@ -2128,7 +2168,7 @@ transformations.
 % ======================================================================
 % ======================================================================
 
-\chapter{Matrix Algebra}
+\chapter{Matrix Algebra and Invertibility}
 
 \section*{Basic Exercises}
 
@@ -2472,6 +2512,9 @@ should do this without determining $A$ first.
 
 \begin{enumerate}[resume]
 \item
+  For any two matrices $A$ and $B$, if $A + B$ is defined then $A + B
+  = B + A$.
+\item
   For all matrices $A$ and $B$ in $\R^{m \times n}$ and $C$ in $\R^{n
     \times m}$, we have $(A + B + C^T)^T = C + B^T + A^T$.
 \item
@@ -2494,6 +2537,9 @@ should do this without determining $A$ first.
 \item
   For any matrices $A$ and $B$, if there is a unique matrix $X$ such
   that $AX = B$, then $A$ is invertible.
+\item
+  For any matrix $A \in \R^{n \times n}$ and diagonal matrix $D \in
+  \R^{n \times n}$, it must be that $AD = DA$.
 \item
   If $A$ and $B$ are invertible, then so is $A + B$.
 \item
@@ -2549,6 +2595,12 @@ For any real numbers $a$ and $b$, the matrix $\begin{bmatrix} a & a^2
 \item
    For any matrices $A$ and $B$, if $AB = I$ then $A$ is invertible
    and $B = A^{-1}$.
+\item
+  For any two symmetric matrices $A$ and $B$, if $AB$ is defined then
+  $(AB)^T = A^TB^T$.
+\item
+  A matrix $A \in \R^{n \times n}$ is invertible if and only if $A^T$
+  is invertible.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -2843,6 +2895,10 @@ Determine an LU factorization of the following matrices.
 
 \begin{enumerate}[resume]
 \item
+  Let $E \in \R^{n \times n}$ denote the elementary matrix that
+  implements $R_1 \gets 3 R_1$. For any matrix $A \in \R^{n \times
+    n}$, if $\det(EA) = 1$ then $\det A^{-1} = \frac{1}{3}$.
+\item
   For any matrix $A \in \mathbb R^{m \times n}$, if $A = LU$ where $L$
   and $U$ form an LU-factorization of $A$, then $L$ is invertible.
 \item
@@ -3056,6 +3112,9 @@ following items:
 
 \begin{enumerate}[resume]
 \item
+  For any matrix $A \in \R^{n \times n}$, if $A$ is regular and
+  stochastic then $\dim \nul (A - I) = 1$.
+\item
   If $A$ is a stochastic matrix, then the all ones vector $\mathbf 1$
   is an eigenvector for $A^T$.
 \item
@@ -3075,6 +3134,9 @@ following items:
 \item
   For any stochastic matrix $A$, if $A$ has a unique stationary state,
   then it is regular.
+\item
+  If $A$ is a square matrix with strictly positive entries, then there
+  is diagonal matrix $D$ such that $AD$ is stochastic.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -3105,7 +3167,6 @@ following items:
   Suppose that the price is currently \textbf{STEADY}.  In the long
   term, is more likely to remain \textbf{STEADY}, go up \textbf{HIGH},
   or dip down \textbf{LOW}?  Justify your answer.
-
 \item
   Suppose that we're trying to predict the preformance of the $A_5$
   Soccer Club based on statistics that we've gathered on their recent
@@ -3130,6 +3191,55 @@ following items:
     If they lose their first game, what will their overall record tend
     towards?
   \end{enumerate}
+\item
+  Consider the following state diagram.
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw] (1) {1};
+      \node[circle, draw] (2) [below left=of 1] {2};
+      \node[circle, draw] (3) [below right=of 1] {3};
+      \draw[<-] (2) edge["1"] (1);
+      \draw[<-] (3) edge["1"] (2);
+      \draw[<-] (1) edge["1"] (3);
+    \end{tikzpicture}
+  \end{center}
+  If an edge between two states is not present, the probability of
+  transitioning in a single step is $0$.  For example, the probability
+  of transitioning from state $3$ to state $2$ in a single step is $0$.
+  \begin{enumerate}
+  \item
+    Determine the transition matrix $T$ for the above diagram. You
+    should write $T$ such that the $i$th column of $T$ corresponds to
+    the transitions from state $i$. (In the following parts, $T$
+    refers to the matrix you determined in this part.)
+  \item
+    Compute $T^2$, $T^3$ and $T^{2023}$.
+  \item
+    Determine if $T$ is regular. Justify your answer.
+  \item
+    Determine if $T$ have a unique steady-state distribution.  Justify
+    your answer.
+  \end{enumerate}
+\item
+  Consider the following state diagram.
+  \begin{center}
+    \begin{tikzpicture}[inner sep=4pt]
+      \node[circle, draw] (1) {1};
+      \node[circle, draw] (2) [right=of 1] {2};
+      \draw[->] (1) edge[bend left, "{$1 - p$}"] (2);
+      \draw[->] (1) edge[loop above, "{$p$}"] (1);
+      \draw[->] (2) edge[bend left, "{$1 - p$}"] (1);
+      \draw[->] (2) edge[loop above, "{$p$}"] (2);
+    \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+  \item
+    Determine the transition matrix $T$ for the above diagram in terms
+    of $p$.  In the following parts, $T$ will refer to this matrix.
+  \item
+    Given $0 < p < 1$, determine $\lim_{k \to \infty} T^k \ve_1$.
+    Justify your answer.
+  \end{enumerate}
 \end{enumerate}
 
 \section*{Challenge Problems}
@@ -3142,6 +3252,31 @@ following items:
   entries being 0s.  \textit{Hint:} Consider what can be inferred
   about the entries of a stochastic $A^{-1}$ from its action on $A
   \mathbf{e}_i$ for any elementary basis vector $\mathbf{e}_i$.
+\item
+ Let $T$ denote the transition matrix of the following state diagram.
+  \begin{center}
+    \begin{tikzpicture}[inner sep=4pt]
+      \node[circle, draw] (1) {1};
+      \node[circle, draw] (2) [right=of 1] {2};
+      \draw[->] (1) edge[bend left, "{$1 - p$}"] (2);
+      \draw[->] (1) edge[loop above, "{$p$}"] (1);
+      \draw[->] (2) edge[bend left, "{$1 - p$}"] (1);
+      \draw[->] (2) edge[loop above, "{$p$}"] (2);
+    \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+  \item
+    Determine $\lambda_2$, the \textit{second} largest eigenvalue of
+    $T$, and a corresponding eigenvector. \textit{Hint:}  $T$ is
+    symmetric and, hence, orthogonally diagonalizable.\footnote{The
+    second largest eigenvalue tells us about the \textit{rate of
+      convergence} to the steady-state distribution. The smaller
+    $|\lambda_2|$, the faster the convergence to the steady-state
+    distribution.}
+  \item
+    Give a closed-form solution for $T^k [(1-q) \ \ q]^T$ in terms
+    of $p$, $q$ and $k$.
+  \end{enumerate}
 \end{enumerate}
 
 % ======================================================================
@@ -3246,7 +3381,8 @@ space and a basis for its null space.
 \item \faCalculator
   \begin{lstlisting}
 
-  Matrix(
+  import sympy
+  sympy.Matrix(
     [[1,   2,   4,   3,  -4,  1],
      [-3, -4, -10,  -8,  13, -3],
      [ 5,  6,  16,  10, -13,  9],
@@ -3375,6 +3511,8 @@ For each of the following matrices, determine a vector that is
   For any matrix $A \in \R^{m \times n}$, $\col(A)$ is the same as the
   set of vectors $\vb$ such that $A \vx = \vb$ has a solution.
 \item
+  For any matrix $A$, we have $\rank(A) = \rank(A^T)$.
+\item
   A basis is a spanning set that is as large as possible.
 \item
   A linear transformation $T: \R^3 \to \R^3$ that maps $\R^3$ to a
@@ -3486,15 +3624,35 @@ the subspace $\vspan\left\{\vv_1,  \vv_2,
     and subspace $U$.
   \end{enumerate}
 \item
-Determine the linear equation whose solution set is the column space
-of the following matrix.
-\begin{displaymath}
-  \begin{bmatrix}
-    1 & -4 & -10 \\
-    -4 & 17 & 42 \\
-    1 & -2 & -6
-  \end{bmatrix}
-\end{displaymath}
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 2 & 3 & -1 \\
+      1 & 2 & 4 & -4 \\
+      0 & 0 & 2 & 4 \\
+      0 & 0 & 1 & 2
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a basis for $\nul A$.
+  \item
+    Determine a linear equation over the variables $x_1, x_2, x_3,
+    x_4$ whose solution set is $\col A$ (that is, $(x_1, x_2, x_3,
+    x_4)$ satisfies the linear equation if and only if the vector
+    $[x_1 \ x_2 \ x_3 \ x_4]^T$ is in the column space of $A$).
+  \end{enumerate}
+\item
+  Determine the linear equation whose solution set is the column space
+  of the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -4 & -10 \\
+      -4 & 17 & 42 \\
+      1 & -2 & -6
+    \end{bmatrix}
+  \end{displaymath}
 \item
   Let $A$ be a $4 \times 2024$ matrix where $\rank A = 3$. Further
   suppose that the LU-decomposition of $A$ has
@@ -3787,6 +3945,12 @@ determinant.
 \item
   For any matrix $A$, if $A$ is square and $\det(A) = 0$, then the
   columns of $A$ are linearly dependent.
+\item
+  For any matrix $A$ and vector $\vv$, if $\vv$ is an eigenvector of
+  the matrix $A$ then it is also an eigenvector of the matrix $A^2$.
+\item
+  For any square matrices $A$ and $B$, we have $\det(AB^T) =
+  \det(A)\det(B)$
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -3983,6 +4147,42 @@ answer.
     0 & 0 & 0 & 2
   \end{bmatrix}
 \end{displaymath}
+\item
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -3 & 0 & 0 & 0 & 0 \\
+      -5 & 2 & 0 & 0 & 0 \\
+      1 & 3 & -1 & 0 & 0 \\
+      2 & 10 & 6 & -4 & 1 \\
+      -7 & -3 & -5 & -6 & 3
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine the characteristic polynomial of $A$ in fully-factored from.
+  \item
+    Determine the rank of $A$ (i.e., the dimension of $\col A$) and the
+    nullity of $A$ (i.e, the dimension of $\nul A$).  Justify your answer.
+  \item
+    Determine the rank of $A+I$.  Justify your answer
+  \item
+    Consider the following matrix.
+    \begin{displaymath}
+      B =
+      \begin{bmatrix}
+        -3 & 0 & 0 & 0 & 0 \\
+        -5 & 2 & 0 & 0 & 0 \\
+        1 & 3 & -1 & 0 & 0 \\
+        2 & 10 & 6 & -4 & 1 \\
+        -7 & -3 & -5 & -6 & 3 \\
+        0 & 0 & 0 & 0 & 0
+      \end{bmatrix}
+    \end{displaymath}
+    Use the Rank-Nullity theorem to determine $\rank B$, $\dim \nul B$
+    and $\dim \nul B^T$.
+  \end{enumerate}
 \end{enumerate}
 
 \section*{Challenge Problems}
@@ -4177,7 +4377,6 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
       0 & 1 & 3
     \end{bmatrix}
   \end{displaymath}
-
   \begin{enumerate}
   \item
     Determine the characteristic polynomial of $A$.
@@ -4203,6 +4402,36 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
   to find eigenvectors or to reduce matrices, but you must otherwise
   show your work and justify your answer.  \textit{Hint:} $A$ is
   diagonalizable.
+\item
+  Suppose $A$ is a $2 \times 2$ matrices such that
+  \begin{displaymath}
+    A \vTwo {-3} 1 = \vTwo 3 {-1}
+    \qquad
+    A \vTwo {-2} 1 = \vTwo {-16} 8
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a diagonalization of $A$.
+  \item
+    Determine a matrix $B$ such that $B^3 = A$.
+  \end{enumerate}
+\item
+\item
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      -2 & 4\\
+      -2 & 4
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a diagonalization of $A$.
+  \item
+    Using the same technique as in the previous problem determine the
+    matrix $2^A$.
+  \end{enumerate}
 \end{enumerate}
 
 \section*{Challenge Problems}
@@ -4238,6 +4467,22 @@ $\lambda^{3} - 2 \lambda^{2} - 3 \lambda$.
     of the form `$(\square - \square)^2 + 4\square\square$' and reason
     about why this must be positive.
   \end{enumerate}
+\item
+  Consider the following matrices
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      4 & 1 \\
+     -2 & 5
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      4 & -6 \\
+      8 & -8
+    \end{bmatrix}
+  \end{displaymath}
+  Determine the characteristic polynomial of $2^A 2^B$.
 \end{enumerate}
 
 % ======================================================================
@@ -4360,6 +4605,17 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
     \right\}
   \end{displaymath}
 \end{enumerate}
+Determine an orthogonal diagonalization of the following matrices.
+\begin{enumerate}[resume]
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 1 \\
+      1 & 3
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
 \section*{True/False}
 
 \trueFalseHeader
@@ -4375,6 +4631,9 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
   There can be a linear dependence relationship between vectors in an
   orthogonal set.
 \item
+  For any $A \in \R^{m \times n}$, there is an eigenbasis of $\R^n$
+  for $A^TA$.
+\item
   In $\R^4$, any set of vectors that has 5 members cannot be an
   orthogonal set.
 \item
@@ -4382,8 +4641,14 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
 \item
   Orthogonal matrices have determinant 1.
 \item
+  For any matrix $A \in \R^{m \times n}$ and vector $\vv \in \R^n$, if
+  $\|A \vv \| = \vzero$ then $\vv \in \nul A$.
+\item
   For an $m \times n$ matrix with orthogonal columns, it may be the
   case that $m < n$.
+\item
+  For any matrix $U \in \mathbb \R^{n \times n}$, if $U$ is orthogonal
+  then $\det U = \pm 1$.
 \item
   The orthogonal projection of $\vy$ onto $\vv$ is the same as the
   orthogonal projection of $\vy$ onto $c \vv$ whenever $c \neq 0$.
@@ -4391,12 +4656,66 @@ Determine the projection of $\vv$ onto the span of the given set of vectors.
   For any vector $\vy \in \R^n$ and any subspace $W$ of $\R^n$, the
   vector $\vy - \proj_W \vy$ is orthogonal to $W$.
 \item
+  For any matrix $A \in \R^{n \times n}$, if $A$ has an eigenbasis of
+  $\R^n$ then $A$ is symmetric.
+\item
+  For any matrix $A$ with orthogonal columns, $A^TA = I$.
+\item
   Every orthogonal set is linearly independent.
+\item
+  For any matrix $A$, if $A$ is orthogonally diagonalizable, then so
+  is $A^T$.
+\item
+  $\|A \vv \| = \| A^2 \vv \|$ for any orthogonal matrix $A \in \R^{n
+  \times n}$ and any vector $\vv \in \R^n$.
+\item
+  For any vector $\vu \in \R^n$, if $\|\vu\| = 1$ then the matrix $\vu
+  \vu^T$ implements projection onto $\vspan\{\vu\}$.
 \end{enumerate}
 
 \section*{More Difficult Problems}
 
 \begin{enumerate}
+\item \hfill
+
+  \begin{center}
+    \begin{tikzpicture}[scale=0.4]
+      \draw [<->] (10, 0) -- (-10, 0);
+      \draw [<->] (0, 10) -- (0 ,-10);
+      \draw [->, thick] (0, 0) -- (4, 2);
+      \node at (5.4, 2) {(4, 2)};
+      \draw [->, thick] (0, 0) -- (-8, 6);
+      \node at (-9, 6.6) {(-8, 6)};
+      \draw [dotted] (4, 2) -- (-8, 6);
+      \draw [->, thick] (0, 0) -- (1, 3);
+      \draw (0.842, 2.526) -- (1.316, 2.368);
+      \draw (1.316, 2.368) -- (1.474, 2.842);
+      \node at (1.2, 3.4) {$\vv$};
+      \draw [->, thick] (0, 0) -- (-4, 8);
+      \node at (-4, 8.5) {(-4, 8)};
+      \draw [dotted] (-8, 6) -- (-4, 8);
+      \draw [dotted] (-4, 8) -- (4, 2);
+    \end{tikzpicture}
+  \end{center}
+  \begin{enumerate}
+  \item
+    Determine the distance between $(-8, 6)$ and $(4, 2)$.
+  \item
+    Determine the length of the vector $\vv$, whose endpoint is on the
+    line segment between $(-8, 6)$ and $(4, 2)$ and which forms a
+    $90^\circ$ angle with that line segment.
+  \item
+    Use these values to determine the area of the parallelogram formed by
+    $(0, 0)$, $(4, 2)$, $(-4, 8)$, and $(-8, 6)$.
+
+  \item Determine a matrix in $\R^{2\times 2}$ that transforms the
+    unit square into the parallelogram from the previous part.  Recall
+    that the unit square is the set of points in
+    \begin{displaymath}
+      \{(x, y) : 0 \leq x \leq 1 \text{ and } 0 \leq y \leq 1\}
+    \end{displaymath}
+  \item Calulate the determinant of the matrix from the previous part.
+  \end{enumerate}
 \item
   Determine if the following six vectors form an orthogonal set.
   Justify your answer. \textit{Hint:} You do not need to explicitly
@@ -4673,13 +4992,6 @@ using the normal equations.
   \begin{displaymath}
     f(x) = \beta_1 \cos x + \beta_2 \sin x + \beta_3 x + \beta_4
   \end{displaymath}
-\item Determine an orthogonal diagonalization of the following matrix.
-  \begin{displaymath}
-    \begin{bmatrix}
-      3 & 1 \\
-      1 & 3
-    \end{bmatrix}
-  \end{displaymath}
 \end{enumerate}
 
 \section*{True/False}
@@ -4707,17 +5019,17 @@ using the normal equations.
 \item
   There are orthogonally diagonalizable matrices that are not symmetric.
 \item
+  For any square matrix $A$, if $A \vx = \vb$ has a unique least
+  squares solution for each choice of $\vb$, then $A$ is invertible.
+\item
   Every $n \times n$ symmetric matrix must has $n$ distinct eigenvalues.
 \item
   For a symmetric matrix, the dimension of each eigenspace is equal to
   the algebraic multiplicity of the corresponding eigenvalue.
 \item
-  $\|\vx\|^2$ is a quadratic form.
-\item
-  A positive definite quadratic form $Q(\vx)$ satisfies $Q(\vx) > 0$
-  for all $\vx \in \R^n$.
-\item
-  $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
+  For any matrix $A \in \R^{m \times n}$ and
+  vector $\vb \in \R^m$, if $A\vx = \vb$ has
+  a unique least-squares solution, then $\vx \mapsto A\vx$ is onto.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -4734,13 +5046,24 @@ using the normal equations.
   $C\vx = \vb$ where $\vb \not = \vzero$.  Justify your
   answer.  Your solution should be given in terms of $m$, $n$, and
   $k$.
-\item \faCalculator
-  Consider the following multivariate function model
+\item
+  Consider the following function model:
+  \begin{displaymath}
+    f(x) = \beta_0 + \beta_1 x^3 + \beta_2 (2^x)
+  \end{displaymath}
+  where $\beta_0$, $\beta_1$, and $\beta_2$ are parameters.  Determine
+  the design matrix which can be used to compute the parameters that
+  minimize least square error for the following data points.
+  \begin{displaymath}
+    \{(-1, 1), (0, -1), (1, 1), (2, 3), (4, 5)\}
+  \end{displaymath}
+\item
+  \faCalculator \ Consider the following multivariate function model:
   \begin{displaymath}
     f(x,y) = \beta_0 + \beta_1 x + \beta_2 y
   \end{displaymath}
-  and solve for the real number parameters $\beta_0$, $\beta_1$, and
-  $\beta_2$ that minimize least squares error for the following data
+  where $\beta_0$, $\beta_1$, and $\beta_2$ are paramters.  Computer
+  the paramters minimize least squares error for the following data
   points.
   \begin{displaymath}
     \{(-2,0,0), (0,0,3), (0,2,0), (-2, -3, 3), (1,5,-1)\}.
@@ -4856,8 +5179,20 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
 
 \begin{enumerate}[resume]
 \item
+  Every positive-definite symmetric matrix is invertible.
+\item
   For any matrix $A$ and quadratic form $Q(\vx)$, if $Q(\vx) =
   \vx^TA\vx$, then $A$ is symmetric.
+\item
+  For any quadratic form $Q(\vx)$, the vector $\argmax_{\|\vx\| = 1}
+  Q(\vx)$ is unique.
+\item
+  $\|\vx\|^2$ is a quadratic form.
+\item
+  A positive definite quadratic form $Q(\vx)$ satisfies $Q(\vx) > 0$
+  for all $\vx \in \R^n$.
+\item
+  $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
 \end{enumerate}
 
 \section*{More Difficult Problems}
@@ -4902,8 +5237,20 @@ Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
 
 \section*{Basic Exercises}
 
-For each matrix, determine a singular value decomposition.
+Determine the singular values of the following matrices
 \begin{enumerate}
+\item
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 0 & 2 \\
+      3 & 1 & 1 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{enumerate}
+
+Determine a singular value decomposition for each of the following
+matrices.
+\begin{enumerate}[resume]
 \item
   \begin{displaymath}
     \begin{bmatrix}
@@ -4925,5 +5272,76 @@ For each matrix, determine a singular value decomposition.
 \end{enumerate}
 
 \section*{More Difficult Problems}
+
+\begin{enumerate}
+\item
+Consider the following matrices and vector.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      2 & -4 & 4 \\
+      2 & 2 & 1 \\
+      -2 & 4 & -4 \\
+    \end{bmatrix}
+    \qquad
+    AA^T =
+    \begin{bmatrix}
+      36 & 0 & -36 \\
+      0 & 9 & 0 \\
+      -36 & 0 & 36
+    \end{bmatrix}
+    \qquad
+    \vb =
+    \begin{bmatrix}
+      10 \\ 18 \\ -14
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a \textit{reduced} singular value decomposition of $A$,
+    given that $6\sqrt{2}$ and $3$ are its nonzero singular values and
+    $\rank(A) = 2$.
+  \item
+    Determine the length of the \textit{shortest} least-squares
+    solution to the equation $A\vx = \vb$.  \textit{Hint:} Use the
+    pseudoinverse of $A$.
+  \end{enumerate}
+\item
+  \label{prob:svd-prev}
+  Consider the following matrices.
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 2 & 2 \\
+      1 & 1 & -2 \\
+      2 & 2 & 2
+    \end{bmatrix}
+    \qquad
+    V =
+    \begin{bmatrix}
+      \sqrt{3} / 3 & \sqrt{6} / {6} \\
+      \sqrt{3} / 3 & \sqrt{6} / {6} \\
+      \sqrt{3} / 3 & -\sqrt{6} / {3}
+    \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Without first determining $A^TA$ or $AA^T$, determine left singular vectors
+    of $A$ associated with nonzero singular values, i.e., determine the
+    columns of $U$ in the \textit{reduced} SVD of $A$, where $U\Sigma
+    V^T$ is the reduced SVD of $A$.
+  \item
+    Without first determine $A^TA$ or $AA^T$, determine the singular
+    values of $A$.
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Challenge Problems}
+
+\begin{enumerate}
+\item
+  let $A$ be as in Problem \ref{prob:svd-prev} above.  Determine the matrix that
+  implements orthogonal projection onto $\col A$.
+\end{enumerate}
 
 \end{document}
