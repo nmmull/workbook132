@@ -313,14 +313,10 @@ operations used.
     \end{bmatrix}
   \end{displaymath}
 \end{enumerate}
-For each of the following linear systems, determine
-\begin{itemize}
-\item its augmented matrix;
-\item the row-reduced echelon form of its augmented matrix;
-\item a general form solution;
-\item whether it has \textbf{no solutions}, a \textbf{unique
-  solution}, or \textbf{infinitely many solutions}.
-\end{itemize}
+Determine a general form solution for each of the following linear
+systems by first determining the row-reduced echelon form of its
+augmented matrix.  If this system has no solutions then write
+\enquote{no solution}.
 \begin{enumerate}[resume]
 \item
   \begin{align*}
@@ -351,6 +347,40 @@ For each of the following linear systems, determine
     x_1 + 5x_2 + 3x_3 &= -4 \\
     x_1 + 6x_2 + 7x_3 &= -13 \\
     -2x_1 - 12 x_2 - 14 x_3 &= 25
+  \end{align*}
+\item
+  \begin{align*}
+    -x - 2y - z &= -4 \\
+    x + 2y &= 3 \\
+    -2x -4y + z &= -7
+  \end{align*}
+\item
+  \begin{align*}
+    x_{1} - 6x_{2} + x_{4} &= 2 \\
+    2x_{1} - 12x_{2} + x_{3} - 4x_{4} &= 7 \\
+    x_{1} - 6x_{2} - 2x_{3} + 13x_{4} &= -4
+  \end{align*}
+\item \faCalculator
+  \begin{align*}
+    88x_1 + 61x_2 + 8x_3 + 61 x_4 &= -68 \\
+    37x_1 + 14x_2 + 72x_3 + 41 x_4 &= -460 \\
+    57x_1 + 59x_2 + 69x_3 + 75x_4 &= -333 \\
+    92 x_1 + 60x_2 + 28x_3 + 72x_4 &= -192
+  \end{align*}
+\item \faCalculator
+  \begin{align*}
+    x_2 + x_3 + x_4 + 3x_5 - x_6 + 2x_7 &= 34 \\
+    x_3 - x_4 + 4x_5 &= -14 \\
+    2x_2 - 4x_3 + 8x_4 - 18x_5 - x_6 &= 110 \\
+    3x_3 - 3x_4 + 12 x_5 + 2x_7 &= -18 \\
+    x_2 + 4x_3 - 2x_4 + 15x_5 - x_6 + 7x_7 &= 52
+  \end{align*}
+\item \faCalculator
+  \begin{align*}
+    8x_1 + 3x_2 - 3x_3 &= -4 \\
+    -3x_1 + 8x_2 + 5x_3 &= -4 \\
+    6x_1 + 7x_2 - 3x_3 &= -3 \\
+    8x_1 + x_2 - x_3 &= -4
   \end{align*}
 \end{enumerate}
 Determine a sequence of elementary row operations from the left matrix
@@ -387,46 +417,6 @@ row operations used.
       0 & 1 & 0 & 1
     \end{bmatrix}
   \end{displaymath}
-\end{enumerate}
-Determine a general form solution for each of the following linear
-systems by first determining the row-reduced echelon form of its
-augmented matrix.  If this system has no solutions then write
-\enquote{no solution}.
-\begin{enumerate}[resume]
-\item
-  \begin{align*}
-    -x - 2y - z &= -4 \\
-    x + 2y &= 3 \\
-    -2x -4y + z &= -7
-  \end{align*}
-\item
-  \begin{align*}
-    x_{1} - 6x_{2} + x_{4} &= 2 \\
-    2x_{1} - 12x_{2} + x_{3} - 4x_{4} &= 7 \\
-    x_{1} - 6x_{2} - 2x_{3} + 13x_{4} &= -4
-  \end{align*}
-\item \faCalculator
-  \begin{align*}
-    88x_1 + 61x_2 + 8x_3 + 61 x_4 &= -68 \\
-    37x_1 + 14x_2 + 72x_3 + 41 x_4 &= -460 \\
-    57x_1 + 59x_2 + 69x_3 + 75x_4 &= -333 \\
-    92 x_1 + 60x_2 + 28x_3 + 72x_4 &= -192
-  \end{align*}
-\item \faCalculator
-  \begin{align*}
-    x_2 + x_3 + x_4 + 3x_5 - x_6 + 2x_7 &= 34 \\
-    x_3 - x_4 + 4x_5 &= -14 \\
-    2x_2 - 4x_3 + 8x_4 - 18x_5 - x_6 &= 110 \\
-    3x_3 - 3x_4 + 12 x_5 + 2x_7 &= -18 \\
-    x_2 + 4x_3 - 2x_4 + 15x_5 - x_6 + 7x_7 &= 52
-  \end{align*}
-\item \faCalculator
-  \begin{align*}
-    8x_1 + 3x_2 - 3x_3 &= -4 \\
-    -3x_1 + 8x_2 + 5x_3 &= -4 \\
-    6x_1 + 7x_2 - 3x_3 &= -3 \\
-    8x_1 + x_2 - x_3 &= -4
-  \end{align*}
 \end{enumerate}
 
 \section*{True/False}
@@ -504,9 +494,6 @@ augmented matrix.  If this system has no solutions then write
     9x_1 - 20x_2 - 8x_3 &= -71 \\
     3x_1 - 8x_2 - 3x_3 &= -29
   \end{align*}
-  \begin{enumerate}
-  \item
-  \end{enumerate}
   \begin{enumerate}
   \item Determine the RREF of the augmented matrix of the above linear
     system.
