@@ -4,22 +4,13 @@ from stdlib132 import probgen
 with open('main-template.tex', 'r') as f:
     body = f.read()
 
-rref = stdlib132.random.rref(2, 3, seed=1722463322)
-rref2 = stdlib132.random.rref(3, 5, seed=236229483)
-
 problems = [
-    (
-        "input",
-        stdlib132.latex.matrix(rref)
-    ),
-    (
-        "input2",
-        stdlib132.latex.matrix(rref2)
-    ),
+    probgen.compute_lin_comb_vec(2, 2, 720840271),
+    probgen.compute_lin_comb_vec(3, 3, 2553921248),
 ]
 
-for (name, problem) in problems:
-    body = body.replace(f"<<{name}>>", problem)
+for i, problem in enumerate(problems):
+    body = body.replace(f"<<{i}>>", problem)
 
 with open('main.tex', 'w') as f:
     f.write(body)
