@@ -7,7 +7,6 @@ with open('main-template.tex', 'r') as f:
 problems = [
     probgen.gen_form_sol_vec_eq(3, 4, 2295471575),
     probgen.gen_form_sol_vec_eq(2, 4, 3131868451),
-
 ]
 
 for i, problem in enumerate(problems):
