@@ -6,10 +6,10 @@ with open('main-template.tex', 'r') as f:
 
 subs = [
   stdlib132.latex.matrix(
-    stdlib132.random.int_matrix(3, 3)
+    stdlib132.random.int_matrix(1, 4)
   ),
   stdlib132.latex.matrix(
-    stdlib132.random.int_matrix(3, 1)
+    stdlib132.random.int_matrix(4, 1)
   )
 ]
 
