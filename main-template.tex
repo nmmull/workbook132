@@ -4,7 +4,7 @@
 
 \title{
   Problems and Exercises \\
-  \texttt{v0.0.2}
+  \texttt{v0.0.3}
 }
 \author{\texttt{CAS CS 132}: \textit{Geometric Algorithms}}
 \begin{document}
@@ -1278,44 +1278,6 @@ the columns span $\R^m$.
   \textit{Hint:} Don't try to row reduce it. Think in terms of
   polynomial interpolation.
 \item
-  Let $A$ be a matrix with $n$ rows and 6 columns.  Each row of $A$
-  contains the \textbf{unweighted} percentage scores (out of 100) of
-  one student on 4 homework assignments (columns 1 through 4) a
-  midterm exam (column 5) and a final exam (column 6).
-  \begin{displaymath}
-    \begin{matrix}
-      H_1 & H_2 & H_3 & H_4 & M & F
-    \end{matrix}
-  \end{displaymath}
-  \begin{displaymath}
-    \begin{bmatrix}
-      p_{11} & p_{12} & p_{13} & p_{14} & p_{15} & p_{16} \\ p_{21} &
-      p_{22} & p_{23} & p_{24} & p_{25} & p_{26} \\ \vdots & \vdots &
-      \vdots & \vdots & \vdots & \vdots \\ p_{n1} & p_{n2} & p_{n3} &
-      p_{n4} & p_{n5} & p_{n6} \\
-    \end{bmatrix}
-  \end{displaymath}
-  All homework assignments are worth the same amount.  Let $T$ denote
-  the linear transformation implemented by this matrix.
-  \begin{enumerate}
-  \item
-    Suppose that homework assignments account for \textbf{50} percent
-    of the final grade, the midterm exam accounts for \textbf{20}
-    percent and the final exam accounts for \textbf{30} percent.  Find
-    a vector $\vv$ such that $T(\vv)$ is the vector whose
-    $i^\text{th}$ entry is the final percentage grade of the
-    $i^\text{th}$ student.  For example, if the $i^\text{th}$ student
-    recieved $90$ percent on every homework assignment, $85$ percent
-    on the midterm, and $92$ percent on the final, then the
-    $i^\text{th}$ entry of the output vector should be $90 * 0.5 + 85
-    * 0.2 + 92 * 0.3$.
-  \item
-    Find a vector $\vv$ such that $T(\vv)$ is the vector
-    whose $i^\text{th}$ entry is the unweighted homework grade for
-    student $i$. For the same example as above, the $i^\text{th}$
-    entry would be $90$.
-  \end{enumerate}
-\item
   Consider the following matrix and vector.
   \begin{displaymath}
     B =
@@ -2067,6 +2029,44 @@ transformations.
 \section*{More Difficult Problems}
 
 \begin{enumerate}[resume]
+\item
+  Let $A$ be a matrix with $n$ rows and 6 columns.  Each row of $A$
+  contains the \textbf{unweighted} percentage scores (out of 100) of
+  one student on 4 homework assignments (columns 1 through 4) a
+  midterm exam (column 5) and a final exam (column 6).
+  \begin{displaymath}
+    \begin{matrix}
+      H_1 & H_2 & H_3 & H_4 & M & F
+    \end{matrix}
+  \end{displaymath}
+  \begin{displaymath}
+    \begin{bmatrix}
+      p_{11} & p_{12} & p_{13} & p_{14} & p_{15} & p_{16} \\ p_{21} &
+      p_{22} & p_{23} & p_{24} & p_{25} & p_{26} \\ \vdots & \vdots &
+      \vdots & \vdots & \vdots & \vdots \\ p_{n1} & p_{n2} & p_{n3} &
+      p_{n4} & p_{n5} & p_{n6} \\
+    \end{bmatrix}
+  \end{displaymath}
+  All homework assignments are worth the same amount.  Let $T$ denote
+  the linear transformation implemented by this matrix.
+  \begin{enumerate}
+  \item
+    Suppose that homework assignments account for \textbf{50} percent
+    of the final grade, the midterm exam accounts for \textbf{20}
+    percent and the final exam accounts for \textbf{30} percent.  Find
+    a vector $\vv$ such that $T(\vv)$ is the vector whose
+    $i^\text{th}$ entry is the final percentage grade of the
+    $i^\text{th}$ student.  For example, if the $i^\text{th}$ student
+    recieved $90$ percent on every homework assignment, $85$ percent
+    on the midterm, and $92$ percent on the final, then the
+    $i^\text{th}$ entry of the output vector should be $90 * 0.5 + 85
+    * 0.2 + 92 * 0.3$.
+  \item
+    Find a vector $\vv$ such that $T(\vv)$ is the vector
+    whose $i^\text{th}$ entry is the unweighted homework grade for
+    student $i$. For the same example as above, the $i^\text{th}$
+    entry would be $90$.
+  \end{enumerate}
 \item
   Consider the following linear transformation $T$.
   \begin{displaymath}
