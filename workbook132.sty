@@ -1,9 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{workbook132}[2026/01/04 v0.01 LaTeX package for the workbook of CS132 at Boston University]
 
-% Palatino
-%% \usepackage{mathpazo}
-
 % 1.25 inch margins
 \usepackage[margin=1.25in]{geometry}
 
@@ -54,6 +51,12 @@
     tabsize=2
 }
 \lstset{style=mystyle}
+
+\newcommand{\trueFalseHeader}{
+  Determine if each statement is \textbf{true} or \textbf{false} and
+  justify your answer.  In particular, if the statement is false,
+  provide a counterexample if possible.
+}
 
 % Links for chapters/references
 \usepackage{hyperref}
