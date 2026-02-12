@@ -1,20 +1,30 @@
+import sys
+import re
 import stdlib132
-from stdlib132 import probgen
 
-with open('main-template.tex', 'r') as f:
-    body = f.read()
+if len(sys.argv) != 2:
+    print("usage: python3 build.py <filename>")
+    exit(1)
 
-subs = [
-  probgen.gen_form_sol_mat_eq(
-      rows=2,
-      cols=2,
-      rank=2,
-      force_consistent=True,
-  ),
-]
+filename = sys.argv[1]
 
-for i, sub in enumerate(subs):
-    body = body.replace(f"<<{i}>>", sub)
+text = None
+with open(filename, 'r') as f:
+    text = f.read()
 
-with open('main.tex', 'w') as f:
-    f.write(body)
+if not text:
+    print("error opening file")
+    exit(1)
+
+env = { 'stdlib132': stdlib132 }
+
+def replace_match(m):
+    code = m.group(1).strip()
+    value = eval(code, env)
+    return str(value)
+
+pattern = re.compile(r'<<(.*?)>>', re.S)
+text = pattern.sub(replace_match, text)
+
+with open(filename, 'w') as f:
+    f.write(text)
