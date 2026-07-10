@@ -1,12 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{workbook132}[2026/01/04 v0.01 LaTeX package for the workbook of CS132 at Boston University]
 
+% Palatino
+\usepackage{mathpazo}
+
 % 1.25 inch margins
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 
 % line spacing
 \usepackage{setspace}
-\setstretch{1.1}
+\setstretch{1.15}
 
 % better quotes
 \usepackage{csquotes}
@@ -14,11 +17,17 @@
 %% standard math tools
 \usepackage{amsthm, amssymb, mathtools}
 
+\newtheorem{fact}{Fact}
+\newtheorem{theorem}{Theorem}
+
 %% better bullets/enumeration
 \usepackage{enumitem}
 
 %% for the calculator symbol
 \usepackage{fontawesome}
+
+%% better bullet point
+\renewcommand{\labelitemi}{$\triangleright$}
 
 %% for images
 \usepackage{tikz}

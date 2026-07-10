@@ -1,10 +1,18 @@
 \documentclass[10pt]{report}
 \usepackage{workbook132}
 \usepackage{cs132}
-
+\usepackage{tasks}
+%% \usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%% \fancyhf{} % clear existing header/footer entries
+% Place Page X of Y on the right-hand
+% side of the footer
+%% \fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
 \title{
   Problems and Exercises \\
-  \texttt{v0.0.4}
+  \texttt{v0.0.5}
 }
 \author{\texttt{CAS CS 132}: \textit{Geometric Algorithms}}
 \begin{document}
@@ -25,22 +33,19 @@ difficulty there are four kinds of problems:
 \item More Difficult Problems
 \item Challenge Problems
 \end{itemize}
-You should think of basic exercises as problems that are most like
-problems that appear on quizzes, and the true/false and difficult
-problems as those that are most like problems that appear on exams
-(several of these problems and exercises have appeared on quizzes and
-exams in the past).  The challenge problems are for those of who want
-to think a bit harder, and are most like problems that may appear as
-extra credit on exams.
+You should think of the basic exercises as quiz-level and the
+true/false and difficult problems as exam-level.  A large proportion
+of these problems and exercises have appeared on quizzes and exams in
+the previous iterations of the course.  The challenge problems are
+for those of who want to think a bit harder, and are purely for fun.
 
-Many of the problems and exercises here are based on those that appear
-in \textit{Linear Algebra and Its Applications} by David Lay, Steven
-Lay and Judi McDonald.  If a problem in this workbook is identical to
-one that appears there, it is by accident or by coincidence.
-Regardless, we are in debt to this seminal text on undergraduate
-linear algebra.
+Many of these problems and exercises are based on those that appear in
+\textit{Linear Algebra and Its Applications} by David Lay, Steven Lay
+and Judi McDonald.  If a problem in this workbook is identical to one
+that appears there, it is by accident or by coincidence.  Regardless,
+we are in debt to this seminal text on undergraduate linear algebra.
 
-Problems that require a computer or a calculator are labelled with the
+Problems that require a computer or a calculator are labeled with the
 symbol \faCalculator.  Otherwise, the expectation is that you should
 be able to solve the problem by hand.
 
@@ -54,9 +59,10 @@ appear in this workbook, including Ed Chien, Mark Crovella, Vishesh
 Jain, Ieva Sagaitis, and Abhinit Sati.  I also include David C. Lay,
 Steven R. Lay, and Judi J. McDonald by proxy.
 
-Lastly, even if it's not explicitly stated, \textbf{you should always show
-  your work and justify your answer for every problem.}  Happy
-exercising/problem solving!
+Lastly, even if it's not explicitly stated, \textbf{you should always
+  show your work and justify your answer for every problem when
+  submitting assignments in \texttt{CS132}.}  Happy exercising/problem
+solving!
 
 % ======================================================================
 % ======================================================================
@@ -64,38 +70,476 @@ exercising/problem solving!
 
 \chapter{Linear Systems}
 
+\section{Definitions and Examples}
+
+\begin{enumerate}
+\item An \textbf{$\R$-linear equation} in the variables $x_1, \dots,
+  x_n$ is an equation that can be expressed in the form
+  \begin{displaymath}
+    a_1 x_1 + \dots + a_n x_n = b
+  \end{displaymath}
+  where $a_1, \dots, a_n, b \in \R$.\footnote{In this course we will
+  often drop the ``$\R$'' and simply call this a linear equation.}
+  The numbers $a_1, \dots, a_n$ are called \textbf{coefficients} and
+  the variables $x_1, \dots, x_n$ are also called \textbf{unknowns}.
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item $2x - 3y + \pi z = -44.5$ is a linear equation in the
+    variables $x, y, z$.\footnote{The choice of names for unknowns is
+    unimportant, and will be made clear from context.}
+  \item $2(x_1 + x_2) = 4x_3 - x_4$ is a linear equation in the
+    variables $x_1, x_2, x_3, x_4$.\footnote{This equation can be
+    \textit{expressed} in the above form by rearranging terms.}
+  \item $(2x_1 + x_2)(x_3 - x_4) = 5$ is not a linear equation because
+    the left-hand-side, after rearranging terms, will include a
+    nonlinear terms, e.g., $x_2x_3$.
+  \end{itemize}
+\item A \textbf{system of linear equations} in the variables $x_1,
+  \dots, x_n$ is a collection of linear equations in those variables.
+  We also call this a \textbf{linear system}.  Note that every
+  equation in a linear system must over the \textit{same} variables.
+  The general form of a system of linear equations is written as
+  follows.
+  \begin{equation}
+    \begin{split}
+      a_{11}x_1 + \dots + a_{1n} x_n &= b_1 \\
+      &\vdots \\
+      a_{m1}x_1 + \dots + a_{mn} x_n &= b_m
+    \end{split}
+    \label{gen-form-lin-sys}
+  \end{equation}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item The following is a system of two linear equations over the
+    variables $x$ and $y$.  This system represents a pair of lines in
+    the plane that intersect at a single point.
+    \begin{equation}
+      \begin{split}
+        2x + 3y &= 4 \\
+        -5x + 3y &= 0
+      \end{split}
+      \label{lin-sys-ex-1}
+    \end{equation}
+  \item The following is a system of three linear equations over four
+    variables.  Note that not all equations are required to nonzero
+    coefficients for every variable.
+    \begin{equation}
+      \begin{split}
+      3x_1 - 4.4x_2 &= 1 \\
+      200x_1 + 200x_2 + x_3 + 200x_4 &= 200 \\
+      9x_1 - x_2 - 5x_4 &= 98
+      \end{split}
+      \label{lin-sys-ex-2}
+    \end{equation}
+  \end{itemize}
+\item
+  We write $\R^n$ for \textbf{$n$-dimensional Euclidean space}.  In
+  this chapter we write $(a_1, \dots, a_n)$ where $a_1, \dots, a_n \in
+  R$ for an element of $\R^n$.  We call this a \textbf{point} in
+  $\R^n$.\footnote{In the next chapter, we will identify points in
+  $\R^n$ with \textit{vectors}.}
+\item
+  An \textbf{$\R$-matrix} is a rectangular grid of real numbers.  We
+  usually assume that a matrix has at least one row and and least one
+  column.  We write $\R^{m \times n}$ for the set of all matrices with
+  $m$ rows and $n$ columns.  We identify $\R^{1 \by 1}$ with $\R$
+  (i.e., we don't make a distinction between real numbers and matrices
+  with one entry).
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item The following is a matrix in $\R^{3 \by 2}$.
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & 2 \\
+        \pi & -4 \\
+        -22.4 & 0
+      \end{bmatrix}
+    \end{displaymath}
+  \item The following is a matrix in $\R^{1 \by 5}$.
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & 2 & 3 & 4 & 5
+      \end{bmatrix}
+    \end{displaymath}
+  \end{itemize}
+\item The \textbf{augmented matrix} of a system of $m$ linear
+  equations over the $n$ variables is the matrix in $\R^{m \by (n +
+    1)}$ whose entries include the coefficients and right-hand-sides
+  of each linear equation in the system.  In symbols, the augmented
+  matrix of the linear system in \ref{gen-form-lin-sys} is as follows.
+  \begin{displaymath}
+    \begin{bmatrix}
+      a_{11} & \dots & a_{1n} & b_1 \\
+      \vdots & \ddots & \vdots & \vdots \\
+      a_{m1} & \dots & a_{mn} & b_m
+    \end{bmatrix}
+  \end{displaymath}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item
+    The following matrix in $\R^{2 \by 3}$ is the augmented matrix of
+    the linear system in \ref{lin-sys-ex-1}.
+    \begin{displaymath}
+      \begin{bmatrix}
+        2 & 3 & 4 \\
+        -5 & 3 & 0
+      \end{bmatrix}
+    \end{displaymath}
+  \item
+    The following matrix in $\R^{3 \by 5}$ is the augmented matrix of
+    the linear system in \ref{lin-sys-ex-2}.
+    \begin{displaymath}
+      \begin{bmatrix}
+        3 & -4.4 & 0 & 0 & 1 \\
+        200 & 200 & 1 & 200 & 200 \\
+        9 & -1 & 0 & -5 & 98
+      \end{bmatrix}
+    \end{displaymath}
+  \end{itemize}
+\item The \textbf{coefficient matrix} of a system of $m$ linear
+  equations over $n$ variables is the matrix in $\R^{m \by n}$ gotten
+  by removing the rightmost column of its augmented matrix.  In
+  symbols, the coefficient matrix of the linear system in
+  \ref{gen-form-lin-sys} is as follows.
+  \begin{align*}
+    \begin{bmatrix}
+      a_{11} & \dots & a_{1n} \\
+      \vdots & \ddots & \vdots \\
+      a_{m1} & \dots & a_{mn}
+    \end{bmatrix}
+  \end{align*}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item
+    The following matrix in $\R^{2 \by 2}$ is the coefficient matrix of
+    the linear system in \ref{lin-sys-ex-1}.
+    \begin{displaymath}
+      \begin{bmatrix}
+        2 & 3 \\
+        -5 & 3
+      \end{bmatrix}
+    \end{displaymath}
+  \item
+    The following matrix in $\R^{3 \by 5}$ is the coefficient matrix of
+    the linear system in \ref{lin-sys-ex-2}.
+    \begin{displaymath}
+      \begin{bmatrix}
+        3 & -4.4 & 0 & 0 \\
+        200 & 200 & 1 & 200 \\
+        9 & -1 & 0 & -5
+      \end{bmatrix}
+    \end{displaymath}
+  \end{itemize}
+\item A \textbf{solution} of a linear system over the variables $x_1,
+  \dots, x_n$ such is a point $(s_1, \dots, s_n) \in \R^n$ such that
+  substituting each variable $x_i$ with the value $s_i$ simultaneously
+  satisfies every equation in the system.  In symbols, a solution of
+  the linear system in \ref{gen-form-lin-sys} is a point $(s_1, \dots,
+  s_n) \in \R^n$ such that the following real number equalities hold.
+  \begin{align*}
+    a_{11}s_1 + \dots + a_{1n} s_n &= b_1 \\
+    &\vdots \\
+    a_{m1}s_1 + \dots + a_{mn} s_n &= b_m \\
+  \end{align*}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item The point $\left(\frac{12}{21}, \frac{20}{21}\right)$ is a
+    solution to the linear system in \ref{lin-sys-ex-1} because
+    \begin{displaymath}
+      2\left(\frac{12}{21}\right) + 3\left(\frac{20}{21}\right)
+      = \frac{24}{21} + \frac{60}{21}
+      = \frac{84}{21}
+      = 4
+      \quad
+      \text{and}
+      \quad
+      -5\left(\frac{12}{21}\right) + 3\left(\frac{20}{21}\right)
+      = -\frac{60}{21} + \frac{60}{21}
+      = 0
+    \end{displaymath}
+  \end{itemize}
+\item A linear system is \textbf{consistent} if it has a solution.
+  Otherwise, we say that it is \textbf{inconsistent}.
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item As noted above, the linear system in \ref{lin-sys-ex-1} is consistent.
+  \item The following linear system is inconsistent (it represents two
+    parallel lines in $\R^2$).
+    \begin{align*}
+      2x - 3y &= 4 \\
+      -4x + 6y &= 5
+    \end{align*}
+  \end{itemize}
+
+\item There are three forms of \textbf{elementary row operations}:
+  \begin{enumerate}
+  \item \textbf{Replacement} operations add a scalar multiple of one
+    row to another row.  They are denoted
+    \begin{displaymath}
+      R_i \gets R_i + cR_j
+    \end{displaymath}
+    where $c \in \R$ and act on matrices as follows.
+    \begin{displaymath}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        a_{i1} & \dots & a_{in} \\
+        \vdots & \ddots & \vdots \\
+        a_{j1} & \dots & a_{jn} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+      \xrightarrow{R_i \gets R_i + cR_j}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        a_{i1} + ca_{j1} & \dots & a_{in} + ca_{jn} \\
+        \vdots & \ddots & \vdots \\
+        a_{j1} & \dots & a_{jn} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+    \end{displaymath}
+  \item \textbf{Scaling} operations multiply a row by a nonzero
+    constant. They are denoted
+    \begin{displaymath}
+      R_i \gets cR_i
+    \end{displaymath}
+    where $c \in \R$ and $c \neq 0$ and act on matrices as follows.
+    \begin{displaymath}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        a_{i1} & \dots & a_{in} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+      \xrightarrow{R_i \gets cR_i}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        ca_{i1} & \dots & ca_{in} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+    \end{displaymath}
+  \item \textbf{Swap} operations interchange two rows.  They are
+    denoted
+    \begin{displaymath}
+      R_i \leftrightarrow R_j
+    \end{displaymath}
+    and act on matrices as follows.
+    \begin{displaymath}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        a_{i1} & \dots & a_{in} \\
+        \vdots & \ddots & \vdots \\
+        a_{j1} & \dots & a_{jn} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+      \xrightarrow{R_i \leftrightarrow R_j}
+      \begin{bmatrix}
+        a_{11} & \dots & a_{1n} \\
+        \vdots & \ddots & \vdots \\
+        a_{j1} & \dots & a_{jn} \\
+        \vdots & \ddots & \vdots \\
+        a_{i1} & \dots & a_{in} \\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \dots & a_{mn}
+      \end{bmatrix}
+    \end{displaymath}
+  \end{enumerate}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item The following is an example of applying the replacement
+    operation $R_2 \gets R_2 - 3R_1$.
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+      \end{bmatrix}
+      \xrightarrow{R_2 \gets R_2 - 3R_1}
+      \begin{bmatrix}
+        1 & 2 & 3 \\
+        1 & -1 & -3 \\
+        7 & 8 & 9
+      \end{bmatrix}
+    \end{displaymath}
+  \item The following is an example of applying the scaling operation $R_3 \gets (-4)R_3$.
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+      \end{bmatrix}
+      \xrightarrow{R_3 \gets (-4)R_3}
+      \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        -28 & -32 & -36
+      \end{bmatrix}
+    \end{displaymath}
+  \item The following is an example of applying the swap operation $R_1 \leftrightarrow R_2$.
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+      \end{bmatrix}
+      \xrightarrow{R_1 \leftrightarrow R_2}
+      \begin{bmatrix}
+        4 & 5 & 6 \\
+        1 & 2 & 3 \\
+        7 & 8 & 9
+      \end{bmatrix}
+    \end{displaymath}
+  \end{itemize}
+\item Matrices $A, B \in \R^{m \times n}$ are \textbf{row equivalent},
+  written $A \sim B$ if there is a sequence of elementary row
+  operations thas transform $A$ into $B$.
+
+  \textit{Facts.}
+  \begin{itemize}
+  \item
+    \textit{Row equivalence is a, in fact, an equivalence.}
+    \begin{itemize}
+    \item (reflexivity) $A \sim A$ for any matrix $A$;
+    \item (symmetry) $A \sim B$ if and only if $B \sim A$;
+    \item (transitivity) If $A \sim B$ and $B \sim C$ then $A \sim C$.
+    \end{itemize}
+  \item
+    \textit{Row operations preserve solutions.}  Let $A$ and $B$ be
+    the augmented matrices of two linear systems such that $A \sim B$.
+    Then $\vs \in \R^n$ is a solution of the linear system with
+    augmented matrix $A$ if and only if it is a solution of the system
+    with augmented matrix $B$.
+  \end{itemize}
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item
+  \end{itemize}
+\item
+  The \textbf{leading entry} of a row in a matrix is its first nonzero
+  entry.  Note that a row may not have a leading entry.
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item
+    TODO
+  \end{itemize}
+\item
+  A matrix is in \textbf{echelon form} if
+  \begin{itemize}
+  \item
+    the leading entry of every row appears to the right of the
+    leading entries of the rows that precede it;
+  \item
+    every all-zero row appears below every non-zero row.
+  \end{itemize}
+  This can be expressed by example pictorially as
+  \begin{displaymath}
+    \begin{bmatrix}
+      0&\blacksquare&*&*&*&*&*&*&*&*\\
+      0&0&0&\blacksquare&*&*&*&*&*&*\\
+      0&0&0&0&\blacksquare&*&*&*&*&*\\
+      0&0&0&0&0&\blacksquare&*&*&*&*\\
+      0&0&0&0&0&0&0&0&\blacksquare&*\\
+      0&0&0&0&0&0&0&0&0&0\\
+    \end{bmatrix}
+  \end{displaymath}
+  where ``$\blacksquare$'' represents a nonzero entry and ``$*$" represents
+  an entry of any value.
+
+  \textit{Examples.}
+  \begin{itemize}
+  \item
+  \end{itemize}
+\item A matrix is in \textbf{row-reduced echelon form} (RREF) if it is echelon form and
+  \begin{itemize}
+  \item every leading entry is $1$;
+  \item the leading entries are the only nonzero entries of their columns.
+  \end{itemize}
+  This can be expressed by example pictorially as
+  \begin{displaymath}
+    \begin{bmatrix}
+      0&1&*&0&0&0&*&*&0&*\\
+      0&0&0&1&0&0&*&*&0&*\\
+      0&0&0&0&1&0&*&*&0&*\\
+      0&0&0&0&0&1&*&*&0&*\\
+      0&0&0&0&0&0&0&0&1&*\\
+      0&0&0&0&0&0&0&0&0&0\\
+    \end{bmatrix}
+  \end{displaymath}
+  where ``$*$" represents an entry of any value.  We will also say
+  that a matrix \textit{is} an RREF to mean that it is in row-reduced
+  echelon form.
+
+  \textit{Facts.}
+  \begin{itemize}
+  \item \textit{Every matrix is row-equivalent to exactly one RREF.}
+  \end{itemize}
+\item A \textbf{pivot position} in a matrix is the position of a
+  leading entry in its RREF.  A \textbf{pivot column} is a column
+  containing a pivot position.
+\item A variable $x_i$ is \textbf{basic} with respect to a linear
+  system if the $i$th column of its augmented matrix is a pivot
+  column.  A variables is \textbf{free} if it is not basic.
+\item A \textbf{general form solution}\footnote{This is also
+sometimes just called a general solution.} is a collection of statements of the form
+  \begin{displaymath}
+    x_i = x_i \text{ is free} \qquad \text{and} x_i = a_1x_{j_1} + \dots + a_kx_{j_k}
+  \end{displaymath}
+  where $a_{j_1}, \dots, a_{j_k}$ are free variables.  In other words,
+  a general form solution is one that expresses every basic variable
+  of a linear system linearly in terms of its free variables.
+\end{enumerate}
+
+\section{Basic Exercises}
+
 Determine the coefficient matrix and augmented matrix for each of the
 following linear systems.
-\begin{enumerate}
-\item
+\begin{tasks}[style=enumerate](2)
+\task
   \begin{align*}
     2 x_{1} - 6 x_{2} &= -4 \\
     6 x_{1} + 8 x_{2} &= -7
   \end{align*}
-\item
+\task
   \begin{align*}
     x_{1} + 8 x_{2} + 7 x_{3} &= -1 \\
     4 x_{1} - 9 x_{2} &= 8 \\
     7 x_{1} - 7 x_{2} - 3 x_{3} &= 10
   \end{align*}
-\item
+\task
   \begin{align*}
     x_{1} - 2x_{2} - 2x_{3} &= 2 \\
     2x_{1} - 3x_{2} - 5x_{3} &= 2 \\
     -2x_{1} + 2x_{2} + 7x_{3} &= -1
   \end{align*}
-\item
+\task
   \begin{align*}
     - 8 x_{1} + 6 x_{2} + x_{3} + 7 x_{4} + 10 x_{5} &= 8 \\
     - 4 x_{2} - 4 x_{3} - x_{4} + x_{5} &= -8 \\
     7 x_{1} + x_{2} - 2 x_{3} - 8 x_{4} + 7 x_{5} &= 9 \\
     - 4 x_{1} - 7 x_{2} + 5 x_{3} + 2 x_{4} - 9 x_{5} &= -4
   \end{align*}
-\end{enumerate}
+\end{tasks}
 For each of the following linear systems, verify that the given point
 $s$ is a solution.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{align*}
     x_{1} - 2x_{2} + x_{3} - 2x_{4} &= -9 \\
     x_{1} - x_{2} - x_{3} - 2x_{4} &= -10 \\
@@ -104,7 +548,7 @@ $s$ is a solution.
     \\
     s = (1, 3, 2, 3)
   \end{align*}
-\item
+\task
   \begin{align*}
     2 x_{1} - 2 x_{2} - 6 x_{3} + 4 x_{4} &= -20 \\
     x_{1} + 2 x_{2} - 6 x_{3} - 4 x_{4} &= 26 \\
@@ -112,64 +556,62 @@ $s$ is a solution.
     \\
     s = (10, 8, 2, -3)
   \end{align*}
-
-\end{enumerate}
-
+\end{tasks}
 Demonstrate that each of the following linear systems has a unique
-solution.  Additionally, determine the solution.
-\begin{enumerate}[resume]
-\item
+solution.
+\begin{tasks}[resume, style=enumerate](3)
+\task
   \begin{align*}
     3 x_{1} + 6 x_{2} &= -15 \\
     - x_{1} + x_{2} &= 5
   \end{align*}
-\item
+\task
   \begin{align*}
     2x + 4y &= 29 \\
     -6x - 10y &= -75
   \end{align*}
-\item
+\task
   \begin{align*}
     x + 3y - 3z &= -2 \\
     2x + 7y + 7z &= -5 \\
     x - 2y - z &= 3
   \end{align*}
-\item
+\task
   \begin{align*}
     3x - 4y + 3z &= -9 \\
     6x + 7y - 3z &= 0 \\
     x + 10z &= -21
 \end{align*}
-\item
+\task
   \begin{align*}
     - 3 x_{1} + 6 x_{3} &= 12 \\
     3 x_{1} + 3 x_{2} - 12 x_{3} &= -21 \\
     2 x_{1} - 6 x_{2} + 10 x_{3} &= 16
   \end{align*}
-\item
+\task
   \begin{align*}
     - 3 x_{1} + 6 x_{2} &= 9 \\
     3 x_{1} - 8 x_{2} &= -9 \\
     2 x_{2} + 6 x_{3} &= 18
   \end{align*}
-\item
+\task
   \begin{align*}
     x_{1} - 2x_{2} - 2x_{3} &= -7 \\
     -x_{1} + 3x_{2} + 2x_{3} &= 10 \\
     2x_{1} - 6x_{2} - 3x_{3} &= -18
   \end{align*}
-\item
+\task
   \begin{align*}
     - 3 x_{1} - 6 x_{3} + 9 x_{4} &= -6 \\
     - x_{1} + 2 x_{2} - 3 x_{4} &= 8 \\
     - 2 x_{1} - 9 x_{2} - 19 x_{3} + 45 x_{4} &= -61 \\
     x_{1} - 3 x_{2} + 5 x_{3} - 9 x_{4} &= 5
   \end{align*}
-\end{enumerate}
+\end{tasks}
 For each of the following matrices, apply the given row operations
 from top to bottom.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{displaymath}
     \begin{bmatrix}
       -2 & 7 & 9 \\
@@ -182,7 +624,7 @@ from top to bottom.
     R_{1} &\gets R_{1} - 4R_{2} \\
     R_{2} &\gets R_{2} + 3R_{1}
   \end{align*}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       -4 & 1 & 3 \\
@@ -195,7 +637,7 @@ from top to bottom.
     R_{3} &\gets R_{3} + 3R_{1} \\
     R_{1} &\leftrightarrow R_{3}
   \end{align*}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       9 & 5 & -7 & -5 & -9 \\
@@ -211,12 +653,12 @@ from top to bottom.
     R_{3} &\gets R_{3} + 3R_{4} \\
     R_{3} &\leftrightarrow R_{2}
   \end{align*}
-\end{enumerate}
+\end{tasks}
 Determine a general form solution from each of the following
 matrices. That is, determine a general form solution for a linear
 system whose augmented matrix is row equivalent to the given matrix.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & -3 & 0 & 0 & -5 \\
@@ -224,7 +666,7 @@ system whose augmented matrix is row equivalent to the given matrix.
       0 & 0 & 0 & 1 & 5
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & 0 & -3 & 0 & 1 \\
@@ -232,7 +674,7 @@ system whose augmented matrix is row equivalent to the given matrix.
       0 & 0 & 0 & 1 & 5
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & 0 & -6 & 0 & 3 \\
@@ -240,7 +682,7 @@ system whose augmented matrix is row equivalent to the given matrix.
       0 & 0 & 0 & 1 & -6
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & 1 & 0 & 0 & 0 & -4 & 5 & -3 \\
@@ -250,21 +692,21 @@ system whose augmented matrix is row equivalent to the given matrix.
       0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
     \end{bmatrix}
   \end{displaymath}
-\end{enumerate}
+\end{tasks}
 Determine three particular solutions of the linear system underlying
 each of the following matrices.  That is, determine three particular
 solutions of a linear system whose augmented matrix is row equivalent
 to the given matrix.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{displaymath}
     \left[\begin{matrix}1 & 2 & 0\\0 & 0 & 1\end{matrix}\right]
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \left[\begin{matrix}1 & 0 & 0 & -3 & -6\\0 & 1 & 0 & 5 & 5\\0 & 0 & 1 & 0 & -4\end{matrix}\right]
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & 1 & 0 & -3 & 0 & 0 & -3 & 1 \\
@@ -274,12 +716,12 @@ to the given matrix.
       0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
     \end{bmatrix}
   \end{displaymath}
-\end{enumerate}
+\end{tasks}
 Determine the row-reduced echelon form of each of the following
 matrices.  You must include the intermediate matrices and row
 operations used.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{displaymath}
     \begin{bmatrix}
       5 & 2 & 9 \\
@@ -287,7 +729,7 @@ operations used.
       2 & 1 & 3
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       0 & 1 & -6 & -2 \\
@@ -295,7 +737,7 @@ operations used.
       -2 & -4 & 18 & 16
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       2 & 3 & -13 & -8 \\
@@ -303,7 +745,7 @@ operations used.
       1 & 0 & 1 & 5
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & -1 & -2 & 1 \\
@@ -312,62 +754,62 @@ operations used.
       -2 & 1 & 2 & -1
     \end{bmatrix}
   \end{displaymath}
-\end{enumerate}
+\end{tasks}
 Determine a general form solution for each of the following linear
 systems by first determining the row-reduced echelon form of its
 augmented matrix.  If this system has no solutions then write
 \enquote{no solution}.
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{align*}
     x - 2y - 7z &= -3 \\
     2x + y + 6z &= 14 \\
     x + y + 5z &= 9
   \end{align*}
-\item
+\task
   \begin{align*}
     x_1 + x_2 - x_3 &= -9 \\
     x_2 - 2x_3 &= -1 \\
     x_1 + x_2 &= -10 \\
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     x_1 - 2x_2 + 5x_3 &= 6 \\
     -2x_1 + 6x_2 - 11x_3 + 7x_4 &= -8 \\
     5x_1 - 10 x_2 + 25x_3 + 3x_4 &= 30
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     x_1 - 3x_2 + 4x_3 &= 0 \\
     -x_1 + 6x_2 + x_3 &= 4 \\
     23x_2 + 5x_3 &= 9
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     x_1 + 5x_2 + 3x_3 &= -4 \\
     x_1 + 6x_2 + 7x_3 &= -13 \\
     -2x_1 - 12 x_2 - 14 x_3 &= 25
   \end{align*}
-\item
+\task
   \begin{align*}
     -x - 2y - z &= -4 \\
     x + 2y &= 3 \\
     -2x -4y + z &= -7
   \end{align*}
-\item
+\task
   \begin{align*}
     x_{1} - 6x_{2} + x_{4} &= 2 \\
     2x_{1} - 12x_{2} + x_{3} - 4x_{4} &= 7 \\
     x_{1} - 6x_{2} - 2x_{3} + 13x_{4} &= -4
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     88x_1 + 61x_2 + 8x_3 + 61 x_4 &= -68 \\
     37x_1 + 14x_2 + 72x_3 + 41 x_4 &= -460 \\
     57x_1 + 59x_2 + 69x_3 + 75x_4 &= -333 \\
     92 x_1 + 60x_2 + 28x_3 + 72x_4 &= -192
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     x_2 + x_3 + x_4 + 3x_5 - x_6 + 2x_7 &= 34 \\
     x_3 - x_4 + 4x_5 &= -14 \\
@@ -375,19 +817,19 @@ augmented matrix.  If this system has no solutions then write
     3x_3 - 3x_4 + 12 x_5 + 2x_7 &= -18 \\
     x_2 + 4x_3 - 2x_4 + 15x_5 - x_6 + 7x_7 &= 52
   \end{align*}
-\item \faCalculator
+\task \faCalculator
   \begin{align*}
     8x_1 + 3x_2 - 3x_3 &= -4 \\
     -3x_1 + 8x_2 + 5x_3 &= -4 \\
     6x_1 + 7x_2 - 3x_3 &= -3 \\
     8x_1 + x_2 - x_3 &= -4
   \end{align*}
-\end{enumerate}
+\end{tasks}
 Determine a sequence of elementary row operations from the left matrix
-to the right matrix.  You must including the intermediate matrices and
-row operations used.
-\begin{enumerate}[resume]
-\item
+to the right matrix.  You must include the intermediate matrices and
+row operations used in your solution.
+\begin{tasks}[resume, style=enumerate](2)
+\task
   \begin{displaymath}
     \begin{bmatrix}
       -4 & -7 & 4 \\
@@ -401,7 +843,7 @@ row operations used.
       -10 & 1 & -9
     \end{bmatrix}
   \end{displaymath}
-\item
+\task
   \begin{displaymath}
     \begin{bmatrix}
       1 & 2 & -1 & 5 \\
@@ -417,62 +859,62 @@ row operations used.
       0 & 1 & 0 & 1
     \end{bmatrix}
   \end{displaymath}
-\end{enumerate}
+\end{tasks}
 
-\section*{True/False}
+\section{True/False}
 
 \trueFalseHeader
 
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](1)
+\task
   Elementary row operations cannot change the solution set of a linear
   system.
-\item
+\task
   There is a linear system with exactly three solutions.
-\item
+\task
   If $A$ is the augmented matrix of an inconsistent linear system, and
   $B$ is a matrix such that $A \sim B$ (that is, $A$ and $B$ are row
   equivalent), then $B$ is the augmented matrix of an inconsistent
   linear system.
-\item
- If $A$ is the augmented matrix of an inconsistent system, then $A$
- has a pivot in its rightmost column.
-\item
+\task
+  If $A$ is the augmented matrix of an inconsistent system, then $A$
+  has a pivot in its rightmost column.
+\task
   If $A \sim B$ and $A \sim C$ and $B$ and $C$ are in reduced echelon
   form, then $B = C$.
-\item
+\task
   There is a unique sequence of row operations that reduces a matrix
   to reduced echelon form.
-\item
+\task
   If a general form solution of a linear system has a free variable,
   then the system has infinitely many solutions.
-\item
+\task
   A matrix may have different pivot positions depending on the
   sequence of row operations used to attain a matrix in echelon form.
-\item
+\task
   Every matrix has a unique echelon form.
-\item
+\task
   A linear system over 3 variables and 2 equations must be consistent.
-\item
+\task
   If the coefficient matrix of a linear system as more rows than
   columns, then the system has infinitely many solutions.
-\item
+\task
   If $A$ is the augmented matrix of a linear system and it has a pivot
   position in every column, then the system is inconsistent.
-\item
+\task
   A \textit{consistent} linear system whose augmented matrix is a $207
   \times 209$ matrix has infinitely many solutions.
-\item
+\task
   A \textit{consistent} linear system whose coefficient matrix is
   square has infinitely many solutions.
-\item
+\task
   If the rightmost column of the augmented matrix of a linear system
   is a pivot column, then the system is inconsistent.
-\item
+\task
   If a system of linear equations of linear equations has infinitely
   many solutions, then it must have more unknowns than equations.
-\item
- For any nonzero real values $a$ and $b$, the matrix
+\task
+  For any nonzero real values $a$ and $b$, the matrix
   $
   \begin{bmatrix}
     a & 2a \\
@@ -480,14 +922,14 @@ row operations used.
   \end{bmatrix}
   $
   has a pivot in every column and every row.
-\item
+\task
   A system of linear equations with 3 variables and 4 equations cannot
   be consistent.
-\end{enumerate}
+\end{tasks}
 
-\section*{More Difficult Problems}
-\begin{enumerate}[resume]
-\item
+\section{More Difficult Problems}
+\begin{tasks}[resume, style=enumerate](1)
+\task
   \faCalculator \ Consider the following linear system.
   \begin{align*}
     4x_2 + x_3 &= 16 \\
@@ -513,26 +955,26 @@ row operations used.
       equations.}
     \end{enumerate}
   \end{enumerate}
-\item
+\task
   Determine all the $2 \times 2$ matrices in echelon form whose
   entries are either $0$ or $1$.  Mark which ones are in reduced
   echelon form.
-\item
+\task
   Determine every $3 \times 3$ matrix in reduced echelon form with at
   least two pivot positions whose entries are either $0$ or $1$.
-\item
+\task
   Determine a linear system over three variables such that $(a, b, c)$
   is a solution exactly when the cubic function $f(x) = ax^3 + bx^2 +
   c$ intersects the points $(-1, 4)$, $(1, 5)$ and $(2, 10)$.  You do
   not need to solve the linear system.
-\item
+\task
   Determine the slope-intercept form of the line equation which
   defines the intersection of the plane
   \begin{align*}
     2x + 3y + 3z = 6
   \end{align*}
   with the $xy$-plane.
-\item
+\task
   For what values of the coefficient $h$ is the following system
   inconsistent?
   \begin{align*}
@@ -541,7 +983,7 @@ row operations used.
   \end{align*}
   Is there a value of $h$ for which the above system has infinitely
   many solutions? Justify your answer.
-\item
+\task
   Consider the following linear system with two unknown coefficients
   $h$ and $k$.
   \begin{align*}
@@ -559,7 +1001,7 @@ row operations used.
     Determine values of $h$ and $k$ so that the above linear system
     has infinitely many solutions.
   \end{enumerate}
-\item
+\task
   Consider the following general form solution
   \begin{align*}
     x_1 &= 3x_2 - 2x_3 \\
@@ -575,7 +1017,7 @@ row operations used.
     Determine an RREF which yields the general form solution from the
     previous part.
   \end{enumerate}
-\item
+\task
   Consider the following general form solution.
   \begin{align*}
     x_{1} &= -6 + 6x_{3} + 2x_{5} \\
@@ -586,7 +1028,7 @@ row operations used.
   \end{align*}
   Determine a general form solution that describes the same solution
   set but in which $x_1$ is free.
-\item
+\task
   \faCalculator \ Suppose you're investigating a claim that, out of
   five competing car companies who purchase engine parts from the same
   suppliers, one purportedly \textit{overestimated} their total
@@ -612,16 +1054,16 @@ row operations used.
       \hline
     \end{tabular}
   \end{center}
-\item
+\task
   Suppose you're given a system of linear equations with three
   variables and two equations, and that $(4, 1, 0)$ and $(2, 4, 1)$
   are solutions to this system.  You are also given that the two
   equations define distinct planes in $\R^3$.  Determine the
   RREF of the augmented matrix for this system.
-\item
+\task
   Repeat the previous problem with the points $(-3, 0, 1)$ are $(-3,
   1, 1)$.
-\item
+\task
   Consider an arbitrary system of linear equations with $n$ unknowns
   and $m$ equations.  Further suppose that
   \begin{itemize}
@@ -633,12 +1075,12 @@ row operations used.
   Write down an expression in terms of $m$ and $n$ for the number of
   all-zero rows which appear in the rwo-reduced echelon form of its
   augmented matrix.  Justify your answer.
-\end{enumerate}
+\end{tasks}
 
-\section*{Challenge Problems}
+\section{Challenge Problems}
 
-\begin{enumerate}[resume]
-\item
+\begin{tasks}[resume, style=enumerate](1)
+\task
   Consider the following pair of linear systems.
   \begin{align*}
     ax + by &= c \\
@@ -664,7 +1106,7 @@ row operations used.
       \end{bmatrix}
     \end{displaymath}
   \end{enumerate}
-\item
+\task
   Consider the following pair of linear systems.
   \begin{align*}
     x_1 - 2x_2 &= 3 \\
@@ -685,14 +1127,14 @@ row operations used.
     $x_1$, $x_2$, $x_3$, $x_4$.  Describe the relationship between
     this matrix and the one in the previous part.
 \end{enumerate}
-\item
+\task
   Determine what must hold of $a$, $b$, $c$, $d$ so that the following
   linear system has exactly one solution.
   \begin{align*}
     ax + by &= 0 \\
     cx + dy &= 0
   \end{align*}
-\item
+\task
   Determine an inconsistent linear system in 3 variables such that
   every pair of equations is consistent.  That is, give values for $a$
   through $l$ in the system
@@ -718,7 +1160,7 @@ row operations used.
   \item
     Achieve this with all nonzero values for $a$ through $l$.
   \end{enumerate}
-\item
+\task
   Consider an arbitrary linear system in three variables:
   \begin{align*}
     ax + by + cz &= d \\
@@ -736,7 +1178,7 @@ row operations used.
   \end{displaymath}
   is also a solution.  Describe why $(s_x, s_y, s_z) \not = (t_x, t_y,
   t_z)$ implies the system has infinitely many solutions.
-\item
+\task
   One way to describe a line in 3 dimensions is to use a parameter
   $t$.  That is, after fixing values $a_x$, $b_x$, $a_y$, $b_y$,
   $a_z$, and $b_z$, a line can be described as all points of the form
@@ -750,7 +1192,7 @@ row operations used.
   of as a system in the variables $x$, $y$, $z$, and $t$, e.g., one of
   its equations is $x - a_xt = b_x$. Write $t$ in terms of $x$ and
   substitute this value for $t$ into the other equations.
-\item
+\task
   There are several ways to define row equivalence.  For example,
   suppose we restrict the replacement rule to only allow operations of
   the form
@@ -764,7 +1206,7 @@ row operations used.
   there is a sequence of addition and scaling operations which
   transform $A$ to $B$.  In particular, addition and scaling
   operations can simulate replacement and exchange operations.
-\end{enumerate}
+\end{tasks}
 
 % ======================================================================
 % ======================================================================
