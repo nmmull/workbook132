@@ -399,6 +399,29 @@ Determine an orthogonal diagonalization of the following matrices.
     $\vv v$ onto the plane given by the above linear equation.
     Justify your answer.
   \end{enumerate}
+\task
+  One matrix factorization not covered in this course is the
+  \textbf{QR factorization}: any square matrix $A \in \R^{n \times n}$
+  can be expressed as a matrix product $A = QR$ where $Q \in \R^{n
+  \times n}$ has orthonormal columns and $R \in \R^{n \times n}$ is
+  upper triangular (i.e., has zeros below the diagonal).  Let
+  \begin{displaymath}
+    A = \begin{bmatrix} \va_1 & \va_2 \end{bmatrix}
+    =
+    \begin{bmatrix} 2 & -3 \\ 1 & 1 \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}[label=(\alph*)]
+  \item
+    Determine an orthonormal basis $\{\vb_1, \vb_2\}$ for $\col A$
+    such that $\vb_1$ is a scalar multiple of $\va_1$.
+  \item
+    Determine an upper triangular matrix $R$ (i.e., a matrix of the
+    form $\begin{bmatrix} a & b \\ 0 & c \end{bmatrix}$) such that $A =
+    \begin{bmatrix} \vb_1 & \vb_2 \end{bmatrix} R$, where $\vb_1$ and
+    $\vb_2$ are the vectors you determined in the previous part.
+    \textit{Hint:} Think about the relationship between $\vb_2$ and
+    $\proj_{\vspan\{\va_1\}} \va_2$.
+  \end{enumerate}
 \end{tasks}
 
 \section{Challenge Problems}
