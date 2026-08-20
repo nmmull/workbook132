@@ -1,0 +1,421 @@
+\section{Basic Exercises}
+
+For each of the following exercises, justify your answer.
+\begin{tasks}[style=enumerate](1)
+\task
+  Given $A \in \R^{3 \times 6}$, determine value of $n$ such that
+  $\nul A$ is a subspace of $\R^n$.
+\task
+  Given $A \in \R^{10 \times 13}$, determine the minimum dimension of
+  $\nul A$.
+\task
+  Given $A \in \R^{7 \times 5}$ and $\rank A = 4$, determine
+  $\dim(\nul A)$.
+\task
+  Determine if $v$ is in $\nul A$ where
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      -1 & 0 & 1 \\
+      3 & 6 & 0\\
+      5 & 7 & 2
+    \end{bmatrix}
+    \qquad
+    \vv = \vThree 2 {-1} 2
+  \end{align*}
+\task Determine if $\vv$ is in $\col A$, where $\vv$ and $A$ are
+  defined as in the previous exercise.
+\task Without performing any row operations, determine $\rank A$ where
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 1 & -8 & 3 \\
+      -1 & 3 & 4 & 2 \\
+      3 & 2 & -12 & 5 \\
+      1 & -2 & -4 & -1
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+For each of the following matrices, determine a basis for its column
+space and a basis for its null space.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -5 \\
+      -2 & 10
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 \\
+      0 & 0
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      0 & -2 & 2 \\
+      -2 & 3 & -9 \\
+      -1 & -2 & -1
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -4 & 3 & -3 \\
+      -2 & 8 & -6 & 7
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -4 & -3 \\
+      -3 & 12 & 10 \\
+      -2 & 8 & 8 \\
+      -1 & 4 & 2
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  The matrix $[ \va_1 \ \ \ \va_2 \ \ \ \va_3 \ \ \ \va_4 \ \ \ \va_5
+    \ \ \ \va_6 \ \ \ \va_7 \ \ \ \va_8 ]$ which is row-equivalent to
+  the following matrix.
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 3 & 0 & 0 & 5 & 0 & -7 \\
+      0 & 1 & 14 & 0 & 0 & 2 & 0 & 1 \\
+      0 & 0  & 0  & 1 & 0 & 3 & 0 & 7 \\
+      0 & 0  & 0  & 0 & 1 & 8 & 0 & 9 \\
+      0 & 0  & 0  & 0 & 0 & 0 & 1 & 1 \\
+      0 & 0  & 0  & 0 & 0 & 0 & 0 & 0 \\
+    \end{bmatrix}
+  \end{align*}
+\task \faCalculator
+  \lstinputlisting{sympy-example-2.py}
+\end{tasks}
+For each of the following subspaces, determine a basis.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    \vspan
+    \left
+    \{\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix},
+    \begin{bmatrix} 2 \\ 5 \\ 1 \end{bmatrix},
+    \begin{bmatrix} -3 \\ -5 \\ -8 \end{bmatrix}
+    \right\}
+  \end{align*}
+\task
+  \begin{align*}
+    \vspan \left\{
+    \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix},
+    \begin{bmatrix} -1 \\ 0 \\ -3 \end{bmatrix},
+    \begin{bmatrix} 2 \\ -4 \\ 18 \end{bmatrix},
+    \begin{bmatrix} -2 \\ -4 \\ 6 \end{bmatrix}
+    \right\}
+\end{align*}
+\end{tasks}
+Determine the coordinate vector $[\vu]_{\cB}$ where
+$\vu$ and $\cB$ are defined below.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{displaymath}
+    \vu = \vTwo 8 {-12}
+    \qquad
+    \cB = \left\{ \vTwo 1 {-1}, \vTwo {-3} 4 \right\}
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    \vu = \vThree 4 1 3
+    \qquad
+    \cB = \left\{
+    \vThree 1 {-1} 0
+    \vThree {-1} 2 1
+    \vThree {-2} 2 1
+    \right\}
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    \vu = \vTwo {-17} {15}
+    \qquad
+    \cB =
+    \left\{
+    \vTwo 1 {-5}
+    \vTwo 3 {-1}
+    \right\}
+  \end{displaymath}
+\task \faCalculator
+  \begin{displaymath}
+    \vu = \vFour 5 {29} {-80} {42}
+    \qquad
+    \cB =
+    \left\{
+    \vFour {-11} {-19} {17} 9,
+    \vFour 9 {17} {-20} {-2},
+    \vFour {-3} 1 {-18} {18}
+    \right\}
+  \end{displaymath}
+\end{tasks}
+Determine the change-of-basis matrix for the following bases.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{displaymath}
+    \left\{
+    \vTwo 1 2,
+    \vTwo {-3} {-5}
+    \right\}
+  \end{displaymath}
+\task
+\begin{displaymath}
+\left\{
+\vThree 1 {-3} {-2},
+\vThree {-3} {10} {5},
+\vThree {-2} 8 3
+\right\}
+\end{displaymath}
+\end{tasks}
+For each of the following matrices, determine a vector that is
+\textit{not} in its column space.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 \\
+      0 & 1 & 2 & 0 \\
+      0 & 0 & 0 & 1 \\
+      0 & 0 & 0 & 0
+    \end{bmatrix}
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 5 \\
+      -1 & 0 & -1 \\
+      1 & 2 & 9
+    \end{bmatrix}
+  \end{displaymath}
+\end{tasks}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  There is a unique basis for any subspace.
+\task
+  A $7 \times 4$ matrix $A$ may have $\dim(\nul A) = 5$.
+\task
+  A $3 \times 6$ matrix $A$ may have $\dim(\nul A) = 2$.
+\task
+  For any matrix $A \in \R^{n \times n}$, if $A$ is invertible then
+  $\rank A = n$.
+\task
+  For any matrix $A \in \R^{m \times n}$, $\col(A)$ is the same as the
+  set of vectors $\vb$ such that $A \vx = \vb$ has a solution.
+\task
+  For any matrix $A$, we have $\rank(A) = \rank(A^T)$.
+\task
+  A basis is a spanning set that is as large as possible.
+\task
+  A linear transformation $T: \R^3 \to \R^3$ that maps $\R^3$ to a
+  plane has a trivial kernel (i.e., if $T(\vv) = \vzero$, then $\vv =
+  \vzero$).
+\task
+  If $\cB$ is the standard basis for $R^n$, then for any $\vx \in
+  \R^n$ we have that $[\vx]_{\cB} = \vx$
+\task
+  For any matrix $A$, the dimension of the null space of $A$ is at
+  most the rank of $A$.
+\end{tasks}
+
+\section{More Difficult Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  For a matrix $A \in \R^{m \times n}$, consider the set of vectors
+  $\{\vx \in \R^n : A\vx= \ve_1\}$ (\textit{Recall:} $\ve_1$ is the
+  first standard basis vector).
+  \begin{enumerate}
+  \item
+    Determine if this set if closed under addition. Justify your
+    answer.
+  \item
+    Determine if this set is closed under scaling. Justify your
+    answer.
+  \item
+    Determine if this set is a subspace of $\R^n$. Justify your
+    answer.
+  \end{enumerate}
+\task
+  \begin{align*}
+    \vv_1 = \begin{bmatrix}
+      3  \\
+      0  \\
+      -1
+    \end{bmatrix},
+    \vv_2 = \begin{bmatrix}
+      -3  \\
+      2  \\
+      0
+    \end{bmatrix},
+    \vv_3 = \begin{bmatrix}
+      0  \\
+      -2  \\
+      -1
+    \end{bmatrix}
+\end{align*}
+List all possible subsets of the above vectors that form a basis of
+the subspace $\vspan\{\vv_1, \vv_2, \vv_3\}$.\footnote{The process we
+teach for determining a basis gives one choice, but there may be
+multiple choices that are suitable.}
+\task Consider the following vectors.
+\begin{align*}
+\vv_1 = \begin{bmatrix}
+      3   \\
+      -1
+\end{bmatrix},
+\vv_2 = \begin{bmatrix}
+      -3  \\
+      1
+\end{bmatrix},
+\vv_3 = \begin{bmatrix}
+      -1  \\
+      1
+\end{bmatrix},
+\vv_4 = \begin{bmatrix}
+      8  \\
+      -4
+\end{bmatrix}
+\end{align*}
+List all possible subsets of the above vectors that form a basis of
+the subspace $\vspan\left\{\vv_1,  \vv_2,
+\vv_3,  \vv_4 \right\}$.
+\task Consider the 3-dimensional vector space of all quadratic
+  polynomials $Q = \{a x^2 + b x + c  |  a,b,c \in \R\}$
+  and consider the linear derivative map $\frac{d}{dx}: Q \to Q$
+  defined by $\frac{d}{dx}(a x^2 + b x + c) = 0 x^2 + 2 a x + b$.
+  \begin{enumerate}
+  \item
+    Using the standard basis given by $\{x^2, x, 1 \}$, determine a $3
+    \times 3$ matrix $A$ that implements $\frac{d}{dx}$.
+  \item
+    Determine a basis for $\col A$.
+  \item
+    Determine basis for $\nul A$.
+  \item
+    Determine $\rank A$ and $\dim(\nul A)$.
+  \end{enumerate}
+\task
+  Let $A$ be an $m \times n$ matrix and let $\vv$ be a vector in
+  $\R^n$.  Let $\vb$ denote the vector $A\vv$.
+  \begin{enumerate}
+  \item
+    Show that if $\vw \in \nul A$, then $\vv + \vw$ is a solution to
+    the equation $A\vx = \vb$.
+  \item
+    Show that if $\vb \not = 0$, then the solution set of $A\vx = \vb$
+    is not a subspace of $\R^n$.
+  \item
+    A set $H$ is an \textbf{affine} subspace of $\R^n$ if there is a
+    subspace $U$ of $\R^n$ and a vector $\vo$ such that
+    \begin{align*}
+      H = \{\vu + \vo \ | \ \vu \in U\}
+    \end{align*}
+    Show that the solution set of $A\vx = \vb$ is an affine subspace
+    of $\R^n$ if it is nonempty.  In particular, choose a vector $\vo$
+    and subspace $U$.
+  \end{enumerate}
+\task
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 2 & 3 & -1 \\
+      1 & 2 & 4 & -4 \\
+      0 & 0 & 2 & 4 \\
+      0 & 0 & 1 & 2
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a basis for $\nul A$.
+  \item
+    Determine a linear equation over the variables $x_1, x_2, x_3,
+    x_4$ whose solution set is $\col A$ (that is, $(x_1, x_2, x_3,
+    x_4)$ satisfies the linear equation if and only if the vector
+    $[x_1 \ x_2 \ x_3 \ x_4]^T$ is in the column space of $A$).
+  \end{enumerate}
+\task
+  Determine the linear equation whose solution set is the column space
+  of the following matrix.
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -4 & -10 \\
+      -4 & 17 & 42 \\
+      1 & -2 & -6
+    \end{bmatrix}
+  \end{displaymath}
+\task
+  Let $A$ be a $4 \times 2024$ matrix where $\rank A = 3$. Further
+  suppose that the LU-decomposition of $A$ has
+  \begin{displaymath}
+    L =
+    \begin{bmatrix}
+      1 & 0 & 0 & 0 \\
+      -2 & 1 & 0 & 0 \\
+      7 & 5 & 1 & 0 \\
+      0 & 0 & 1 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  Determine the linear equation whose solution set is $\col A$.
+\task
+  Consider the following two matrices.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      6 & -6 & -1 & 17 \\
+      9 & -2 & 2 & 36 \\
+      -10 & -13 & 8 & -45 \\
+      -9 & 4 & -1 & -33 \\
+      2 & 4 & 2 & 14
+    \end{bmatrix}
+    \qquad
+    B =
+    \begin{bmatrix}
+      -8 & 5 & -16 & 1 \\
+      2 & 11 & 4 & 16 \\
+      3 & -2 & 6 & 3 \\
+      2 & -10 & 4 & 0 \\
+      8 & 4 & 16 & 9
+    \end{bmatrix}
+  \end{displaymath}
+  Also consider the following set of vectors.
+  \begin{displaymath}
+    H = \{ \vu + \vv \ | \ \vu \in \col A \text{ and } \vv \in \col B \}
+  \end{displaymath}
+  That is, $H$ consists of all sums of pairs of vectors, one from
+  $\col A$ and one from $\col B$.
+  \begin{enumerate}
+  \item
+    Show that $H$ is a subspace of $\R^5$.
+  \item \faCalculator \
+    Determine the dimension of $H$.  Justify your answer.  You may use a
+    computer but you must determine any matrix you reduce along with its
+    reduced echelon form.
+  \end{enumerate}
+\end{tasks}
+
+\section{Challenge Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  The row space of a matrix $A \in \R^{m \times n}$ is the span of the
+  rows of $A$, denoted $\row A$. Show that $\dim(\row A) + \dim(\nul
+  A) = n$.
+\task
+  In the vector space of all real-valued functions, find a basis for
+  the subspaced spanned by $\{\sin t, \sin 2t, \sin t \cos t \}$.
+\end{tasks}
