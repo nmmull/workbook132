@@ -1,0 +1,189 @@
+\section{Basic Exercises}
+
+Determine the symmetric matrix $A$ such that $Q(\vx) = \vx^T A \vx$.
+\begin{tasks}[style=enumerate](1)
+\task
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T)
+    = 3x_1^2 + 4 x_1 x_2 + 5 x_2 x_1 - x_1 x_3
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T)
+    = 3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
+  \end{displaymath}
+\end{tasks}
+Determine the quadratic form $Q(\vx)$ such that $Q(\vx) = \vx^T A
+\vx$.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 9 & 3 \\
+      0 & 3 & 1
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+Determine the type of the quadratic form $Q(\vx) = \vx^T A \vx$.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      2 & 0 & 0 \\
+      0 & 9 & 3 \\
+      0 & 3 & 1
+    \end{bmatrix}
+  \end{displaymath}
+\end{tasks}
+Determine the singular values of the following matrices.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 0 & 2 \\
+      3 & 1 & 1 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{tasks}
+Determine a singular value decomposition for each of the following
+matrices.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      3 & 2 \\
+      2 & 3 \\
+      2 & -2
+    \end{bmatrix}
+  \end{displaymath}
+\end{tasks}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  Every positive-definite symmetric matrix is invertible.
+\task
+  For any matrix $A$ and quadratic form $Q(\vx)$, if $Q(\vx) =
+  \vx^TA\vx$, then $A$ is symmetric.
+\task
+  For any quadratic form $Q(\vx)$, the vector $\argmax_{\|\vx\| = 1}
+  Q(\vx)$ is unique.
+\task
+  $\|\vx\|^2$ is a quadratic form.
+\task
+  A positive definite quadratic form $Q(\vx)$ satisfies $Q(\vx) > 0$
+  for all $\vx \in \R^n$.
+\task
+  $\vx^T A \vx$ defines a quadratic form only if $A$ is symmetric.
+\task
+  An orthogonal diagonalization of a symmetric matrix $A = PDP^T$ is
+  also a singular value decomposition of $A$.
+\end{tasks}
+
+\section{More Difficult Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  Consider the quadratic form $Q(\vx) = \vx^T A \vx$ where $A$ is
+  defined as follows.
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 1 & 5 \\
+      1 & 5 & 1 \\
+      5 & 1 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  Determine the following.
+  \begin{enumerate}
+  \item
+    $\min_{\|\vx\| = 1} Q(\vx)$
+  \item
+    $\max_{\|\vx\| = 1}  Q(\vx)$
+  \item
+    $\argmin_{\|\vx\| = 1} Q(\vx)$
+  \item
+    $\argmax_{\|\vx\| = 1} Q(\vx)$
+  \end{enumerate}
+  \textit{Hint:} $4$ is an eigenvalue of $A$.
+\task
+  \faCalculator \ Repeat the previous problem with the following
+  quadratic form.
+  \begin{displaymath}
+    Q([x_1 \ x_2 \ x_3]^T) =
+    3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
+  \end{displaymath}
+\task
+Consider the following matrices and vector.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      2 & -4 & 4 \\
+      2 & 2 & 1 \\
+      -2 & 4 & -4 \\
+    \end{bmatrix}
+    \qquad
+    AA^T =
+    \begin{bmatrix}
+      36 & 0 & -36 \\
+      0 & 9 & 0 \\
+      -36 & 0 & 36
+    \end{bmatrix}
+    \qquad
+    \vb =
+    \begin{bmatrix}
+      10 \\ 18 \\ -14
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}
+  \item
+    Determine a \textit{reduced} singular value decomposition of $A$,
+    given that $6\sqrt{2}$ and $3$ are its nonzero singular values and
+    $\rank(A) = 2$.
+  \item
+    Determine the length of the \textit{shortest} least-squares
+    solution to the equation $A\vx = \vb$.  \textit{Hint:} Use the
+    pseudoinverse of $A$.
+  \end{enumerate}
+\task
+  \label{prob:svd-prev}
+  Consider the following matrices.
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      2 & 2 & 2 \\
+      1 & 1 & -2 \\
+      2 & 2 & 2
+    \end{bmatrix}
+    \qquad
+    V =
+    \begin{bmatrix}
+      \sqrt{3} / 3 & \sqrt{6} / {6} \\
+      \sqrt{3} / 3 & \sqrt{6} / {6} \\
+      \sqrt{3} / 3 & -\sqrt{6} / {3}
+    \end{bmatrix}
+  \end{align*}
+  \begin{enumerate}
+  \item
+    Without first determining $A^TA$ or $AA^T$, determine left singular vectors
+    of $A$ associated with nonzero singular values, i.e., determine the
+    columns of $U$ in the \textit{reduced} SVD of $A$, where $U\Sigma
+    V^T$ is the reduced SVD of $A$.
+  \item
+    Without first determining $A^TA$ or $AA^T$, determine the singular
+    values of $A$.
+  \end{enumerate}
+\end{tasks}
+
+\section{Challenge Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  Let $A$ be as in Problem \ref{prob:svd-prev} above.  Determine the matrix that
+  implements orthogonal projection onto $\col A$.
+\end{tasks}
