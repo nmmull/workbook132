@@ -86,13 +86,13 @@ solving!
   \textit{Examples.}
   \begin{itemize}
   \item $2x - 3y + \pi z = -44.5$ is a linear equation in the
-    variables $x, y, z$.\footnote{The choice of names for unknowns is
-    unimportant, and will be made clear from context.}
+    variables $x, y, z$.\footnote{The choice of variables names is
+    unimportant, and will be clear from context.}
   \item $2(x_1 + x_2) = 4x_3 - x_4$ is a linear equation in the
     variables $x_1, x_2, x_3, x_4$.\footnote{This equation can be
     \textit{expressed} in the above form by rearranging terms.}
   \item $(2x_1 + x_2)(x_3 - x_4) = 5$ is not a linear equation because
-    the left-hand-side, after rearranging terms, will include a
+    the left-hand-side, after rearranging terms, includes
     nonlinear terms, e.g., $x_2x_3$.
   \end{itemize}
 \item A \textbf{system of linear equations} in the variables $x_1,
@@ -123,7 +123,7 @@ solving!
       \label{lin-sys-ex-1}
     \end{equation}
   \item The following is a system of three linear equations over four
-    variables.  Note that not all equations are required to nonzero
+    variables.  Note that equations are required to have nonzero
     coefficients for every variable.
     \begin{equation}
       \begin{split}
@@ -142,7 +142,7 @@ solving!
   $\R^n$ with \textit{vectors}.}
 \item
   An \textbf{$\R$-matrix} is a rectangular grid of real numbers.  We
-  usually assume that a matrix has at least one row and and least one
+  usually assume that a matrix has at least one row and and one
   column.  We write $\R^{m \times n}$ for the set of all matrices with
   $m$ rows and $n$ columns.  We identify $\R^{1 \by 1}$ with $\R$
   (i.e., we don't make a distinction between real numbers and matrices
@@ -166,10 +166,10 @@ solving!
     \end{displaymath}
   \end{itemize}
 \item The \textbf{augmented matrix} of a system of $m$ linear
-  equations over the $n$ variables is the matrix in $\R^{m \by (n +
-    1)}$ whose entries include the coefficients and right-hand-sides
-  of each linear equation in the system.  In symbols, the augmented
-  matrix of the linear system in \ref{gen-form-lin-sys} is as follows.
+  equations over $n$ variables is the matrix in $\R^{m \by (n + 1)}$
+  whose entries include the coefficients and right-hand-sides of each
+  linear equation in the system.  The augmented matrix of the a
+  general linear system (as in \ref{gen-form-lin-sys}) is as follows.
   \begin{displaymath}
     \begin{bmatrix}
       a_{11} & \dots & a_{1n} & b_1 \\
@@ -202,9 +202,9 @@ solving!
   \end{itemize}
 \item The \textbf{coefficient matrix} of a system of $m$ linear
   equations over $n$ variables is the matrix in $\R^{m \by n}$ gotten
-  by removing the rightmost column of its augmented matrix.  In
-  symbols, the coefficient matrix of the linear system in
-  \ref{gen-form-lin-sys} is as follows.
+  by removing the rightmost column of its augmented matrix.  The
+  coefficient matrix of a general linear system (as in
+  \ref{gen-form-lin-sys}) is as follows.
   \begin{align*}
     \begin{bmatrix}
       a_{11} & \dots & a_{1n} \\
@@ -236,11 +236,11 @@ solving!
     \end{displaymath}
   \end{itemize}
 \item A \textbf{solution} of a linear system over the variables $x_1,
-  \dots, x_n$ such is a point $(s_1, \dots, s_n) \in \R^n$ such that
+  \dots, x_n$ is a point $(s_1, \dots, s_n) \in \R^n$ such that
   substituting each variable $x_i$ with the value $s_i$ simultaneously
-  satisfies every equation in the system.  In symbols, a solution of
-  the linear system in \ref{gen-form-lin-sys} is a point $(s_1, \dots,
-  s_n) \in \R^n$ such that the following real number equalities hold.
+  satisfies every equation in the system.  A solution of the linear
+  general system in \ref{gen-form-lin-sys} is a point $(s_1, \dots, s_n) \in
+  \R^n$ such that the following real number equalities hold.
   \begin{align*}
     a_{11}s_1 + \dots + a_{1n} s_n &= b_1 \\
     &\vdots \\
@@ -263,22 +263,24 @@ solving!
       = -\frac{60}{21} + \frac{60}{21}
       = 0
     \end{displaymath}
+  \item
+    \todo{Another example.}
   \end{itemize}
 \item A linear system is \textbf{consistent} if it has a solution.
-  Otherwise, we say that it is \textbf{inconsistent}.
+  Otherwise, it is \textbf{inconsistent}.
 
   \textit{Examples.}
   \begin{itemize}
   \item As noted above, the linear system in \ref{lin-sys-ex-1} is consistent.
-  \item The following linear system is inconsistent (it represents two
-    parallel lines in $\R^2$).
+  \item The following linear system is inconsistent.  It represents
+    two parallel lines in $\R^2$.
     \begin{align*}
       2x - 3y &= 4 \\
       -4x + 6y &= 5
     \end{align*}
   \end{itemize}
 
-\item There are three forms of \textbf{elementary row operations}:
+\item There are three kinds of \textbf{elementary row operations}.
   \begin{enumerate}
   \item \textbf{Replacement} operations add a scalar multiple of one
     row to another row.  They are denoted
@@ -406,39 +408,34 @@ solving!
     \end{displaymath}
   \end{itemize}
 \item Matrices $A, B \in \R^{m \times n}$ are \textbf{row equivalent},
-  written $A \sim B$ if there is a sequence of elementary row
-  operations thas transform $A$ into $B$.
+  written $A \sim B$, if there is a sequence of elementary row
+  operations that transform $A$ into $B$.
 
   \textit{Facts.}
   \begin{itemize}
   \item
-    \textit{Row equivalence is a, in fact, an equivalence.}
+    \textit{Row equivalence is, in fact, an equivalence.}
     \begin{itemize}
     \item (reflexivity) $A \sim A$ for any matrix $A$;
     \item (symmetry) $A \sim B$ if and only if $B \sim A$;
     \item (transitivity) If $A \sim B$ and $B \sim C$ then $A \sim C$.
     \end{itemize}
   \item
-    \textit{Row operations preserve solutions.}  Let $A$ and $B$ be
-    the augmented matrices of two linear systems such that $A \sim B$.
-    Then $\vs \in \R^n$ is a solution of the linear system with
+    \textit{Row operations preserve solutions.}  Suppose $A$ and $B$
+    are the augmented matrices of two linear systems.  If $A \sim B$
+    then $\vs \in \R^n$ is a solution of the linear system with
     augmented matrix $A$ if and only if it is a solution of the system
     with augmented matrix $B$.
   \end{itemize}
 
-  \textit{Examples.}
-  \begin{itemize}
-  \item
-  \end{itemize}
+  \textit{Example.}
+  \todo{Fill in example.}
 \item
   The \textbf{leading entry} of a row in a matrix is its first nonzero
   entry.  Note that a row may not have a leading entry.
 
-  \textit{Examples.}
-  \begin{itemize}
-  \item
-    TODO
-  \end{itemize}
+  \textit{Example.}
+  \todo{Fill in example.}
 \item
   A matrix is in \textbf{echelon form} if
   \begin{itemize}
@@ -462,14 +459,31 @@ solving!
   where ``$\blacksquare$'' represents a nonzero entry and ``$*$" represents
   an entry of any value.
 
+  \textit{Facts.}
+  \begin{itemize}
+  \item
+    \textit{Echelon forms can be used to determine consistency.}
+    Let $A$ be the augmented matrix of a linear system.  The system is
+    inconsistent if and only if every echelon form of $A$ has a row of
+    the form
+    \begin{displaymath}
+      \begin{bmatrix}
+        0 \dots & 0 & b
+      \end{bmatrix}
+    \end{displaymath}
+    where $b \neq 0$.
+  \end{itemize}
+
   \textit{Examples.}
   \begin{itemize}
   \item
+    \todo{Example}
+    \todo{Example}
   \end{itemize}
 \item A matrix is in \textbf{row-reduced echelon form} (RREF) if it is echelon form and
   \begin{itemize}
   \item every leading entry is $1$;
-  \item the leading entries are the only nonzero entries of their columns.
+  \item its leading entries are the only nonzero entries of their columns.
   \end{itemize}
   This can be expressed by example pictorially as
   \begin{displaymath}
@@ -486,25 +500,38 @@ solving!
   that a matrix \textit{is} an RREF to mean that it is in row-reduced
   echelon form.
 
-  \textit{Facts.}
+  \textit{Fact.} \textit{Every matrix is row-equivalent to exactly one RREF.}
+
+  \textit{Examples.}
   \begin{itemize}
-  \item \textit{Every matrix is row-equivalent to exactly one RREF.}
+  \item \todo{Example}
+  \item \todo{Example}
   \end{itemize}
-\item A \textbf{pivot position} in a matrix is the position of a
-  leading entry in its RREF.  A \textbf{pivot column} is a column
-  containing a pivot position.
+
+\item A \textbf{pivot position} of a matrix is a position of a leading
+  entry in its RREF.  A \textbf{pivot column} is a column containing a
+  pivot position.
 \item A variable $x_i$ is \textbf{basic} with respect to a linear
   system if the $i$th column of its augmented matrix is a pivot
   column.  A variables is \textbf{free} if it is not basic.
 \item A \textbf{general form solution}\footnote{This is also
 sometimes just called a general solution.} is a collection of statements of the form
   \begin{displaymath}
-    x_i = x_i \text{ is free} \qquad \text{and} x_i = a_1x_{j_1} + \dots + a_kx_{j_k}
+    x_i = x_i \text{ is free} \qquad \text{or} \qquad x_i = a_1x_{j_1} + \dots + a_kx_{j_k}
   \end{displaymath}
-  where $a_{j_1}, \dots, a_{j_k}$ are free variables.  In other words,
-  a general form solution is one that expresses every basic variable
-  of a linear system linearly in terms of its free variables.
+  where $a_{1}, \dots, a_{k} \in \R$ and $x_{j_1}, \dots, x_{j_k}$ are
+  free variables.  In other words, a general form solution is one that
+  expresses every basic variable of a linear system linearly in terms
+  of its free variables.
 \end{enumerate}
+
+\subsection*{Topics Not Covered}
+
+\begin{itemize}
+\item Gaussian elimination
+\item deriving general form solutions from RREFs
+\end{itemize}
+
 
 \section{Basic Exercises}
 
