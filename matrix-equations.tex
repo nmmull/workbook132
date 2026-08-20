@@ -188,27 +188,28 @@ the columns span $\R^m$.
   For each of the following shapes, determine a concrete matrix $A$ so
   that the above equation holds, where $\blacksquare$ represents a
   nonzero entry.  { \newcommand{\bs}{\blacksquare}
-    \begin{enumerate}
-    \item
+    \newcounter{shapetask}
+    \begin{tasks}[style=enumerate, counter=shapetask](3)
+    \task
       \begin{displaymath}
         \begin{bmatrix}
           \bs&0&0&0 \\ 0&\bs&0&0 \\ 0&0&\bs&0 \\ 0&0&0&\bs
         \end{bmatrix}
       \end{displaymath}
-    \item
+    \task
       \begin{displaymath}
         \begin{bmatrix}
           \bs&0&0&0 \\ \bs&\bs&0&0 \\ \bs&\bs&\bs&0 \\ \bs&\bs&\bs&\bs
         \end{bmatrix}
       \end{displaymath}
-    \item
+    \task
       \begin{displaymath}
         \begin{bmatrix}
           \bs&\bs&\bs&\bs \\ \bs&\bs&\bs&0 \\ \bs&\bs&0&0 \\ \bs&0&0&0
           \\
         \end{bmatrix}
       \end{displaymath}
-    \end{enumerate}
+    \end{tasks}
   }
 \task
   \faCalculator \ Any three distinct points in the plane define a
