@@ -99,7 +99,7 @@ using the normal equations.
   orthogonal projection of $\vb$ onto $\col A$.
 \task
   Given a model function $f(x) = \beta_0 + \beta_1^2 x$, we may
-  minimize for least squares error by using the least squares solution
+  minimize the least squares error by using the least squares solution
   to a matrix equation.
 \task
   If $X$ denotes the design matrix for a least squares regression
@@ -110,7 +110,7 @@ using the normal equations.
   For any square matrix $A$, if $A \vx = \vb$ has a unique least
   squares solution for each choice of $\vb$, then $A$ is invertible.
 \task
-  Every $n \times n$ symmetric matrix must has $n$ distinct eigenvalues.
+  Every $n \times n$ symmetric matrix must have $n$ distinct eigenvalues.
 \task
   For a symmetric matrix, the dimension of each eigenspace is equal to
   the algebraic multiplicity of the corresponding eigenvalue.
@@ -141,7 +141,7 @@ using the normal equations.
   \end{displaymath}
   where $\beta_0$, $\beta_1$, and $\beta_2$ are parameters.  Determine
   the design matrix which can be used to compute the parameters that
-  minimize least square error for the following data points.
+  minimize least squares error for the following data points.
   \begin{displaymath}
     \{(-1, 1), (0, -1), (1, 1), (2, 3), (4, 5)\}
   \end{displaymath}
@@ -150,9 +150,9 @@ using the normal equations.
   \begin{displaymath}
     f(x,y) = \beta_0 + \beta_1 x + \beta_2 y
   \end{displaymath}
-  where $\beta_0$, $\beta_1$, and $\beta_2$ are paramters.  Computer
-  the paramters minimize least squares error for the following data
-  points.
+  where $\beta_0$, $\beta_1$, and $\beta_2$ are parameters.  Compute
+  the parameters that minimize least squares error for the following
+  data points.
   \begin{displaymath}
     \{(-2,0,0), (0,0,3), (0,2,0), (-2, -3, 3), (1,5,-1)\}.
   \end{displaymath}
@@ -163,7 +163,7 @@ using the normal equations.
 
 \begin{tasks}[resume, style=enumerate](1)
 \task
-  Suppose we are given four aribtrary data points:
+  Suppose we are given four arbitrary data points:
   \begin{displaymath}
     (x_1, y_1), (x_2, y_2), (x_3, y_3), (x_4, y_4)
   \end{displaymath}
