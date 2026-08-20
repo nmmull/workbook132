@@ -368,7 +368,7 @@ transformations.
   If $\vx \mapsto A \vx$ is one-to-one and onto, then $A$ is a square
   matrix.
 \task
-  If $\vx \mapsto A \vx$ is neither one-to-one or onto, and the
+  If $\vx \mapsto A \vx$ is neither one-to-one nor onto, and the
   reduced echelon form of $A$ only has $0$s and $1$s, then one of the
   columns of $A$ is $\vzero$.
 \task
@@ -398,8 +398,8 @@ transformations.
 \task
   Let $A$ be a matrix with $n$ rows and 6 columns.  Each row of $A$
   contains the \textbf{unweighted} percentage scores (out of 100) of
-  one student on 4 homework assignments (columns 1 through 4) a
-  midterm exam (column 5) and a final exam (column 6).
+  one student on 4 homework assignments (columns 1 through 4), a
+  midterm exam (column 5), and a final exam (column 6).
   \begin{displaymath}
     \begin{matrix}
       H_1 & H_2 & H_3 & H_4 & M & F
@@ -423,7 +423,7 @@ transformations.
     a vector $\vv$ such that $T(\vv)$ is the vector whose
     $i^\text{th}$ entry is the final percentage grade of the
     $i^\text{th}$ student.  For example, if the $i^\text{th}$ student
-    recieved $90$ percent on every homework assignment, $85$ percent
+    received $90$ percent on every homework assignment, $85$ percent
     on the midterm, and $92$ percent on the final, then the
     $i^\text{th}$ entry of the output vector should be $90 * 0.5 + 85
     * 0.2 + 92 * 0.3$.
@@ -449,7 +449,7 @@ transformations.
   Determine a set of linearly independent vectors which span the range
   of $T$.
 \task
-  Determine the matrix which implements the linear tranformation $T :
+  Determine the matrix which implements the linear transformation $T :
   \R^3 \to \R^3$ that reflects vectors across the $x_1x_2$-plane.
 \task
   Determine the matrix which implements the linear transformation $T :
@@ -460,7 +460,7 @@ transformations.
   \end{align*}
 \task
   Determine the matrix which implements the linear transformation $T :
-  \R^5 \to \R^5$ which adds to each entries all its preceding entries,
+  \R^5 \to \R^5$ which adds to each entry all its preceding entries,
   e.g.,
   \begin{displaymath}
     T\left(\vFive 1 2 3 4 5 \right) =
@@ -522,13 +522,13 @@ transformations.
 \task
   Suppose that $T : \R^3 \to \R^3$ is the linear transformation which
   reflects vectors across the $xy$ plane (i.e., across the plane given
-  by the linear equation $z = 0$) and that $S : \R^3 \to \R^3$ the
+  by the linear equation $z = 0$) and that $S : \R^3 \to \R^3$ is the
   transformation which rotates vectors around $\vspan\{[1 \ \ 1
     \ \ 0]^T\}$ by $180$ degrees.  Determine the matrix which
   implements $S \circ T$, the composition of $S$ and $T$ (recall that
   $(S \circ T)(\vv) = S(T(\vv))$).
 \task
-  Considering the transformation $T$ implemented by the following
+  Consider the transformation $T$ implemented by the following
   matrix.
   \begin{displaymath}
     \begin{bmatrix}
@@ -573,7 +573,7 @@ transformations.
   \item
     Determine a general form solution that describes the preimages of
     the following vector $\mathbf b$ under the linear transformation
-    $S \circ T$.  That is determine a general form solution where
+    $S \circ T$.  That is, determine a general form solution where
     $S(T(\mathbf x)) = \mathbf b$ if and only if $\mathbf x$ is in the
     solution set described by your general form solution.
     \begin{align*}
@@ -590,7 +590,7 @@ transformations.
 \begin{tasks}[resume, style=enumerate](1)
 \task
   Determine the matrices which implement the linear transformations
-  that rotates vectors in $\R^3$ 120 degrees about
+  that rotate vectors in $\R^3$ 120 degrees about
   \begin{align*}
     \vspan\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
   \end{align*}
@@ -598,8 +598,8 @@ transformations.
   rotation and the other for counterclockwise rotation.
 \task
   Determine the matrices which implement the linear transformations
-  that reflects vectors across the plane defined by the linear
-  equation $x + y + z = 0$, and then rotates vectors 60 degrees about
+  that reflect vectors across the plane defined by the linear
+  equation $x + y + z = 0$, and then rotate vectors 60 degrees about
   \begin{align*}
     \vspan\left\{\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right\}
   \end{align*}
