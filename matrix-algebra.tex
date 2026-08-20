@@ -1,0 +1,680 @@
+\section{Basic Exercises}
+
+\begin{align*}
+  A =
+  \begin{bmatrix}
+    6 & 1 \\
+    -1 & -3 \\
+    8 & 1
+  \end{bmatrix}
+  \qquad
+  B =
+  \begin{bmatrix}
+    6 & -5 \\
+    -6 & -2 \\
+    -3 & 4
+  \end{bmatrix}
+  \qquad
+  C =
+  \begin{bmatrix}
+    -4 & 0 \\
+    -8 & 5 \\
+    -4 & -1
+  \end{bmatrix}
+\end{align*}
+Compute the following expressions.
+\begin{tasks}[style=enumerate](1)
+\task $A + B$
+\task $2A - 4B - 3C$
+\task $A^TA + B^TB$
+\task $AC^T + CA^T$
+\end{tasks}
+Compute the following matrix multiplications, if possible.  If it is
+not possible, explain why.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      -2 & 6 \\
+      -2 & -7 \\
+      -3 & -2
+    \end{bmatrix}
+    \begin{bmatrix}
+      -4 & 8 & 4 \\
+      -10 & -4 & 9
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix} 8 & 6 & -1 & -2 \end{bmatrix}
+    \begin{bmatrix} 3 \\ 5 \\ 1 \\ 5 \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix} -3 \\ 6 \\ 8 \\ 5 \end{bmatrix}
+    \begin{bmatrix} -9 & -7 & 0 & -8 \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      7 & -10 \\
+      -6 & 6 \\
+      1 & 0 \\
+      -4 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      -8 & 9 \\
+      -10 & 0 \\
+      -9 & 1 \\
+      -4 & -3
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      2 & 3 & -1 \\
+      7 & 4 & 3 \\
+      0 & -1 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 4 & 1 \\
+      0 & 2 & 1 \\
+      0 & 0 & 3
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 1 & 0 & 1 \\
+      0 & 1 & 0 & 1 & 0 \\
+      1 & 0 & 1 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 2 & 3 \\
+      2 & 3 & 4 \\
+      3 & 4 & 5 \\
+      4 & 5 & 6 \\
+      5 & 6 & 7
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 & 5 & 6
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 & 2 & 3 & 4 & 5 & 6
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -1 & 4 \\
+      3 & 0 & 1 \\
+      0 & 1 & 1 \\
+      -3 & 1 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      2 & 0 & 1 & 1 \\
+      0 & 0 & 2 & 3 \\
+      1 & 1 & 3 & 5
+    \end{bmatrix}
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 \\ 2 \\ 3 \\ -1
+    \end{bmatrix}
+    \begin{bmatrix}
+      2 & -1 & 2 & 2
+    \end{bmatrix}
+  \end{displaymath}
+\end{tasks}
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}^T
+    \begin{bmatrix}
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+      1 & 0 & 1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 1 & 0 & 1 \\
+    \end{bmatrix}
+    \begin{bmatrix}
+      1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+    \end{bmatrix}
+  \end{displaymath}
+\task
+  \begin{displaymath}
+    \begin{bmatrix}
+      \va_1 & \va_2 & \va_3 & \va_4 & \va_5
+    \end{bmatrix}
+    \begin{bmatrix}
+      0 & 0 & 1 & 0 & 0 \\
+      0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 1 & 0 \\
+      1 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  where $\va_1$, $\va_2$, $\va_3$, $\va_4$, $\va_5$ are vectors in $\R^n$.
+\end{tasks}
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 \\
+      0 & 1
+    \end{bmatrix}^{2023}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      \cos2 & -\sin2 & 0 \\
+      \sin2 & \cos2 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}^{2023}
+  \end{align*}
+\end{tasks}
+Let $A$ be matrix such that $A^{-1}$ is defined as below.  Use this to
+determine the solution to the matrix equations of the form $A\vx =
+\vb_i$, where each $\vb_i$ is defined below.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{align*}
+    A^{-1} =
+    \begin{bmatrix}
+      -10 & -10 & -1 \\
+      -2 & -4 & -3 \\
+      -8 & -6 & 1
+    \end{bmatrix}
+    \qquad
+    \vb_{1} = \begin{bmatrix} -5 \\ 6 \\ -1 \end{bmatrix}
+    \qquad
+    \vb_{2} = \begin{bmatrix} -1 \\ -3 \\ -10 \end{bmatrix}
+    \qquad
+    \vb_{3} = \begin{bmatrix} -6 \\ 4 \\ -4 \end{bmatrix}
+  \end{align*}
+\end{tasks}
+Determine the inverse of the following matrices.
+If the matrix is not invertible, then explain why.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      2 & -1 \\
+      3 & 3
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      -8 & -2 \\
+      -2 & -3
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 3 \\
+      -3 & -2
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      0 & 0 & 1 \\
+      0 & 2 & 0 \\
+      3 & 0 & 0
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & -2 \\
+      -3 & 1 & 4 \\
+      2 & -3 & 4
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & -1 & 1 \\
+      -3 & 4 & -4 \\
+      0 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 1 & 0 & -1 \\
+      -2 & -1 & -1 & 0 \\
+      1 & 1 & 0 & 0 \\
+      -2 & -2 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      2 & 1 & 0 \\
+      3 & 4 & 1 \\
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      \cos \theta & -\sin \theta \\
+      \cos \theta + \sin \theta & \cos \theta - \sin \theta
+    \end{bmatrix}
+  \end{align*}
+  Simplify your solution as much as possible.
+\end{tasks}
+Determine the matrix in $\R^{4 \times 4}$ that implements the
+following row operations, in order from top to bottom.  That is,
+determine a matrix $A$ such that $AB$ is the result of applying the
+following row operations, from top to bottom, to $B$.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{align*}
+    R_{2} &\gets R_{2} - R_{3} \\
+    R_{1} &\leftrightarrow R_{4} \\
+    R_{1} &\gets R_{1} + 3R_{2} \\
+    R_{3} &\gets R_{3} - 5R_{4} \\
+    R_{4} &\gets -2R_{4}
+  \end{align*}
+\end{tasks}
+Determine the inverse of the following transformation, if it exists.
+Your solution should be in the form of a transformation, as given
+below.
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  \begin{align*}
+    \begin{bmatrix}
+      x_{1} \\
+      x_{2} \\
+      x_{3}
+    \end{bmatrix} \mapsto \begin{bmatrix}
+      x_{1} + x_{3} \\
+      -3x_{1} + x_{2} - 4x_{3} \\
+      x_{1} + 2x_{2}
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+Suppose that $A$ is a matrix in $\R^{3 \times 3}$ such that the
+following sequence of row operations (from top to bottom) transforms
+$A$ into the identity matrix.  Determine the inverse of $A$.  You
+should do this without determining $A$ first.
+\begin{tasks}[resume, style=enumerate](2)
+\task
+  \begin{align*}
+    R_{1} &\leftrightarrow R_{2} \\
+    R_{1} &\gets R_{1} - R_{2} \\
+    R_{3} &\gets R_{3} - 3R_{2} \\
+    R_{1} &\gets R_{1} + 3R_{2} \\
+    R_{3} &\gets R_{3} - 5R_{1} \\
+    R_{1} &\leftrightarrow R_{2}
+  \end{align*}
+\task
+  \begin{align*}
+    R_2 &\gets R_2 - R_1 \\
+    R_3 &\gets R_3 - R_1 \\
+    R_3 &\gets R_3 - 4R_2 \\
+    R_1 &\gets R_1 - R_3 \\
+    R_1 &\gets R_1 + 2R_2
+  \end{align*}
+\end{tasks}
+
+\section{True/False}
+
+\trueFalseHeader
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  For any two matrices $A$ and $B$, if $A + B$ is defined then $A + B
+  = B + A$.
+\task
+  For all matrices $A$ and $B$ in $\R^{m \times n}$ and $C$ in $\R^{n
+    \times m}$, we have $(A + B + C^T)^T = C + B^T + A^T$.
+\task
+  For any square matrices $A$ and $B$ in $\R^{n \times n}$, if $A =
+  A^T$ and $B = B^T$ then $AB = (AB)^T$.
+\task
+  For all matrices $A$ and $B$ such that $AB$ is defined, we have $AB
+  \not = BA$.
+\task
+  For any matrix $A$, if $A$ has $n$ distinct eigenvalues, then it is
+  invertible.
+\task
+  If $A\vx = \vb$ has a unique solution for every vector $\vb$ in the
+  span of the columns of $A$, then $A$ is invertible.
+\task
+  For any matrix $A$ and vector $\vv$, if $\vv^T A$ is defined, then
+  $A$ is single column.
+\task
+  For any matrices $A$ and $B$, if $A^{-1} = B^{-1}$, then $A = B$.
+\task
+  For any matrices $A$ and $B$, if there is a unique matrix $X$ such
+  that $AX = B$, then $A$ is invertible.
+\task
+  For any matrix $A \in \R^{n \times n}$ and diagonal matrix $D \in
+  \R^{n \times n}$, it must be that $AD = DA$.
+\task
+  If $A$ and $B$ are invertible, then so is $A + B$.
+\task
+  If $A$ and $B$ are invertible, then so is $BA$.
+\task
+  If $A$ and $B$ in $\R^{n \times n}$ are invertible, then so is
+  $\begin{bmatrix}A & B \\ B & A\end{bmatrix}$, the matrix in $\R^{2n
+      \times 2n}$ gotten by stacking copies of $A$ and $B$.
+\task
+  For any matrices $A$ and $B$, if there is a unique matrix $X$ such
+  that $AX = B$, then $A$ is invertible.
+\task
+  For any matrices $A$ and $B$, if $AB = 0$, then $A = 0$ or $B = 0$.
+\task
+  For any matrices $A, B \in \mathbb R^{n \times n}$, if $AB = I$, then $BA = I$.
+\task
+  For any matrices $A$ and $B$, if $AB = BA$, then $A = B$.
+\task
+  If $A$ and $B$ are symmetric and $AB = BA$ then $AB$ is symmetric.
+\task
+  For any matrix $A \in \R^{n \times n}$, if the columns of $A^3$ span
+  all of $\R^n$, then the columns of $A$ are linearly independent.
+\task
+  For any matrix $A \in \R^{n \times n}$, the matrix $A + A^T$ is
+  symmetric.
+\task
+  If $AB$ and $BA$ are symmetric, then $A$ and $B$ are symmetric.
+\task
+  For any matrix $A \in \R^{n \times n}$, if $AA^T$ is
+  symmetric, then so is $A$.
+\task
+  If $A \in \R^{n \times n}$ has zeros along its diagonal, then $A$ is
+  not invertible.
+\task
+  If $A \in \R^{n \times n}$ has a row of all zeros, then $A$ is not
+  invertible.
+\task
+  If $A \in \R^{2 \times 2}$ and $A^{-1}$ has integer entries then the
+  determinant of $A$ is $1$.
+\task
+For any real numbers $a$ and $b$, the matrix $\begin{bmatrix} a & a^2
+  \\ b & ab \end{bmatrix}$ is singular (i.e., not invertible).
+\task
+  For any square matrices $A$ and $B$, if $AB = I$, then $AB = BA$.
+\task
+  The \textbf{Hadamard product} of two matrices is defined as
+  \begin{align*}
+    (A \circ B)_{ij} = A_{ij} B_{ij}
+  \end{align*}
+  In other words, $A$ and $B$ are multiplied entry-wise.  For any
+  invertible matrices $A$ and $B$, if $A \circ B$ is invertible, then
+  $(A \circ B)^{-1} = A^{-1} \circ B^{-1}$.
+\task
+   For any matrices $A$ and $B$, if $AB = I$ then $A$ is invertible
+   and $B = A^{-1}$.
+\task
+  For any two symmetric matrices $A$ and $B$, if $AB$ is defined then
+  $(AB)^T = A^TB^T$.
+\task
+  A matrix $A \in \R^{n \times n}$ is invertible if and only if $A^T$
+  is invertible.
+\end{tasks}
+
+\section{More Difficult Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  Let $A$ be as defined below.  Is it possible to write the inverse of
+  $A$ as a power of $A$?  If so, determine the smallest positive
+  integer $n$ such that $A^n = A^{-1}$.
+  \begin{align*}
+    A = \begin{bmatrix} 1 & 1 \\ -1 & 0 \end{bmatrix}
+  \end{align*}
+\task Determine the smallest positive integer $n$ such that $A^n = A^{-1}$.
+  \begin{align*}
+    A =
+    \begin{bmatrix}
+      \cos\frac{\pi}{9} & -\sin\frac{\pi}{9} & 0 \\
+      \sin\frac{\pi}{9} & \cos\frac{\pi}{9} & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+\task
+  Compute the following matrix expression.  Your answer should be a
+  single matrix with entries given in terms of $n$.
+  \begin{align*}
+    \begin{bmatrix}
+      1 & 0 & 2 \\
+      0 & 1 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}^{n}
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & -3 & 1
+    \end{bmatrix}^{-n}
+  \end{align*}
+\task
+  Suppose that $A$ and $B$ are invertible matrices such that
+  $AB^TXA^{-1}B = I$ for some matrix $X$.  Determine $X$ in terms of
+  $A$ and $B$.
+\task
+  Let $A$, $B$, and $C$ such that $A = A^{-1}$ and $C = C^T$ and
+  \begin{align*}
+    A(C^{-1}(AB)^T)^TC
+  \end{align*}
+  is well-defined.  Simplify this expression using the algebraic
+  properties of matrix operations.
+\task
+  Determine a matrix in $\R^{2 \times 2}$ with all nonzero entries
+  that is equal to its inverse.  \textit{Hint.} Use the closed-form
+  equation for the inverse of a $2 \times 2$ matrix.
+\task
+  Determine a matrix $B$ with integer entries such that the following
+  equality holds.
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & -1 & 2 \\
+      -3 & 4 & 2
+    \end{bmatrix}
+    B = I
+  \end{displaymath}
+\task
+  Explain why it is not possible to determine a matrix $B$ such that
+  the following equality holds.
+  \begin{displaymath}
+    B
+    \begin{bmatrix}
+      1 & -1 & 2 \\
+      -3 & 4 & 2
+    \end{bmatrix}
+    = I
+  \end{displaymath}
+\task
+  Consider the following matrix and vector.\footnote{Credit to Vishesh
+  Jain for suggesting a version of this problem.}
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & -1 & 1 \\
+      -1 & 2 & -1 \\
+      1 & -2 & 1
+    \end{bmatrix}
+    \qquad
+    \vb = \vThree 1 0 0
+  \end{displaymath}
+  \begin{enumerate}
+  \item Compute the following matrix-vector multiplications.
+    \begin{displaymath}
+      \begin{bmatrix} 1 & {-1} & 1 \end{bmatrix}
+      \left(
+      A
+      \vThree 1 {-1} 1
+      \right)
+    \end{displaymath}
+\item Determine a general form solution for the solution
+  set of the matrix equation $A \vx = \vb$.
+\item Use your solution to the previous part to find a
+  \textbf{nonzero} vector $[v_1 \ \ v_2 \ \ v_3]^T$ such that
+  \begin{displaymath}
+    \begin{bmatrix} v_1 & v_2 & v_3 \end{bmatrix}
+    \left(
+    A
+    \vThree {v_1} {v_2} {v_3}
+    \right)
+    = 0
+  \end{displaymath}
+\end{enumerate}
+\task
+  Suppose that $A$ is a matrix such that
+  \begin{align*}
+    A^T
+    \begin{bmatrix}
+      1 \\ 1
+    \end{bmatrix}
+    &=
+    \begin{bmatrix}
+      -2 \\ 1
+    \end{bmatrix}
+    \\
+    \\
+    A
+    \begin{bmatrix}
+      0 \\ 1
+    \end{bmatrix}
+    &=
+    \begin{bmatrix}
+      -2 \\ 3
+    \end{bmatrix}
+    \\
+    \\
+    \det(A) &= 1
+  \end{align*}
+  Determine the inverse of $A$.
+\task
+  Determine a matrix $A$ and two values $k$ and $h$ such that
+  \begin{displaymath}
+    A
+    \begin{bmatrix}
+      1 & 1 \\
+      2 & 3 \\
+      3 & 2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      1 & 0 \\
+      0 & 1
+    \end{bmatrix}
+    \qquad
+    \text{and}
+    \qquad
+    \begin{bmatrix}
+      1 & 1 \\
+      2 & 3 \\
+      3 & 2
+    \end{bmatrix}
+    A
+    =
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      h & k & 0
+    \end{bmatrix}
+  \end{displaymath}
+\task
+  Repeat the previous problem with
+  \begin{align*}
+    A
+    \begin{bmatrix}
+      1 & -1 \\
+      3 & -2 \\
+      -1 & 3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      1 & 0 \\
+      0 & 1
+    \end{bmatrix}
+    \qquad
+    \text{and}
+    \qquad
+    \begin{bmatrix}
+      1 & -1 \\
+      3 & -2 \\
+      -1 & 3
+    \end{bmatrix}
+    A
+    =
+    \begin{bmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      h & k & 0
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
+
+\section{Challenge Problems}
+
+\begin{tasks}[resume, style=enumerate](1)
+\task
+  Determine \textit{three} matrices in $\R^{2 \times 2}$ that satisfy
+  the following equation.  In particular, you must demonstrate that
+  each matrix in your solution satisfies the equation.
+  \begin{align*}
+    X^2 +
+    \begin{bmatrix}
+      3 & 0 \\
+      0 & 1
+    \end{bmatrix}
+    X
+    +
+    \begin{bmatrix}
+      2 & 0 \\
+      0 & 0
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 & 0 \\
+      0 & 0
+    \end{bmatrix}
+  \end{align*}
+\task
+  Determine the reduced echelon form of the matrix
+  \begin{align*}
+    \begin{bmatrix}
+      a & b & 1 & 0 \\
+      c & d & 0 & 1
+    \end{bmatrix}
+  \end{align*}
+  in terms of $a$, $b$, $c$, $d$. Show your work.
+\task
+  Determine two invertible matrices $A$ and $B$ such that $AB^{-1} =
+  -BA^{-1}$.
+\task
+  Let $A$ and $B$ be two invertible matrices in $\R^{n \times n}$ such
+  that $AB^{-1} = -BA^{-1}$.  Determine the inverse of the following
+  matrix in $\R^{2n \times 2n}$.
+  \begin{align*}
+    \begin{bmatrix}
+      A & B \\
+      B & A
+    \end{bmatrix}
+  \end{align*}
+\end{tasks}
