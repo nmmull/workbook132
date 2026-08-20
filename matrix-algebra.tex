@@ -566,6 +566,29 @@ For any real numbers $a$ and $b$, the matrix $\begin{bmatrix} a & a^2
   problem.}
 \begin{tasks}[resume, style=enumerate](1)
 \task
+  Consider the following matrix.
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 4 & 1 \\
+      2 & 0 & 1 \\
+      3 & 5 & 1
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{enumerate}[label=(\alph*)]
+  \item
+    Calculate $\vone^T A$ where $\vone$ is the all-ones vector in
+    $\R^3$.
+  \item
+    A matrix $B$ is \textbf{stochastic} if its entries are
+    non-negative and $B^T \vone = \vone$ (this implies the sum of the
+    entries in each column of $B$ is $1$).  Determine a diagonal
+    matrix $C$ such that $AC$ is stochastic.
+  \item
+    Let $C$ be the matrix you determined in the previous part.
+    Calculate $\vone^T A C [{-1} \ \ 5 \ \ 3]^T$.
+  \end{enumerate}
+\task
   Suppose that $A$ is a matrix such that
   \begin{align*}
     A^T
