@@ -268,6 +268,39 @@ following items:
     Given $0 < p < 1$, determine $\lim_{k \to \infty} T^k \ve_1$.
     Justify your answer.
   \end{enumerate}
+\task
+  Consider the following state diagram.
+  \begin{center}
+    \begin{tikzpicture}
+      \node[circle, draw] (1) {1};
+      \node[circle, draw] (2) [below left=of 1] {2};
+      \node[circle, draw] (3) [below right=of 1] {3};
+      \draw[->] (1) edge[loop above, "{$1 - p$}"] (1);
+      \draw[->] (2) edge["{$p$}"] (1);
+      \draw[->] (1) edge["{$p$}"] (3);
+      \draw[->] (2) edge[loop left, "{$0.5 - p$}"] (2);
+      \draw[->] (2) edge[bend left, "{$0.5$}"] (3);
+      \draw[->] (3) edge[bend left, "{$0.7$}"] (2);
+      \draw[->] (3) edge[loop right, "{$0.3$}"] (3);
+    \end{tikzpicture}
+  \end{center}
+  The transitions out of state $1$ should appear in the first column
+  of the transition matrix, out of state $2$ in the second column,
+  and out of state $3$ in the third column.
+  \begin{enumerate}[label=(\alph*)]
+  \item
+    Determine the transition matrix $A$ of the above state diagram in
+    terms of $p$.
+  \item
+    Is the matrix $A$ regular in the case that $p = 0$?  Justify your
+    answer.
+  \item
+    Determine $\lim_{k \to \infty} A^k \vThree {0.2} {0.4} {0.4}$ in
+    the case that $p = 0.1$.
+  \item
+    Determine $\lim_{k \to \infty} A^k \vThree {0.2} {0.4} {0.4}$ in
+    the case that $p = 0$.
+  \end{enumerate}
 \end{tasks}
 
 \section{Challenge Problems}
